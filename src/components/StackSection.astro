@@ -1,0 +1,138 @@
+---
+const groups = [
+  {
+    category: 'Frontend',
+    items: ['Vue 3', 'Quasar', 'Astro', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3'],
+  },
+  {
+    category: 'Backend',
+    items: ['Laravel', 'PHP', 'Django', 'Python', 'REST API'],
+  },
+  {
+    category: 'Banco & Cloud',
+    items: ['PostgreSQL', 'MySQL', 'AWS', 'S3', 'EC2', 'Git', 'Docker'],
+  },
+  {
+    category: 'Mobile & Desktop',
+    items: ['Capacitor', 'Tauri', 'Android', 'PWA'],
+  },
+];
+---
+
+<section id="stack" class="stack-section">
+  <div class="container">
+    <p class="section-label reveal">Tecnologias</p>
+    <h2 class="section-heading reveal">
+      Stack que uso<br /><span class="heading-accent">no dia a dia</span>
+    </h2>
+
+    <div class="stack-grid">
+      {groups.map((group, gi) => (
+        <div class={`stack-group reveal reveal-delay-${gi}`}>
+          <h3 class="group-label">{group.category}</h3>
+          <div class="group-items">
+            {group.items.map(item => (
+              <span class="tech-pill">{item}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack-section {
+    padding: var(--section-pad) 0;
+    background: var(--bg-2);
+    position: relative;
+  }
+
+  .stack-section::before,
+  .stack-section::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1160px, 90vw);
+    height: 1px;
+    background: var(--border);
+  }
+  .stack-section::before { top: 0; }
+  .stack-section::after  { bottom: 0; }
+
+  .heading-accent {
+    color: var(--accent);
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+
+  .stack-group {
+    padding: 2rem 2rem 2.5rem;
+    border-right: 1px solid var(--border);
+    transition: background 0.3s;
+  }
+  .stack-group:last-child { border-right: none; }
+  .stack-group:hover { background: rgba(0, 212, 255, 0.025); }
+
+  .group-label {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .group-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tech-pill {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.02);
+    transition: color 0.3s, border-color 0.3s, background 0.3s, transform 0.2s;
+    cursor: default;
+  }
+  .tech-pill:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: translateY(-1px);
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 1000px) {
+    .stack-grid { grid-template-columns: repeat(2, 1fr); }
+    .stack-group:nth-child(2)  { border-right: none; }
+    .stack-group:nth-child(1),
+    .stack-group:nth-child(2) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .stack-grid { grid-template-columns: 1fr; }
+    .stack-group { border-right: none; border-bottom: 1px solid var(--border); }
+    .stack-group:last-child { border-bottom: none; }
+  }
+</style>

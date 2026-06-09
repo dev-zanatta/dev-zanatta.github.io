@@ -1,0 +1,169 @@
+---
+---
+
+<section id="sobre" class="about-section">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left: text -->
+      <div class="about-text">
+        <p class="section-label reveal">Sobre mim</p>
+        <h2 class="section-heading reveal">
+          Desenvolvedor apaixonado<br />por resolver<br />
+          <span class="heading-accent">problemas reais</span>
+        </h2>
+        <div class="about-body">
+          <p class="reveal reveal-delay-1">
+            <!-- PREENCHER: adapte este parágrafo com suas palavras -->
+            Com anos de experiência em desenvolvimento full stack, construo
+            sistemas completos — do banco de dados à interface. Especializado em
+            <strong>Vue&nbsp;3</strong>, <strong>Laravel</strong> e
+            <strong>PostgreSQL</strong>, entrego aplicações que são performáticas,
+            maintíveis e prontas para escalar.
+          </p>
+          <p class="reveal reveal-delay-2">
+            Trabalho em todas as camadas: sistemas SaaS, aplicativos mobile com
+            <strong>Capacitor</strong>, apps desktop com <strong>Tauri</strong> e
+            infraestrutura na <strong>AWS</strong>. Gosto de entender o problema
+            antes de abrir o editor — e de código que dura.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: stats -->
+      <div class="about-stats">
+        <div class="stat-item reveal">
+          <!-- PREENCHER: seu número real -->
+          <span class="stat-number">5<span class="stat-plus">+</span></span>
+          <span class="stat-label">Anos de experiência</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <span class="stat-number">15<span class="stat-plus">+</span></span>
+          <span class="stat-label">Projetos entregues</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Plataformas: Web · Mobile · Desktop</span>
+        </div>
+
+        <div class="about-highlight reveal reveal-delay-3">
+          <span class="highlight-icon">→</span>
+          <span>Trabalho autônomo e entrega com qualidade</span>
+        </div>
+        <div class="about-highlight reveal reveal-delay-4">
+          <span class="highlight-icon">→</span>
+          <span>Do protótipo ao deploy em produção</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: var(--section-pad) 0;
+    background: var(--bg);
+  }
+
+  /* Subtle top border */
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1160px, 90vw);
+    height: 1px;
+    background: var(--border);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 7rem);
+    align-items: start;
+  }
+
+  /* ─── Left ─── */
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+  .heading-accent {
+    color: var(--accent);
+  }
+
+  .about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  }
+
+  /* ─── Right: stats ─── */
+  .about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 4.5rem; /* align with heading */
+  }
+
+  .stat-item {
+    padding: 1.75rem 2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    background: rgba(255,255,255,0.015);
+    transition: border-color 0.3s, background 0.3s;
+    margin-bottom: 0.5rem;
+  }
+  .stat-item:hover {
+    border-color: var(--border-hover);
+    background: var(--accent-dim);
+  }
+
+  .stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+  .stat-plus {
+    font-size: 0.55em;
+    vertical-align: super;
+  }
+  .stat-label {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+
+  .about-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+  }
+  .highlight-icon {
+    color: var(--accent);
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 900px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .about-stats { padding-top: 0; }
+  }
+</style>

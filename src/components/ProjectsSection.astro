@@ -1,0 +1,213 @@
+---
+import { projects } from '../data/projects.js';
+---
+
+<section id="projetos" class="projects-section">
+  <div class="container">
+    <p class="section-label reveal">Projetos</p>
+    <h2 class="section-heading reveal">
+      O que tenho<br /><span class="heading-accent">construído</span>
+    </h2>
+  </div>
+
+  <div class="projects-list">
+    {projects.map((project, i) => (
+      <article class={`project-card reveal reveal-delay-${Math.min(i, 3)}`} data-id={project.id}>
+        <div class="card-inner container">
+          <div class="card-left">
+            <span class="project-num" aria-hidden="true">{project.num}</span>
+            <div class="project-meta">
+              <h3 class="project-name">{project.name}</h3>
+              <p class="project-tagline">{project.tagline}</p>
+              <p class="project-desc">{project.description}</p>
+            </div>
+          </div>
+
+          <div class="card-right">
+            <span class="project-type">{project.type}</span>
+            <div class="project-stack">
+              {project.stack.map(tech => (
+                <span class="stack-tag">{tech}</span>
+              ))}
+            </div>
+            {project.link ? (
+              <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
+                Ver projeto <span aria-hidden="true">→</span>
+              </a>
+            ) : (
+              <span class="project-link-wip">Em desenvolvimento</span>
+            )}
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    padding: var(--section-pad) 0;
+    background: var(--bg);
+  }
+
+  .projects-section > .container {
+    margin-bottom: 3rem;
+  }
+
+  .heading-accent { color: var(--accent); }
+
+  /* ─── Project list ─── */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card {
+    border-top: 1px solid var(--border);
+    transition: background 0.4s;
+    cursor: default;
+  }
+  .project-card:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card-inner {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 4rem;
+    align-items: center;
+    padding: 3.5rem 0;
+    transition: padding 0.3s;
+  }
+
+  .project-card:hover {
+    background: rgba(0, 212, 255, 0.018);
+  }
+  .project-card:hover .card-inner {
+    padding-left: 1.5rem;
+  }
+
+  /* Left side */
+  .card-left {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .project-num {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    color: var(--text-dim);
+    flex-shrink: 0;
+    transition: color 0.3s;
+    user-select: none;
+  }
+  .project-card:hover .project-num { color: var(--accent-glow); }
+
+  .project-meta { flex: 1; }
+
+  .project-name {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+    transition: color 0.3s;
+  }
+  .project-card:hover .project-name { color: var(--accent); }
+
+  .project-tagline {
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 0.85rem;
+  }
+
+  .project-desc {
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 52ch;
+  }
+
+  /* Right side */
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .project-type {
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .stack-tag {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.25rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    color: var(--text-muted);
+    background: rgba(255,255,255,0.02);
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .project-card:hover .stack-tag {
+    border-color: rgba(0, 212, 255, 0.2);
+  }
+
+  .project-link {
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--accent);
+    transition: gap 0.3s, opacity 0.3s;
+  }
+  .project-link:hover { gap: 0.7rem; opacity: 0.75; }
+
+  .project-link-wip {
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 900px) {
+    .card-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .card-right { padding-left: calc(2.5rem + 2.5rem); }
+  }
+
+  @media (max-width: 600px) {
+    .card-left { gap: 1.5rem; }
+    .card-right { padding-left: 0; }
+    .project-num { font-size: 2.5rem; }
+    .project-card:hover .card-inner { padding-left: 0; }
+  }
+</style>
