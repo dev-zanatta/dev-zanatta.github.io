@@ -2,19 +2,19 @@
 const groups = [
   {
     category: 'Frontend',
-    items: ['Vue 3', 'Quasar', 'Astro', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3'],
+    items: ['Vue.js', 'Quasar', 'Astro', 'JavaScript', 'HTML5', 'CSS3'],
   },
   {
     category: 'Backend',
-    items: ['Laravel', 'PHP', 'Django', 'Python', 'REST API'],
+    items: ['Laravel', 'PHP', 'Node.js', 'REST API', 'Redis'],
   },
   {
     category: 'Banco & Cloud',
-    items: ['PostgreSQL', 'MySQL', 'AWS', 'S3', 'EC2', 'Git', 'Docker'],
+    items: ['PostgreSQL', 'MySQL', 'AWS', 'S3', 'EC2', 'Git'],
   },
   {
-    category: 'Mobile & Desktop',
-    items: ['Capacitor', 'Tauri', 'Android', 'PWA'],
+    category: 'Web, Mobile & Desktop',
+    items: ['Capacitor', 'Tauri', 'Android', 'PWA/SPA'],
   },
 ];
 ---
@@ -120,7 +120,6 @@ const groups = [
     transform: translateY(-1px);
   }
 
-  /* ─── Responsive ─── */
   @media (max-width: 1000px) {
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
     .stack-group:nth-child(2)  { border-right: none; }

@@ -1,11 +1,7 @@
----
----
-
 <section id="sobre" class="about-section">
   <div class="container">
     <div class="about-grid">
 
-      <!-- Left: text -->
       <div class="about-text">
         <p class="section-label reveal">Sobre mim</p>
         <h2 class="section-heading reveal">
@@ -14,42 +10,34 @@
         </h2>
         <div class="about-body">
           <p class="reveal reveal-delay-1">
-            <!-- PREENCHER: adapte este parágrafo com suas palavras -->
-            Com anos de experiência em desenvolvimento full stack, construo
-            sistemas completos — do banco de dados à interface. Especializado em
+            Com 3+ anos de experiência em desenvolvimento full stack, construo
+            sistemas completos — do primeiro contato à entrega. Especializado em
             <strong>Vue&nbsp;3</strong>, <strong>Laravel</strong> e
             <strong>PostgreSQL</strong>, entrego aplicações que são performáticas,
-            maintíveis e prontas para escalar.
+            de fácil manutenção e prontas para escalar.
           </p>
           <p class="reveal reveal-delay-2">
             Trabalho em todas as camadas: sistemas SaaS, aplicativos mobile com
-            <strong>Capacitor</strong>, apps desktop com <strong>Tauri</strong> e
-            infraestrutura na <strong>AWS</strong>. Gosto de entender o problema
-            antes de abrir o editor — e de código que dura.
+            <strong>Capacitor</strong>, apps desktop e <strong>Node.js</strong>.
+            Gosto de entender o problema antes de executar, e principalmente de resolver o problema da melhor forma.
           </p>
         </div>
       </div>
 
-      <!-- Right: stats -->
       <div class="about-stats">
         <div class="stat-item reveal">
-          <!-- PREENCHER: seu número real -->
-          <span class="stat-number">5<span class="stat-plus">+</span></span>
+          <span class="stat-number">3<span class="stat-plus">+</span></span>
           <span class="stat-label">Anos de experiência</span>
         </div>
         <div class="stat-item reveal reveal-delay-1">
-          <span class="stat-number">15<span class="stat-plus">+</span></span>
+          <span class="stat-number">9</span>
           <span class="stat-label">Projetos entregues</span>
         </div>
         <div class="stat-item reveal reveal-delay-2">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Plataformas: Web · Mobile · Desktop</span>
+          <span class="stat-number">Multi-Plataforma</span>
+          <span class="stat-label">Web · Mobile · Desktop</span>
         </div>
 
-        <div class="about-highlight reveal reveal-delay-3">
-          <span class="highlight-icon">→</span>
-          <span>Trabalho autônomo e entrega com qualidade</span>
-        </div>
         <div class="about-highlight reveal reveal-delay-4">
           <span class="highlight-icon">→</span>
           <span>Do protótipo ao deploy em produção</span>
@@ -66,7 +54,6 @@
     background: var(--bg);
   }
 
-  /* Subtle top border */
   .about-section::before {
     content: '';
     position: absolute;
@@ -85,7 +72,6 @@
     align-items: start;
   }
 
-  /* ─── Left ─── */
   .section-heading {
     margin-bottom: 2rem;
   }
@@ -101,12 +87,11 @@
     font-size: clamp(0.95rem, 1.4vw, 1.05rem);
   }
 
-  /* ─── Right: stats ─── */
   .about-stats {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding-top: 4.5rem; /* align with heading */
+    padding-top: 4.5rem;
   }
 
   .stat-item {
@@ -158,7 +143,6 @@
     flex-shrink: 0;
   }
 
-  /* ─── Responsive ─── */
   @media (max-width: 900px) {
     .about-grid {
       grid-template-columns: 1fr;

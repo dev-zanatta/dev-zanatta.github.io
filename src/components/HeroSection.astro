@@ -1,48 +1,43 @@
 ---
 ---
 
-<!-- Custom cursor -->
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
 
-<!-- Navigation -->
 <nav id="main-nav" aria-label="Navegação principal">
   <a href="#hero" class="nav-logo">GZ</a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#projetos">Projetos</a></li>
     <li><a href="#stack">Stack</a></li>
+    <li><a href="#projetos">Projetos</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <div class="nav-progress" aria-hidden="true"></div>
 </nav>
 
-<!-- Hero section -->
 <section id="hero">
-  <!-- Three.js canvas background -->
   <div id="hero-canvas-wrapper" aria-hidden="true">
     <canvas id="hero-canvas"></canvas>
   </div>
 
-  <!-- Left gradient overlay so text is readable over the 3D scene -->
   <div class="hero-overlay" aria-hidden="true"></div>
 
-  <!-- Hero content -->
   <div class="hero-content container">
     <p class="hero-eyebrow">Desenvolvedor Full Stack</p>
-    <h1 class="hero-name">Gustavo Zanatta</h1>
+    <h1 class="hero-name">Gustavo</h1>
+    <h1 class="hero-name">Felipe</h1>
+    <h1 class="hero-name">Zanatta</h1>
     <p class="hero-subtitle">
       Transformando ideias em <span class="accent">sistemas reais</span> —
-      web, mobile e desktop com Vue&nbsp;3, Laravel e AWS
+      web, mobile e desktop com Vue 3, Laravel e Node
     </p>
     <div class="hero-tags" aria-label="Tecnologias principais">
       <span>Vue 3</span>
       <span>Laravel</span>
       <span>PostgreSQL</span>
       <span>Quasar</span>
-      <span>AWS</span>
+      <span>Node.js</span>
       <span>Capacitor</span>
-      <span>Tauri</span>
     </div>
     <div class="hero-ctas">
       <a href="#projetos" class="btn-primary">Ver Projetos</a>
@@ -52,7 +47,6 @@
     </div>
   </div>
 
-  <!-- Scroll indicator -->
   <div class="scroll-indicator" aria-hidden="true">
     <span>scroll</span>
     <div class="scroll-line"></div>
@@ -60,7 +54,6 @@
 </section>
 
 <style>
-  /* ─── Nav ─── */
   #main-nav {
     position: fixed;
     top: 0;
@@ -117,7 +110,6 @@
   .nav-links a:hover { color: var(--text); }
   .nav-links a:hover::after { width: 100%; }
 
-  /* Scroll progress bar (thin line at bottom of nav) */
   .nav-progress {
     position: absolute;
     bottom: 0;
@@ -127,7 +119,6 @@
     background: linear-gradient(90deg, var(--accent), rgba(0,212,255,0.3));
   }
 
-  /* ─── Hero section ─── */
   #hero {
     position: relative;
     width: 100%;
@@ -149,7 +140,6 @@
     height: 100%;
   }
 
-  /* Gradient: left side solid (text readable) → right side reveals 3D */
   .hero-overlay {
     position: absolute;
     inset: 0;
@@ -164,7 +154,6 @@
     pointer-events: none;
   }
 
-  /* ─── Hero content ─── */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -188,7 +177,6 @@
     letter-spacing: 0.01em;
     color: var(--text);
     margin-bottom: 2rem;
-    /* perspective for SplitText 3D rotation */
     perspective: 600px;
   }
 
@@ -237,7 +225,6 @@
     gap: 1rem;
   }
 
-  /* ─── Scroll indicator ─── */
   .scroll-indicator {
     position: absolute;
     bottom: 2.5rem;
@@ -267,7 +254,6 @@
     50%       { opacity: 1;    transform: scaleY(1);   }
   }
 
-  /* ─── Responsive ─── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     #hero { height: 100dvh; }
@@ -284,9 +270,6 @@
 
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  // ══════════════════════════════════════════
-  //  THREE.JS — HERO 3D SCENE
-  // ══════════════════════════════════════════
   const canvas  = document.getElementById('hero-canvas') as HTMLCanvasElement;
   const wrapper = document.getElementById('hero-canvas-wrapper') as HTMLElement;
 
@@ -294,96 +277,166 @@
   let W = window.innerWidth;
   let H = window.innerHeight;
 
-  const camera = new THREE.PerspectiveCamera(58, W / H, 0.1, 1000);
-  camera.position.set(2, 0, 5.5);
+  const camera = new THREE.PerspectiveCamera(55, W / H, 0.1, 1000);
+  camera.position.set(0, 0, 6.5);
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
   renderer.setSize(W, H);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Geometry
-  const geometry = new THREE.TorusKnotGeometry(1.35, 0.38, 220, 32);
+  // Materials — dark metallic body + cyan wireframe overlay
+  const solidMat = new THREE.MeshStandardMaterial({ color: 0x051a26, roughness: 0.4, metalness: 0.7 });
+  const wireMat  = new THREE.MeshBasicMaterial({ color: 0x00d4ff, wireframe: true, transparent: true, opacity: 0.48 });
 
-  // Solid inner mesh (very dark teal)
-  const solidMesh = new THREE.Mesh(
-    geometry,
-    new THREE.MeshStandardMaterial({ color: 0x041520, roughness: 0.6, metalness: 0.4 })
-  );
-  scene.add(solidMesh);
+  // Build a gear profile (rectangular teeth) with a centre axle hole
+  function buildGearShape(teeth: number, innerR: number, outerR: number): THREE.Shape {
+    const shape = new THREE.Shape();
+    const pitch = (Math.PI * 2) / teeth;
+    const tw    = pitch * 0.21; // half-width of each tooth, in radians
 
-  // Wireframe mesh (cyan)
-  const wireMesh = new THREE.Mesh(
-    geometry,
-    new THREE.MeshBasicMaterial({ color: 0x00d4ff, wireframe: true, transparent: true, opacity: 0.52 })
-  );
-  scene.add(wireMesh);
+    for (let i = 0; i < teeth; i++) {
+      const c = i * pitch;
+      const pts: [number, number][] = [
+        [Math.cos(c - tw) * innerR,         Math.sin(c - tw) * innerR],
+        [Math.cos(c - tw * 0.42) * outerR,  Math.sin(c - tw * 0.42) * outerR],
+        [Math.cos(c + tw * 0.42) * outerR,  Math.sin(c + tw * 0.42) * outerR],
+        [Math.cos(c + tw) * innerR,         Math.sin(c + tw) * innerR],
+        [Math.cos(c + pitch - tw) * innerR, Math.sin(c + pitch - tw) * innerR],
+      ];
+      if (i === 0) shape.moveTo(...pts[0]);
+      else         shape.lineTo(...pts[0]);
+      for (let j = 1; j < pts.length; j++) shape.lineTo(...pts[j]);
+    }
+    shape.closePath();
 
-  // Lights
-  scene.add(new THREE.AmbientLight(0xffffff, 0.15));
+    // Axle hole (wound CW so it becomes a cutout)
+    const hole = new THREE.Path();
+    const hr = innerR * 0.38;
+    const hs = 28;
+    for (let k = hs; k >= 0; k--) {
+      const a = (k / hs) * Math.PI * 2;
+      if (k === hs) hole.moveTo(Math.cos(a) * hr, Math.sin(a) * hr);
+      else          hole.lineTo(Math.cos(a) * hr, Math.sin(a) * hr);
+    }
+    shape.holes.push(hole);
+    return shape;
+  }
 
-  const light1 = new THREE.PointLight(0x00d4ff, 8, 22);
-  light1.position.set(4, 3, 4);
+  // Shared module — every gear uses the same tooth pitch so they can mesh.
+  // Tuned so the 22-tooth main gear has pitch radius ≈ 1.05.
+  const MODULE = (2 * 1.05) / 22;
+
+  function makeGear(teeth: number, pitchR: number, depth: number): THREE.Group {
+    const tipR  = pitchR + MODULE;          // addendum  = 1·module
+    const rootR = pitchR - 1.25 * MODULE;   // dedendum  = 1.25·module → 0.25·module clearance
+    const geo = new THREE.ExtrudeGeometry(
+      buildGearShape(teeth, rootR, tipR),
+      { depth, bevelEnabled: true, bevelThickness: 0.025, bevelSize: 0.018, bevelSegments: 2 }
+    );
+    geo.center();
+    const g = new THREE.Group();
+    g.add(new THREE.Mesh(geo, solidMat), new THREE.Mesh(geo, wireMat));
+    return g;
+  }
+
+  // Gear train. Each non-root gear meshes with its `parent`, sitting at angle
+  // `beta` (direction from parent's centre to this gear's centre).
+  //   • pitch radius  = MODULE · teeth / 2   (constant module → teeth fit)
+  //   • centre dist   = rParent + rChild      (pitch circles tangent, clearance
+  //                                            built into addendum/dedendum)
+  //   • ratio         = -(Nparent / Nchild) · ratioParent  (meshing speed)
+  //   • init phase     solved so a tooth of one sits in the gap of the other
+  type GearDef = {
+    teeth: number; ratio: number; parent: number | null; beta: number;
+    r: number; x: number; y: number; init: number;
+  };
+
+  const gearDefs: GearDef[] = [
+    { teeth: 22, ratio: 1,         parent: null, beta: 0,            r: 0, x: 0, y: 0, init: 0 }, // A – main
+    { teeth: 11, ratio: -2,        parent: 0,    beta: 0,            r: 0, x: 0, y: 0, init: 0 }, // B – right of A
+    { teeth:  7, ratio: 22 / 7,    parent: 1,    beta: -Math.PI / 2, r: 0, x: 0, y: 0, init: 0 }, // C – below B
+    { teeth: 14, ratio: -22 / 14,  parent: 0,    beta:  Math.PI / 2, r: 0, x: 0, y: 0, init: 0 }, // D – above A
+  ];
+
+  gearDefs.forEach((g) => {
+    g.r = (MODULE * g.teeth) / 2;
+    if (g.parent === null) return;
+    const p = gearDefs[g.parent];
+    const dist = p.r + g.r;
+    g.x = p.x + Math.cos(g.beta) * dist;
+    g.y = p.y + Math.sin(g.beta) * dist;
+    // Meshing-phase condition: Np·(initP − β) + Nc·(initC − β − π) ≡ π (mod 2π)
+    g.init = g.beta + Math.PI + (Math.PI - p.teeth * (p.init - g.beta)) / g.teeth;
+  });
+
+  const gearSystem = new THREE.Group();
+  const gearGroups = gearDefs.map((def) => {
+    const g = makeGear(def.teeth, def.r, 0.26);
+    g.position.set(def.x, def.y, 0);
+    g.rotation.z = def.init;
+    gearSystem.add(g);
+    return g;
+  });
+
+  gearSystem.position.set(2.3, -0.35, 0); // shift to the right side of the hero
+  scene.add(gearSystem);
+
+  scene.add(new THREE.AmbientLight(0xffffff, 0.18));
+
+  const light1 = new THREE.PointLight(0x00d4ff, 10, 26);
+  light1.position.set(5, 3, 4);
   scene.add(light1);
 
-  const light2 = new THREE.PointLight(0x0033ff, 4, 16);
-  light2.position.set(-4, -2, 2);
+  const light2 = new THREE.PointLight(0x0044cc, 5, 18);
+  light2.position.set(-2, -3, 3);
   scene.add(light2);
 
-  // Position shape to right side
-  solidMesh.position.x = 2.5;
-  wireMesh.position.x  = 2.5;
-
-  // Mouse tracking for subtle influence
+  // Mouse → tilt the whole gear train
   let targetX = 0, targetY = 0;
   let currentX = 0, currentY = 0;
 
   window.addEventListener('mousemove', (e) => {
-    targetX = (e.clientX / W - 0.5) * 1.4;
-    targetY = (e.clientY / H - 0.5) * 0.9;
+    targetX = (e.clientX / W - 0.5) * 1.0;
+    targetY = (e.clientY / H - 0.5) * 0.7;
+  }, { passive: true });
+
+  // Scroll → progressively spin the gears faster
+  let scrollSpeed = 1;
+  ScrollTrigger.create({
+    trigger: '#hero',
+    start: 'top top',
+    end: 'bottom top',
+    onUpdate: (self) => { scrollSpeed = 1 + self.progress * 5; },
   });
 
-  // Render loop
+  let baseAngle = 0;
   function animate() {
     requestAnimationFrame(animate);
-    const t = performance.now() * 0.001;
 
-    solidMesh.rotation.x = t * 0.22;
-    solidMesh.rotation.y = t * 0.38;
+    baseAngle += 0.007 * scrollSpeed;
+    gearGroups.forEach((g, i) => {
+      g.rotation.z = gearDefs[i].init + baseAngle * gearDefs[i].ratio;
+    });
 
-    currentX += (targetX - currentX) * 0.035;
-    currentY += (targetY - currentY) * 0.035;
-    solidMesh.rotation.x += currentY * 0.45;
-    solidMesh.rotation.y += currentX * 0.45;
-
-    wireMesh.rotation.copy(solidMesh.rotation);
+    currentX += (targetX - currentX) * 0.04;
+    currentY += (targetY - currentY) * 0.04;
+    gearSystem.rotation.y = currentX * 0.5;
+    gearSystem.rotation.x = -currentY * 0.35;
 
     renderer.render(scene, camera);
   }
   animate();
 
-  // Scroll: camera pulls back + canvas fades out
-  gsap.to(camera.position, {
-    z: 11,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 2,
-    },
-  });
-
   gsap.to(wrapper, {
     opacity: 0,
     scrollTrigger: {
       trigger: '#hero',
-      start: '45% top',
+      start: '50% top',
       end: '90% top',
       scrub: 1,
     },
   });
 
-  // Resize
   window.addEventListener('resize', () => {
     W = window.innerWidth;
     H = window.innerHeight;
@@ -393,9 +446,6 @@
     ScrollTrigger.refresh();
   });
 
-  // ══════════════════════════════════════════
-  //  NAV — scroll behavior & progress bar
-  // ══════════════════════════════════════════
   const nav      = document.getElementById('main-nav') as HTMLElement;
   const progress = nav.querySelector('.nav-progress') as HTMLElement;
 
@@ -405,9 +455,6 @@
     progress.style.width = ((window.scrollY / total) * 100) + '%';
   }, { passive: true });
 
-  // ══════════════════════════════════════════
-  //  CUSTOM CURSOR
-  // ══════════════════════════════════════════
   const cursor   = document.getElementById('cursor') as HTMLElement;
   const follower = document.getElementById('cursor-follower') as HTMLElement;
 
@@ -428,13 +475,9 @@
       gsap.to(follower, { scale: 1, opacity: 0.45, duration: 0.3 }));
   });
 
-  // ══════════════════════════════════════════
-  //  HERO INTRO ANIMATION
-  // ══════════════════════════════════════════
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!prefersReduced) {
-    // Initial hidden states
     gsap.set(wrapper,                   { opacity: 0 });
     gsap.set('#main-nav',               { opacity: 0, y: -24 });
     gsap.set('.hero-eyebrow',           { opacity: 0 });
@@ -443,7 +486,6 @@
     gsap.set('.hero-ctas',              { opacity: 0, y: 16 });
     gsap.set('.scroll-indicator',       { opacity: 0 });
 
-    // SplitText on hero name
     const split = new SplitText('.hero-name', { type: 'chars' });
     gsap.set(split.chars, { opacity: 0, y: 70, rotationX: -85, transformOrigin: '50% 50% -30px' });
 
@@ -468,9 +510,6 @@
     tl.to('#main-nav',         { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' }, '<-1.2');
   }
 
-  // ══════════════════════════════════════════
-  //  SCROLL REVEAL (IntersectionObserver)
-  // ══════════════════════════════════════════
   const revealObserver = new IntersectionObserver(
     (entries) => entries.forEach(e => {
       if (e.isIntersecting) {
