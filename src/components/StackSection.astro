@@ -1,19 +1,24 @@
 ---
+import { useTranslations, normalizeLocale } from '../i18n/utils.js';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+
 const groups = [
   {
-    category: 'Frontend',
+    category: t('stack.catFrontend'),
     items: ['Vue.js', 'Quasar', 'Astro', 'JavaScript', 'HTML5', 'CSS3'],
   },
   {
-    category: 'Backend',
+    category: t('stack.catBackend'),
     items: ['Laravel', 'PHP', 'Node.js', 'REST API', 'Redis'],
   },
   {
-    category: 'Banco & Cloud',
+    category: t('stack.catDb'),
     items: ['PostgreSQL', 'MySQL', 'AWS', 'S3', 'EC2', 'Git'],
   },
   {
-    category: 'Web, Mobile & Desktop',
+    category: t('stack.catPlatforms'),
     items: ['Capacitor', 'Tauri', 'Android', 'PWA/SPA'],
   },
 ];
@@ -21,10 +26,8 @@ const groups = [
 
 <section id="stack" class="stack-section">
   <div class="container">
-    <p class="section-label reveal">Tecnologias</p>
-    <h2 class="section-heading reveal">
-      Stack que uso<br /><span class="heading-accent">no dia a dia</span>
-    </h2>
+    <p class="section-label reveal">{t('stack.label')}</p>
+    <h2 class="section-heading reveal" set:html={t('stack.headingHtml')} />
 
     <div class="stack-grid">
       {groups.map((group, gi) => (

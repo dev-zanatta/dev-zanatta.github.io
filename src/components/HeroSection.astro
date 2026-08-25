@@ -1,17 +1,25 @@
 ---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { useTranslations, normalizeLocale } from '../i18n/utils.js';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
 ---
 
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
 
-<nav id="main-nav" aria-label="Navegação principal">
+<nav id="main-nav" aria-label={t('nav.ariaLabel')}>
   <a href="#hero" class="nav-logo">GZ</a>
-  <ul class="nav-links">
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#projetos">Projetos</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#sobre">{t('nav.about')}</a></li>
+      <li><a href="#stack">{t('nav.stack')}</a></li>
+      <li><a href="#projetos">{t('nav.projects')}</a></li>
+      <li><a href="#contato">{t('nav.contact')}</a></li>
+    </ul>
+    <LanguageSwitcher />
+  </div>
   <div class="nav-progress" aria-hidden="true"></div>
 </nav>
 
@@ -23,15 +31,12 @@
   <div class="hero-overlay" aria-hidden="true"></div>
 
   <div class="hero-content container">
-    <p class="hero-eyebrow">Desenvolvedor Full Stack</p>
+    <p class="hero-eyebrow">{t('hero.eyebrow')}</p>
     <h1 class="hero-name">Gustavo</h1>
     <h1 class="hero-name">Felipe</h1>
     <h1 class="hero-name">Zanatta</h1>
-    <p class="hero-subtitle">
-      Transformando ideias em <span class="accent">sistemas reais</span> —
-      web, mobile e desktop com Vue 3, Laravel e Node
-    </p>
-    <div class="hero-tags" aria-label="Tecnologias principais">
+    <p class="hero-subtitle" set:html={t('hero.subtitleHtml')} />
+    <div class="hero-tags" aria-label={t('hero.tagsAria')}>
       <span>Vue 3</span>
       <span>Laravel</span>
       <span>PostgreSQL</span>
@@ -40,7 +45,7 @@
       <span>Capacitor</span>
     </div>
     <div class="hero-ctas">
-      <a href="#projetos" class="btn-primary">Ver Projetos</a>
+      <a href="#projetos" class="btn-primary">{t('hero.ctaProjects')}</a>
       <a href="https://github.com/dev-zanatta" target="_blank" rel="noopener noreferrer" class="btn-secondary">
         GitHub
       </a>
@@ -48,7 +53,7 @@
   </div>
 
   <div class="scroll-indicator" aria-hidden="true">
-    <span>scroll</span>
+    <span>{t('hero.scroll')}</span>
     <div class="scroll-line"></div>
   </div>
 </section>
@@ -81,6 +86,12 @@
     transition: opacity 0.3s;
   }
   .nav-logo:hover { opacity: 0.65; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
 
   .nav-links {
     display: flex;
@@ -189,7 +200,8 @@
     margin-bottom: 2rem;
     line-height: 1.65;
   }
-  .hero-subtitle .accent {
+  /* :global — o conteúdo chega via set:html e não recebe o escopo do Astro */
+  .hero-subtitle :global(.accent) {
     color: var(--text);
     font-weight: 500;
   }

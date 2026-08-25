@@ -1,24 +1,67 @@
 ---
 import '../styles/global.css';
+import { useTranslations, normalizeLocale } from '../i18n/utils.js';
 
 interface Props {
   title?: string;
   description?: string;
 }
 
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+
 const {
-  title = 'Gustavo Zanatta — Desenvolvedor Full Stack',
-  description = 'Portfolio de Gustavo Felipe Zanatta, desenvolvedor Full Stack especializado em Vue 3, Laravel, PostgreSQL e AWS.',
+  title = t('meta.title'),
+  description = t('meta.description'),
 } = Astro.props;
+
+const htmlLang = locale === 'pt' ? 'pt-BR' : locale;
+const ogLocale = { pt: 'pt_BR', en: 'en_US', es: 'es_ES' }[locale];
+
+const site = Astro.site ?? new URL('https://dev-zanatta.github.io');
+const alternates = [
+  { hreflang: 'pt-BR',     href: new URL('/', site).href },
+  { hreflang: 'en',        href: new URL('/en/', site).href },
+  { hreflang: 'es',        href: new URL('/es/', site).href },
+  { hreflang: 'x-default', href: new URL('/', site).href },
+];
+const canonical = new URL(locale === 'pt' ? '/' : `/${locale}/`, site).href;
 ---
 <!doctype html>
-<html lang="pt-BR">
+<html lang={htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#080808" />
     <title>{title}</title>
+
+    <link rel="canonical" href={canonical} />
+    {alternates.map(alt => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+
+    <script is:inline>
+      // Primeira visita à raiz sem preferência salva: redireciona pelo idioma do navegador.
+      // Ao clicar numa bandeira a escolha é salva e este redirect nunca mais roda.
+      (function () {
+        try {
+          if (localStorage.getItem('preferred-lang')) return;
+          var p = window.location.pathname;
+          if (p !== '/' && p !== '/index.html') return;
+          var lang = (navigator.language || '').toLowerCase();
+          if (lang.indexOf('en') === 0) window.location.replace('/en/');
+          else if (lang.indexOf('es') === 0) window.location.replace('/es/');
+        } catch (e) { /* sem storage, segue em pt */ }
+      })();
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -1,0 +1,117 @@
+---
+import { languages } from '../i18n/ui.js';
+import { useTranslations, normalizeLocale } from '../i18n/utils.js';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+
+const langs = [
+  { code: 'pt', href: '/', label: languages.pt },
+  { code: 'en', href: '/en/', label: languages.en },
+  { code: 'es', href: '/es/', label: languages.es },
+];
+---
+
+<div class="lang-switcher" aria-label={t('lang.switcherAria')}>
+  {langs.map(lang => (
+    <a
+      href={lang.href}
+      class:list={['lang-flag', { active: locale === lang.code }]}
+      data-lang={lang.code}
+      aria-label={lang.label}
+      aria-current={locale === lang.code ? 'page' : undefined}
+      title={lang.label}
+    >
+      {lang.code === 'pt' && (
+        <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="16" fill="#009B3A" />
+          <path d="M12 2.2 21.5 8 12 13.8 2.5 8Z" fill="#FEDF00" />
+          <circle cx="12" cy="8" r="3.4" fill="#002776" />
+          <path d="M8.8 7.4c2.3-.5 4.6.1 6.3 1.6l-.3.8c-1.7-1.5-4-2.1-6.2-1.6Z" fill="#fff" />
+        </svg>
+      )}
+      {lang.code === 'en' && (
+        <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="16" fill="#B22234" />
+          <g fill="#fff">
+            <rect y="1.23" width="24" height="1.23" />
+            <rect y="3.69" width="24" height="1.23" />
+            <rect y="6.15" width="24" height="1.23" />
+            <rect y="8.62" width="24" height="1.23" />
+            <rect y="11.08" width="24" height="1.23" />
+            <rect y="13.54" width="24" height="1.23" />
+          </g>
+          <rect width="10.5" height="8.62" fill="#3C3B6E" />
+          <g fill="#fff">
+            <circle cx="2" cy="1.7" r="0.5" />
+            <circle cx="5.2" cy="1.7" r="0.5" />
+            <circle cx="8.4" cy="1.7" r="0.5" />
+            <circle cx="3.6" cy="3.6" r="0.5" />
+            <circle cx="6.8" cy="3.6" r="0.5" />
+            <circle cx="2" cy="5.5" r="0.5" />
+            <circle cx="5.2" cy="5.5" r="0.5" />
+            <circle cx="8.4" cy="5.5" r="0.5" />
+            <circle cx="3.6" cy="7.2" r="0.5" />
+            <circle cx="6.8" cy="7.2" r="0.5" />
+          </g>
+        </svg>
+      )}
+      {lang.code === 'es' && (
+        <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="24" height="16" fill="#AA151B" />
+          <rect y="4" width="24" height="8" fill="#F1BF00" />
+          <rect x="5.4" y="6.2" width="2.6" height="3.6" rx="0.5" fill="#AA151B" />
+        </svg>
+      )}
+    </a>
+  ))}
+</div>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .lang-flag {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+    opacity: 0.4;
+    filter: saturate(0.55);
+    transition: opacity 0.3s, filter 0.3s, transform 0.3s var(--ease-back);
+  }
+
+  .lang-flag svg {
+    width: 22px;
+    height: 15px;
+    border-radius: 2px;
+    display: block;
+    box-shadow: 0 0 0 1px var(--border);
+  }
+
+  .lang-flag:hover {
+    opacity: 0.85;
+    filter: saturate(1);
+    transform: translateY(-1px);
+  }
+
+  .lang-flag.active {
+    opacity: 1;
+    filter: saturate(1);
+  }
+  .lang-flag.active svg {
+    box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.55), 0 0 10px var(--accent-glow);
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.lang-flag').forEach(el => {
+    el.addEventListener('click', () => {
+      try {
+        localStorage.setItem('preferred-lang', el.dataset.lang ?? 'pt');
+      } catch { /* storage indisponível — segue o link normalmente */ }
+    });
+  });
+</script>

@@ -100,6 +100,11 @@ section {
   margin-bottom: 2rem;
 }
 
+/* Global: os headings chegam via set:html (i18n) e não recebem escopo por componente */
+.heading-accent {
+  color: var(--accent);
+}
+
 /* ─── Buttons ─── */
 .btn-primary {
   display: inline-flex;

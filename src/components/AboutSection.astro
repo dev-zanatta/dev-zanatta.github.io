@@ -1,46 +1,40 @@
+---
+import { useTranslations, normalizeLocale } from '../i18n/utils.js';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+---
+
 <section id="sobre" class="about-section">
   <div class="container">
     <div class="about-grid">
 
       <div class="about-text">
-        <p class="section-label reveal">Sobre mim</p>
-        <h2 class="section-heading reveal">
-          Desenvolvedor apaixonado<br />por resolver<br />
-          <span class="heading-accent">problemas reais</span>
-        </h2>
+        <p class="section-label reveal">{t('about.label')}</p>
+        <h2 class="section-heading reveal" set:html={t('about.headingHtml')} />
         <div class="about-body">
-          <p class="reveal reveal-delay-1">
-            Com 3+ anos de experiência em desenvolvimento full stack, construo
-            sistemas completos — do primeiro contato à entrega. Especializado em
-            <strong>Vue&nbsp;3</strong>, <strong>Laravel</strong> e
-            <strong>PostgreSQL</strong>, entrego aplicações que são performáticas,
-            de fácil manutenção e prontas para escalar.
-          </p>
-          <p class="reveal reveal-delay-2">
-            Trabalho em todas as camadas: sistemas SaaS, aplicativos mobile com
-            <strong>Capacitor</strong>, apps desktop e <strong>Node.js</strong>.
-            Gosto de entender o problema antes de executar, e principalmente de resolver o problema da melhor forma.
-          </p>
+          <p class="reveal reveal-delay-1" set:html={t('about.p1Html')} />
+          <p class="reveal reveal-delay-2" set:html={t('about.p2Html')} />
         </div>
       </div>
 
       <div class="about-stats">
         <div class="stat-item reveal">
           <span class="stat-number">3<span class="stat-plus">+</span></span>
-          <span class="stat-label">Anos de experiência</span>
+          <span class="stat-label">{t('about.statYears')}</span>
         </div>
         <div class="stat-item reveal reveal-delay-1">
           <span class="stat-number">9</span>
-          <span class="stat-label">Projetos entregues</span>
+          <span class="stat-label">{t('about.statProjects')}</span>
         </div>
         <div class="stat-item reveal reveal-delay-2">
-          <span class="stat-number">Multi-Plataforma</span>
-          <span class="stat-label">Web · Mobile · Desktop</span>
+          <span class="stat-number">{t('about.statPlatform')}</span>
+          <span class="stat-label">{t('about.statPlatformSub')}</span>
         </div>
 
         <div class="about-highlight reveal reveal-delay-4">
           <span class="highlight-icon">→</span>
-          <span>Do protótipo ao deploy em produção</span>
+          <span>{t('about.highlight')}</span>
         </div>
       </div>
 

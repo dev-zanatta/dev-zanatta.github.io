@@ -1,4 +1,9 @@
 ---
+import { useTranslations, normalizeLocale } from '../i18n/utils.js';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
+
 const socials = [
   { label: 'GitHub',   href: 'https://github.com/dev-zanatta' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gzanatta/' },
@@ -10,21 +15,18 @@ const year = new Date().getFullYear();
 <section id="contato" class="contact-section">
   <div class="container">
     <div class="contact-inner">
-      <p class="section-label reveal">Contato</p>
+      <p class="section-label reveal">{t('contact.label')}</p>
 
-      <h2 class="contact-heading reveal">
-        Vamos trabalhar<br />
-        <span class="heading-accent">juntos?</span>
-      </h2>
+      <h2 class="contact-heading reveal" set:html={t('contact.headingHtml')} />
 
       <p class="contact-body reveal reveal-delay-1">
-        Tem um projeto em mente, quer uma solução personalizada, procura alguém para tirar uma ideia do papel? Estou sempre aberto a conversar sobre novas oportunidades, desafios interessantes ou simplesmente trocar uma ideia sobre tecnologia. Sinta-se à vontade para entrar em contato! 
+        {t('contact.body')}
       </p>
 
       <a
         href="mailto:zanattagg@gmail.com"
         class="contact-email reveal reveal-delay-2"
-        aria-label="Enviar e-mail"
+        aria-label={t('contact.emailAria')}
       >
         zanattagg@gmail.com
       </a>
@@ -48,7 +50,7 @@ const year = new Date().getFullYear();
       © {year} Gustavo Felipe Zanatta
     </span>
     <span class="footer-built">
-      Construído com Astro · Three.js · GSAP
+      {t('footer.built')}
     </span>
   </div>
 </footer>

@@ -1,13 +1,15 @@
 ---
 import { projects } from '../data/projects.js';
+import { useTranslations, normalizeLocale, pickLocalized } from '../i18n/utils.js';
+
+const locale = normalizeLocale(Astro.currentLocale);
+const t = useTranslations(locale);
 ---
 
 <section id="projetos" class="projects-section">
   <div class="container">
-    <p class="section-label reveal">Projetos</p>
-    <h2 class="section-heading reveal">
-      O que tenho<br /><span class="heading-accent">construído</span>
-    </h2>
+    <p class="section-label reveal">{t('projects.label')}</p>
+    <h2 class="section-heading reveal" set:html={t('projects.headingHtml')} />
   </div>
 
   <div class="projects-list">
@@ -18,13 +20,13 @@ import { projects } from '../data/projects.js';
             <span class="project-num" aria-hidden="true">{project.num}</span>
             <div class="project-meta">
               <h3 class="project-name">{project.name}</h3>
-              <p class="project-tagline">{project.tagline}</p>
-              <p class="project-desc">{project.description}</p>
+              <p class="project-tagline">{pickLocalized(project.tagline, locale)}</p>
+              <p class="project-desc">{pickLocalized(project.description, locale)}</p>
             </div>
           </div>
 
           <div class="card-right">
-            <span class="project-type">{project.type}</span>
+            <span class="project-type">{pickLocalized(project.type, locale)}</span>
             <div class="project-stack">
               {project.stack.map(tech => (
                 <span class="stack-tag">{tech}</span>
@@ -32,10 +34,10 @@ import { projects } from '../data/projects.js';
             </div>
             {project.link ? (
               <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
-                Ver projeto <span aria-hidden="true">→</span>
+                {t('projects.view')} <span aria-hidden="true">→</span>
               </a>
             ) : (
-              <span class="project-link-wip">Em desenvolvimento</span>
+              <span class="project-link-wip">{t('projects.wip')}</span>
             )}
           </div>
         </div>
