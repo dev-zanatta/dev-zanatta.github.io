@@ -18,6 +18,9 @@ const t = useTranslations(locale);
         <div class="card-inner container">
           <div class="card-left">
             <span class="project-num" aria-hidden="true">{project.num}</span>
+            <div class="project-icon" aria-hidden="true">
+              <img src={project.icon} alt="" width="72" height="72" loading="lazy" decoding="async" />
+            </div>
             <div class="project-meta">
               <h3 class="project-name">{project.name}</h3>
               <p class="project-tagline">{pickLocalized(project.tagline, locale)}</p>
@@ -27,6 +30,17 @@ const t = useTranslations(locale);
 
           <div class="card-right">
             <span class="project-type">{pickLocalized(project.type, locale)}</span>
+            {project.playStore && (
+              <span class="project-store" title={t('projects.playStoreTitle')}>
+                <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M3.6 1.9a1.3 1.3 0 0 0-.5 1v18.2a1.3 1.3 0 0 0 .5 1l.1.1 10.2-10.1v-.2L3.7 1.8l-.1.1Zm13.5 6.6-2.6 2.6v.2l2.6 2.6.1-.1 3.1-1.7c.9-.5.9-1.4 0-1.9l-3.2-1.7ZM14.3 11l-9.8 9.8c.3.3.8.3 1.3 0l11.6-6.5L14.3 11Zm0 2L4.5 3.2c-.5-.3-1-.3-1.3 0l11.6 6.5L17.4 8l-3.1 5Z"
+                  />
+                </svg>
+                {t('projects.playStore')}
+              </span>
+            )}
             <div class="project-stack">
               {project.stack.map(tech => (
                 <span class="stack-tag">{tech}</span>
@@ -92,9 +106,33 @@ const t = useTranslations(locale);
   /* Left side */
   .card-left {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.75rem;
     align-items: flex-start;
   }
+
+  .project-icon {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.06);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .project-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.88;
+    transition: opacity 0.3s;
+  }
+  .project-card:hover .project-icon {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+  }
+  .project-card:hover .project-icon img { opacity: 1; }
 
   .project-num {
     font-family: var(--font-display);
@@ -152,6 +190,24 @@ const t = useTranslations(locale);
     color: var(--text-dim);
   }
 
+  .project-store {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 0.3rem 0.7rem;
+    margin-top: -0.4rem;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 2rem;
+    background: var(--accent-dim);
+  }
+  .project-store svg { flex-shrink: 0; }
+
   .project-stack {
     display: flex;
     flex-wrap: wrap;
@@ -203,13 +259,14 @@ const t = useTranslations(locale);
       grid-template-columns: 1fr;
       gap: 2rem;
     }
-    .card-right { padding-left: calc(2.5rem + 2.5rem); }
+    .card-right { padding-left: calc(3rem + 72px + 3.5rem); }
   }
 
   @media (max-width: 600px) {
-    .card-left { gap: 1.5rem; }
+    .card-left { gap: 1rem; }
     .card-right { padding-left: 0; }
     .project-num { font-size: 2.5rem; }
+    .project-icon { width: 54px; height: 54px; border-radius: 12px; }
     .project-card:hover .card-inner { padding-left: 0; }
   }
 </style>
