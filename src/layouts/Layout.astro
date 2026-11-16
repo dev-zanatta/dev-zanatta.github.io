@@ -26,7 +26,7 @@ const {
 const htmlLang = locale === 'pt' ? 'pt-BR' : locale;
 const ogLocale = { pt: 'pt_BR', en: 'en_US', es: 'es_ES' }[locale];
 
-const site = Astro.site ?? new URL('https://dev-zanatta.github.io');
+const site = Astro.site ?? new URL('https://zntt.dev.br');
 const alternates = [
   { hreflang: 'pt-BR',     href: new URL(paths.pt, site).href },
   { hreflang: 'en',        href: new URL(paths.en, site).href },

@@ -1,9 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://dev-zanatta.github.io',
+  site: 'https://zntt.dev.br',
   output: 'static',
-  outDir: './docs',
   i18n: {
     defaultLocale: 'pt',
     locales: ['pt', 'en', 'es'],
