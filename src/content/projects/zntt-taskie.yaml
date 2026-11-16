@@ -1,0 +1,269 @@
+order: 3
+name: zntt-control / Taskie
+icon: /projects/zntt-taskie.png
+playStore: false
+link: null
+type:
+  pt: Desktop Windows · Mobile
+  en: Windows Desktop · Mobile
+  es: Escritorio Windows · Móvil
+tagline:
+  pt: App desktop para produtividade e controle de tarefas
+  en: Desktop app for productivity and task management
+  es: App de escritorio para productividad y control de tareas
+description:
+  pt: >-
+    Aplicativo desktop nativo para Windows, construído com Tauri e Vue 3. Integrado a uma API Django para
+    sincronização entre o app desktop e mobile.
+  en: >-
+    Native Windows desktop application built with Tauri and Vue 3. Integrated with a Django API to keep the
+    desktop and mobile apps in sync.
+  es: >-
+    Aplicación de escritorio nativa para Windows, construida con Tauri y Vue 3. Integrada con una API Django
+    para sincronizar las apps de escritorio y móvil.
+stack:
+  - Tauri
+  - Vue 3
+  - Django
+  - Python
+  - PostgreSQL
+year: '2026'
+status:
+  pt: API publicada · desktop em evolução
+  en: API live · desktop evolving
+  es: API publicada · escritorio en evolución
+role:
+  pt: Desktop e integração com a API
+  en: Desktop and API integration
+  es: Escritorio e integración con la API
+summary:
+  - pt: >-
+      O zntt-control é um app desktop de tarefas para Windows no formato de quadro kanban: projetos por
+      categoria, colunas, tarefas com prioridade, etiquetas e subtarefas, cronômetro de tempo por tarefa e
+      métricas de andamento. Abre instantâneo, funciona sem internet e guarda tudo em SQLite no próprio
+      computador.
+    en: >-
+      zntt-control is a Windows desktop task app built around a kanban board: projects by category, columns,
+      tasks with priority, tags and subtasks, a per-task time tracker and progress metrics. It opens
+      instantly, works offline and stores everything in SQLite on the computer.
+    es: >-
+      zntt-control es una app de escritorio de tareas para Windows en formato de tablero kanban: proyectos por
+      categoría, columnas, tareas con prioridad, etiquetas y subtareas, cronómetro de tiempo por tarea y
+      métricas de avance. Abre al instante, funciona sin internet y guarda todo en SQLite en la propia
+      computadora.
+  - pt: >-
+      O mesmo código gera duas versões: uma local, sem login, e o znttaskie, que fala com a API Django do
+      Taskie e compartilha os dados com o app mobile. A escolha é feita no build, por um modo de dados que
+      troca a camada de repositórios sem tocar nas telas.
+    en: >-
+      The same code produces two versions: a local one, with no login, and znttaskie, which talks to the
+      Taskie Django API and shares data with the mobile app. The choice is made at build time, by a data mode
+      that swaps the repository layer without touching the screens.
+    es: >-
+      El mismo código genera dos versiones: una local, sin login, y znttaskie, que habla con la API Django de
+      Taskie y comparte los datos con la app mobile. La elección se hace en el build, con un modo de datos que
+      cambia la capa de repositorios sin tocar las pantallas.
+problem:
+  pt: >-
+    Ferramentas de tarefas na web são pesadas para o uso diário, dependem de conexão e espalham os dados em
+    serviços de terceiros. Faltava algo rápido, offline, com quadro, tempo gasto e métricas no mesmo lugar.
+  en: >-
+    Web task tools are heavy for daily use, depend on a connection and spread data across third-party
+    services. What was missing was something fast and offline, with a board, time spent and metrics in one
+    place.
+  es: >-
+    Las herramientas de tareas en la web son pesadas para el uso diario, dependen de conexión y reparten los
+    datos en servicios de terceros. Faltaba algo rápido, offline, con tablero, tiempo dedicado y métricas en
+    el mismo lugar.
+audience:
+  pt: Desenvolvedores e freelancers que tocam vários projetos e clientes ao mesmo tempo.
+  en: Developers and freelancers juggling several projects and clients at the same time.
+  es: Desarrolladores y freelancers que llevan varios proyectos y clientes al mismo tiempo.
+features:
+  - title:
+      pt: Quadro kanban por projeto
+      en: Kanban board per project
+      es: Tablero kanban por proyecto
+    text:
+      pt: >-
+        Colunas configuráveis, arrastar e soltar, prioridade, etiquetas coloridas, subtarefas com progresso e
+        coluna de concluído.
+      en: Configurable columns, drag and drop, priority, colored tags, subtasks with progress and a done column.
+      es: >-
+        Columnas configurables, arrastrar y soltar, prioridad, etiquetas de colores, subtareas con progreso y
+        columna de terminado.
+  - title:
+      pt: Tempo por tarefa
+      en: Time per task
+      es: Tiempo por tarea
+    text:
+      pt: Cronômetro em cada tarefa, histórico de sessões e horas totais por projeto e por período.
+      en: A timer on every task, session history and total hours per project and per period.
+      es: Cronómetro en cada tarea, historial de sesiones y horas totales por proyecto y por período.
+  - title:
+      pt: Métricas
+      en: Metrics
+      es: Métricas
+    text:
+      pt: >-
+        Tarefas abertas e concluídas, progresso por projeto, distribuição por coluna, tarefas paradas e horas
+        registradas em 7, 14, 30 ou 90 dias.
+      en: >-
+        Open and done tasks, progress per project, distribution per column, stalled tasks and hours logged in
+        7, 14, 30 or 90 days.
+      es: >-
+        Tareas abiertas y terminadas, progreso por proyecto, distribución por columna, tareas detenidas y
+        horas registradas en 7, 14, 30 o 90 días.
+  - title:
+      pt: Prazos, lixeira e histórico
+      en: Deadlines, trash and history
+      es: Plazos, papelera e historial
+    text:
+      pt: >-
+        Visão de próximos prazos de todos os projetos, lixeira com restauração e histórico de atividade de
+        cada tarefa.
+      en: Upcoming deadlines across all projects, a trash with restore and an activity history for every task.
+      es: >-
+        Vista de los próximos plazos de todos los proyectos, papelera con restauración e historial de
+        actividad de cada tarea.
+  - title:
+      pt: Modelos e importação
+      en: Templates and import
+      es: Plantillas e importación
+    text:
+      pt: Modelos de projeto com colunas e etiquetas prontas, e importação de quadros do Trello.
+      en: Project templates with ready-made columns and tags, and Trello board import.
+      es: Plantillas de proyecto con columnas y etiquetas listas, e importación de tableros de Trello.
+  - title:
+      pt: Temas, fontes e backup
+      en: Themes, fonts and backup
+      es: Temas, fuentes y backup
+    text:
+      pt: >-
+        Cinco paletas, opções de tipografia, cor de destaque, interface em português e inglês, e backup do
+        banco local.
+      en: >-
+        Five palettes, typography options, accent color, Portuguese and English interface, and local database
+        backup.
+      es: >-
+        Cinco paletas, opciones de tipografía, color de acento, interfaz en portugués e inglés, y backup de la
+        base local.
+stackLayers:
+  - layer: desktop
+    items:
+      - Tauri 2
+      - Rust
+      - SQLite (tauri-plugin-sql)
+  - layer: frontend
+    items:
+      - Vue 3
+      - Quasar 2
+      - Pinia
+      - SortableJS
+  - layer: backend
+    items:
+      - Django 4.2
+      - Django REST Framework
+      - SimpleJWT
+  - layer: data
+    items:
+      - SQLite
+      - PostgreSQL
+challenges:
+  - title:
+      pt: Um código, duas builds
+      en: One codebase, two builds
+      es: Un código, dos builds
+    text:
+      pt: >-
+        A camada de infraestrutura tem repositórios para o SQLite local e para a API. Uma variável de build
+        escolhe qual entra; telas e stores não sabem de onde vêm os dados, e recursos ainda sem endpoint ficam
+        isolados em stubs até o backend alcançar.
+      en: >-
+        The infrastructure layer has repositories for local SQLite and for the API. A build variable picks
+        which one goes in; screens and stores don't know where data comes from, and features without an
+        endpoint yet stay isolated in stubs until the backend catches up.
+      es: >-
+        La capa de infraestructura tiene repositorios para el SQLite local y para la API. Una variable de
+        build elige cuál entra; pantallas y stores no saben de dónde vienen los datos, y las funciones aún sin
+        endpoint quedan aisladas en stubs hasta que el backend las alcance.
+  - title:
+      pt: Migrations no aparelho
+      en: Migrations on the device
+      es: Migraciones en el dispositivo
+    text:
+      pt: >-
+        O banco local evolui com migrations versionadas aplicadas na abertura do app, para que quem já usa
+        receba tags, histórico, tempo e modelos sem perder nada.
+      en: >-
+        The local database evolves with versioned migrations applied when the app opens, so existing users get
+        tags, history, time tracking and templates without losing anything.
+      es: >-
+        La base local evoluciona con migraciones versionadas aplicadas al abrir la app, para que quien ya la
+        usa reciba etiquetas, historial, tiempo y plantillas sin perder nada.
+  - title:
+      pt: Backend compartilhado sem quebrar o mobile
+      en: A shared backend without breaking mobile
+      es: Backend compartido sin romper el mobile
+    text:
+      pt: >-
+        A API Django é a mesma do app mobile Taskie, mantido por outra pessoa. Toda mudança é retrocompatível,
+        e o cadastro passou a ter aprovação manual antes de liberar o login.
+      en: >-
+        The Django API is the same one used by the Taskie mobile app, maintained by someone else. Every change
+        is backward compatible, and sign-up now requires manual approval before login is allowed.
+      es: >-
+        La API Django es la misma de la app mobile Taskie, mantenida por otra persona. Todo cambio es
+        retrocompatible, y el registro pasó a tener aprobación manual antes de habilitar el login.
+cover:
+  src: /projects/zntt-taskie/board.webp
+  device: desktop
+  alt:
+    pt: Quadro kanban de um projeto com colunas, etiquetas, prioridades e tempo registrado
+    en: Project kanban board with columns, tags, priorities and logged time
+    es: Tablero kanban de un proyecto con columnas, etiquetas, prioridades y tiempo registrado
+  caption:
+    pt: Quadro do projeto com etiquetas, prioridade e tempo por tarefa.
+    en: Project board with tags, priority and time per task.
+    es: Tablero del proyecto con etiquetas, prioridad y tiempo por tarea.
+gallery:
+  - src: /projects/zntt-taskie/projetos.webp
+    device: desktop
+    alt:
+      pt: Lista de projetos com categorias e progresso de cada um
+      en: Project list with categories and each one's progress
+      es: Lista de proyectos con categorías y el progreso de cada uno
+    caption:
+      pt: Projetos por categoria e progresso.
+      en: Projects by category and progress.
+      es: Proyectos por categoría y progreso.
+  - src: /projects/zntt-taskie/tarefa.webp
+    device: desktop
+    alt:
+      pt: Detalhe da tarefa com etiquetas, subtarefas, coluna, prioridade e prazo
+      en: Task details with tags, subtasks, column, priority and deadline
+      es: Detalle de la tarea con etiquetas, subtareas, columna, prioridad y plazo
+    caption:
+      pt: Detalhe da tarefa.
+      en: Task details.
+      es: Detalle de la tarea.
+  - src: /projects/zntt-taskie/metricas.webp
+    device: desktop
+    alt:
+      pt: Métricas com tarefas abertas, horas registradas, progresso por projeto e tarefas por coluna
+      en: Metrics with open tasks, logged hours, progress per project and tasks per column
+      es: Métricas con tareas abiertas, horas registradas, progreso por proyecto y tareas por columna
+    caption:
+      pt: Métricas.
+      en: Metrics.
+      es: Métricas.
+  - src: /projects/zntt-taskie/configuracoes.webp
+    device: desktop
+    alt:
+      pt: Configurações de aparência com paletas, tipografia e cor de destaque
+      en: Appearance settings with palettes, typography and accent color
+      es: Configuración de apariencia con paletas, tipografía y color de acento
+    caption:
+      pt: Aparência — paletas, fontes e cor de destaque.
+      en: Appearance — palettes, fonts and accent color.
+      es: Apariencia — paletas, fuentes y color de acento.

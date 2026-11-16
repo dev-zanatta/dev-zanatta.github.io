@@ -6,9 +6,6 @@ const locale = normalizeLocale(Astro.currentLocale);
 const t = useTranslations(locale);
 ---
 
-<div class="cursor" id="cursor" aria-hidden="true"></div>
-<div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
-
 <nav id="main-nav" aria-label={t('nav.ariaLabel')}>
   <a href="#hero" class="nav-logo">GZ</a>
   <div class="nav-right">
@@ -466,26 +463,6 @@ const t = useTranslations(locale);
     const total = document.documentElement.scrollHeight - window.innerHeight;
     progress.style.width = ((window.scrollY / total) * 100) + '%';
   }, { passive: true });
-
-  const cursor   = document.getElementById('cursor') as HTMLElement;
-  const follower = document.getElementById('cursor-follower') as HTMLElement;
-
-  const moveX   = gsap.quickTo(cursor,   'x', { duration: 0.08 });
-  const moveY   = gsap.quickTo(cursor,   'y', { duration: 0.08 });
-  const followX = gsap.quickTo(follower, 'x', { duration: 0.38, ease: 'power3' });
-  const followY = gsap.quickTo(follower, 'y', { duration: 0.38, ease: 'power3' });
-
-  window.addEventListener('mousemove', (e) => {
-    moveX(e.clientX); moveY(e.clientY);
-    followX(e.clientX); followY(e.clientY);
-  }, { passive: true });
-
-  document.querySelectorAll<HTMLElement>('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () =>
-      gsap.to(follower, { scale: 2.2, opacity: 0.18, duration: 0.3 }));
-    el.addEventListener('mouseleave', () =>
-      gsap.to(follower, { scale: 1, opacity: 0.45, duration: 0.3 }));
-  });
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

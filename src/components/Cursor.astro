@@ -1,0 +1,33 @@
+<!-- Cursor customizado (desktop). Vive no Layout porque o body usa cursor: none em todas as páginas. -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-follower" id="cursor-follower" aria-hidden="true"></div>
+
+<script>
+  import gsap from 'gsap';
+
+  const cursor   = document.getElementById('cursor') as HTMLElement;
+  const follower = document.getElementById('cursor-follower') as HTMLElement;
+
+  const moveX   = gsap.quickTo(cursor,   'x', { duration: 0.08 });
+  const moveY   = gsap.quickTo(cursor,   'y', { duration: 0.08 });
+  const followX = gsap.quickTo(follower, 'x', { duration: 0.38, ease: 'power3' });
+  const followY = gsap.quickTo(follower, 'y', { duration: 0.38, ease: 'power3' });
+
+  window.addEventListener('mousemove', (e) => {
+    moveX(e.clientX); moveY(e.clientY);
+    followX(e.clientX); followY(e.clientY);
+  }, { passive: true });
+
+  // Delegação: cobre também elementos que aparecem depois do load (ex.: lightbox).
+  const isInteractive = (el: EventTarget | null) =>
+    el instanceof Element && el.closest('a, button') !== null;
+
+  document.addEventListener('mouseover', (e) => {
+    if (isInteractive(e.target) && !isInteractive(e.relatedTarget))
+      gsap.to(follower, { scale: 2.2, opacity: 0.18, duration: 0.3 });
+  });
+  document.addEventListener('mouseout', (e) => {
+    if (isInteractive(e.target) && !isInteractive(e.relatedTarget))
+      gsap.to(follower, { scale: 1, opacity: 0.45, duration: 0.3 });
+  });
+</script>

@@ -1,0 +1,447 @@
+order: 1
+name: Salonier
+icon: /projects/salonier.png
+playStore: true
+link: https://comece.salonier.com.br/
+type:
+  pt: SaaS · Web · Mobile
+  en: SaaS · Web · Mobile
+  es: SaaS · Web · Móvil
+tagline:
+  pt: SaaS completo para gestão de salões de beleza
+  en: Complete SaaS for beauty salon management
+  es: SaaS completo para la gestión de salones de belleza
+description:
+  pt: >-
+    Plataforma SaaS com agendamento online, controle financeiro, gestão de clientes e profissionais.
+    Disponível como aplicativo web desktop e app mobile para clientes e colaboradores.
+  en: >-
+    SaaS platform with online booking, financial control, client and staff management. Available as a desktop
+    web application and as a mobile app for clients and staff.
+  es: >-
+    Plataforma SaaS con reservas online, control financiero, gestión de clientes y profesionales. Disponible
+    como aplicación web de escritorio y app móvil para clientes y colaboradores.
+stack:
+  - Vue 3
+  - Quasar
+  - Laravel
+  - PostgreSQL
+  - Capacitor
+year: '2026'
+status:
+  pt: Em produção
+  en: In production
+  es: En producción
+role:
+  pt: Full stack — API, web e app
+  en: Full stack — API, web and app
+  es: Full stack — API, web y app
+summary:
+  - pt: >-
+      Seu salão agendando enquanto você atende. O Salonier junta em um só lugar o link de agendamento online
+      24 horas, a agenda por profissional, a ficha de cliente, o controle de caixa e o WhatsApp. Os clientes
+      marcam sozinhos e o salão só confirma.
+    en: >-
+      Your salon booking appointments while you work. Salonier brings together a 24-hour online booking link,
+      a per-professional schedule, client records, cash control and WhatsApp. Clients book on their own; the
+      salon just confirms.
+    es: >-
+      Tu salón agendando mientras atiendes. Salonier reúne en un solo lugar el enlace de reservas online 24
+      horas, la agenda por profesional, la ficha del cliente, el control de caja y WhatsApp. Los clientes
+      reservan solos y el salón solo confirma.
+  - pt: >-
+      É um SaaS multi-tenant: cada salão fica isolado dos demais e cada pessoa entra com o próprio login, com
+      acesso de administrador, recepção ou profissional. O mesmo front em Vue 3 e Quasar roda no navegador e
+      vira app Android via Capacitor, publicado na Play Store. Atende salões, barbearias, estúdios de estética
+      e nail designers, cada um com os próprios serviços, durações e preços.
+    en: >-
+      It is a multi-tenant SaaS: every salon is isolated from the others and every person signs in with their
+      own login, as admin, front desk or professional. The same Vue 3 and Quasar front end runs in the browser
+      and becomes an Android app through Capacitor, published on the Play Store. It serves hair salons,
+      barbershops, aesthetics studios and nail designers, each with their own services, durations and prices.
+    es: >-
+      Es un SaaS multi-tenant: cada salón queda aislado de los demás y cada persona entra con su propio login,
+      como administrador, recepción o profesional. El mismo front en Vue 3 y Quasar corre en el navegador y se
+      convierte en app Android con Capacitor, publicada en la Play Store. Atiende salones, barberías,
+      estéticas y manicuristas, cada uno con sus propios servicios, duraciones y precios.
+problem:
+  pt: >-
+    Agenda no caderno com horário rasurado, meia hora por dia confirmando e remarcando no WhatsApp, cliente
+    que manda mensagem às 23h e só recebe resposta no dia seguinte e, no fim do mês, ninguém sabe quanto
+    sobrou nem qual serviço deu lucro. Não é culpa de quem toca o salão: é falta de sistema.
+  en: >-
+    A paper schedule with crossed-out times, half an hour a day confirming and rescheduling on WhatsApp,
+    clients messaging at 11 p.m. and getting an answer only the next day, and at the end of the month nobody
+    knows how much was left or which service made a profit. It is not the owner's fault: it is the lack of a
+    system.
+  es: >-
+    Agenda en papel con horarios tachados, media hora al día confirmando y reprogramando por WhatsApp,
+    clientes que escriben a las 23 h y reciben respuesta al día siguiente y, a fin de mes, nadie sabe cuánto
+    sobró ni qué servicio dio ganancia. No es culpa de quien dirige el salón: es falta de sistema.
+audience:
+  pt: >-
+    Salões de beleza, barbearias, estética e nail design: do dono que precisa enxergar os números à recepção
+    que cuida do balcão e ao profissional que só quer ver a própria agenda.
+  en: >-
+    Hair salons, barbershops, aesthetics and nail design: from the owner who needs the numbers to the front
+    desk and to the professional who only wants to see their own schedule.
+  es: >-
+    Salones de belleza, barberías, estética y uñas: desde el dueño que necesita ver los números hasta la
+    recepción y el profesional que solo quiere ver su propia agenda.
+features:
+  - title:
+      pt: Link de agendamento 24 horas
+      en: 24-hour booking link
+      es: Enlace de reservas 24 horas
+    text:
+      pt: >-
+        Cada salão ganha um endereço próprio para a bio do Instagram, o status do WhatsApp e o Google. O
+        cliente escolhe serviço, profissional (ou "qualquer um") e horário, sem app, cadastro ou senha, e
+        recebe código de reserva e comprovante.
+      en: >-
+        Each salon gets its own address for the Instagram bio, WhatsApp status and Google. Clients pick the
+        service, the professional (or "anyone") and the time, with no app, sign-up or password, and get a
+        booking code and receipt.
+      es: >-
+        Cada salón tiene su propia dirección para la bio de Instagram, el estado de WhatsApp y Google. El
+        cliente elige servicio, profesional (o "cualquiera") y horario, sin app, registro ni contraseña, y
+        recibe código de reserva y comprobante.
+  - title:
+      pt: O dia inteiro em uma tela
+      en: The whole day on one screen
+      es: Todo el día en una pantalla
+    text:
+      pt: >-
+        Quatro visões da mesma agenda: dia, por profissional, semana e lista. A linha do horário atual anda
+        sozinha, o status muda com o relógio e a grade nunca deixa marcar em cima de outro atendimento.
+      en: >-
+        Four views of the same schedule: day, per professional, week and list. The current-time line moves by
+        itself, statuses change with the clock and the grid never lets you book over another appointment.
+      es: >-
+        Cuatro vistas de la misma agenda: día, por profesional, semana y lista. La línea de la hora actual
+        avanza sola, el estado cambia con el reloj y la grilla nunca deja reservar encima de otra cita.
+  - title:
+      pt: A pausa da química vira horário
+      en: Chemical processing time becomes bookable
+      es: La pausa del químico se vuelve horario
+    text:
+      pt: >-
+        Coloração, luzes e progressiva têm tempo de espera no meio. O Salonier divide o atendimento em dois
+        blocos e libera o intervalo na agenda para um encaixe, sem sair de cima do horário de ninguém.
+      en: >-
+        Coloring, highlights and keratin treatments have waiting time in the middle. Salonier splits the
+        appointment into two blocks and frees the gap for a quick fit-in, without overlapping anyone.
+      es: >-
+        Coloración, mechas y alisado tienen tiempo de espera en el medio. Salonier divide la cita en dos
+        bloques y libera el intervalo para un turno extra, sin pisar a nadie.
+  - title:
+      pt: Clientes que não somem
+      en: Clients who don't disappear
+      es: Clientes que no desaparecen
+    text:
+      pt: >-
+        A ficha mostra quanto a pessoa já gastou, o ticket médio e de quantas em quantas semanas ela volta.
+        Quem passou do prazo aparece na lista, com selo VIP automático e aniversariantes da semana no painel.
+      en: >-
+        Each record shows how much the person has spent, the average ticket and how often they come back.
+        Overdue clients show up on the list, with an automatic VIP badge and this week's birthdays on the
+        dashboard.
+      es: >-
+        Cada ficha muestra cuánto gastó la persona, el ticket promedio y cada cuántas semanas vuelve. Quien
+        pasó del plazo aparece en la lista, con sello VIP automático y cumpleaños de la semana en el panel.
+  - title:
+      pt: Caixa fechado no dia
+      en: Cash closed every day
+      es: Caja cerrada en el día
+    text:
+      pt: >-
+        Entradas, saídas, sangria e formas de pagamento configuradas pelo salão. Cada atendimento pago cai no
+        caixa com cliente e serviço, sai recibo para imprimir e todo cancelamento deixa rastro.
+      en: >-
+        Income, expenses, cash withdrawals and payment methods set by the salon. Every paid appointment lands
+        in the cash register with client and service, prints a receipt and every cancellation leaves a trail.
+      es: >-
+        Entradas, salidas, retiros y formas de pago definidas por el salón. Cada cita pagada entra en caja con
+        cliente y servicio, sale recibo para imprimir y toda cancelación deja rastro.
+  - title:
+      pt: Qual serviço paga a conta
+      en: Which service pays the bills
+      es: Qué servicio paga las cuentas
+    text:
+      pt: >-
+        Relatórios de entradas, saídas, saldo e ticket médio em qualquer período, com fluxo diário, top 10
+        serviços por faturamento e a divisão entre PIX, cartão e dinheiro.
+      en: >-
+        Reports of income, expenses, balance and average ticket for any period, with daily flow, top 10
+        services by revenue and the split between PIX, card and cash.
+      es: >-
+        Informes de entradas, salidas, saldo y ticket promedio en cualquier período, con flujo diario, top 10
+        servicios por facturación y la división entre PIX, tarjeta y efectivo.
+  - title:
+      pt: WhatsApp em um clique
+      en: WhatsApp in one click
+      es: WhatsApp en un clic
+    text:
+      pt: >-
+        Modelos de confirmação, lembrete, retorno e aniversário escritos uma vez com etiquetas (cliente,
+        serviço, data, valor). Na hora de enviar, o sistema preenche os dados reais e abre o WhatsApp.
+      en: >-
+        Confirmation, reminder, come-back and birthday templates written once with tags (client, service,
+        date, price). When sending, the system fills in the real data and opens WhatsApp.
+      es: >-
+        Plantillas de confirmación, recordatorio, regreso y cumpleaños escritas una vez con etiquetas
+        (cliente, servicio, fecha, valor). Al enviar, el sistema completa los datos reales y abre WhatsApp.
+  - title:
+      pt: Faturamento só para quem deve ver
+      en: Revenue only for those who should see it
+      es: Facturación solo para quien debe verla
+    text:
+      pt: >-
+        Administrador vê tudo; recepção vê agenda, clientes e caixa do dia; profissional vê só os próprios
+        atendimentos. Para quem atende, o caixa simplesmente não existe.
+      en: >-
+        Admins see everything; the front desk sees schedule, clients and the day's cash; professionals see
+        only their own appointments. For staff, the cash register simply doesn't exist.
+      es: >-
+        El administrador ve todo; recepción ve agenda, clientes y la caja del día; el profesional ve solo sus
+        propias citas. Para quien atiende, la caja simplemente no existe.
+cover:
+  src: /projects/salonier/agenda.webp
+  device: desktop
+  alt:
+    pt: >-
+      Agenda do dia em grade, com uma coluna por profissional, encaixe na pausa da coloração e a linha do
+      horário atual
+    en: >-
+      Day schedule in a grid, one column per professional, with a fit-in during the coloring break and the
+      current-time line
+    es: >-
+      Agenda del día en grilla, una columna por profesional, con un turno extra en la pausa de la coloración y
+      la línea de la hora actual
+  caption:
+    pt: Agenda por profissional — o encaixe das 09:45 entra na pausa da coloração.
+    en: Per-professional schedule — the 09:45 fit-in uses the coloring break.
+    es: Agenda por profesional — el turno de las 09:45 entra en la pausa de la coloración.
+gallery:
+  - src: /projects/salonier/dashboard.webp
+    device: desktop
+    alt:
+      pt: Dashboard com agendamentos e faturamento do dia, próximos atendimentos e aniversariantes da semana
+      en: Dashboard with today's bookings and revenue, upcoming appointments and this week's birthdays
+      es: Panel con las citas y la facturación del día, próximas citas y cumpleaños de la semana
+    caption:
+      pt: Dashboard — o dia do salão de relance.
+      en: Dashboard — the salon's day at a glance.
+      es: Panel — el día del salón de un vistazo.
+  - src: /projects/salonier/agenda-semana.webp
+    device: desktop
+    alt:
+      pt: Visão semanal da agenda com a quantidade de atendimentos por dia e por profissional
+      en: Weekly view with the number of appointments per day and per professional
+      es: Vista semanal con la cantidad de citas por día y por profesional
+    caption:
+      pt: Visão semanal da agenda.
+      en: Weekly schedule view.
+      es: Vista semanal de la agenda.
+  - src: /projects/salonier/cliente-ficha.webp
+    device: desktop
+    alt:
+      pt: Ficha da cliente com total gasto, ticket médio, frequência de retorno e histórico de atendimentos
+      en: Client record with total spent, average ticket, return frequency and appointment history
+      es: Ficha de la clienta con total gastado, ticket promedio, frecuencia de regreso e historial
+    caption:
+      pt: Ficha do cliente com frequência de retorno e histórico.
+      en: Client record with return frequency and history.
+      es: Ficha del cliente con frecuencia de regreso e historial.
+  - src: /projects/salonier/caixa.webp
+    device: desktop
+    alt:
+      pt: Caixa do dia com entradas, saídas, sangria, forma de pagamento mais usada e lista de movimentações
+      en: Day's cash with income, expenses, cash withdrawal, most used payment method and transactions
+      es: Caja del día con entradas, salidas, retiro, forma de pago más usada y movimientos
+    caption:
+      pt: Caixa do dia, com formas de pagamento e sangria.
+      en: Day's cash, with payment methods and withdrawals.
+      es: Caja del día, con formas de pago y retiros.
+  - src: /projects/salonier/relatorios.webp
+    device: desktop
+    alt:
+      pt: Relatório de 30 dias com entradas, saídas, ticket médio, fluxo diário e serviços mais lucrativos
+      en: 30-day report with income, expenses, average ticket, daily flow and most profitable services
+      es: Informe de 30 días con entradas, salidas, ticket promedio, flujo diario y servicios más rentables
+    caption:
+      pt: Relatórios — fluxo diário e serviços que mais faturam.
+      en: Reports — daily flow and top-earning services.
+      es: Informes — flujo diario y servicios que más facturan.
+  - src: /projects/salonier/whatsapp.webp
+    device: desktop
+    alt:
+      pt: Modelos de mensagem de WhatsApp com etiquetas de cliente, serviço, profissional e horário
+      en: WhatsApp message templates with client, service, professional and time tags
+      es: Plantillas de mensajes de WhatsApp con etiquetas de cliente, servicio, profesional y horario
+    caption:
+      pt: Modelos de WhatsApp com etiquetas preenchidas na hora do envio.
+      en: WhatsApp templates filled in at send time.
+      es: Plantillas de WhatsApp completadas al enviar.
+  - src: /projects/salonier/booking-1-servicos.webp
+    device: mobile
+    alt:
+      pt: Link público de agendamento — escolha do serviço por categoria, com duração e preço
+      en: Public booking link — choosing a service by category, with duration and price
+      es: Enlace público de reservas — elección del servicio por categoría, con duración y precio
+    caption:
+      pt: 1. Cliente escolhe o serviço
+      en: 1. The client picks the service
+      es: 1. El cliente elige el servicio
+  - src: /projects/salonier/booking-2-profissional.webp
+    device: mobile
+    alt:
+      pt: Escolha do profissional, com a opção qualquer profissional
+      en: Choosing the professional, with the any-professional option
+      es: Elección del profesional, con la opción cualquier profesional
+    caption:
+      pt: 2. O profissional (ou qualquer um)
+      en: 2. The professional (or anyone)
+      es: 2. El profesional (o cualquiera)
+  - src: /projects/salonier/booking-3-horarios.webp
+    device: mobile
+    alt:
+      pt: Calendário com os horários realmente livres do profissional no dia escolhido
+      en: Calendar with the professional's truly free times on the chosen day
+      es: Calendario con los horarios realmente libres del profesional en el día elegido
+    caption:
+      pt: 3. Só horários que existem de verdade
+      en: 3. Only times that really exist
+      es: 3. Solo horarios que existen de verdad
+  - src: /projects/salonier/booking-5-sucesso.webp
+    device: mobile
+    alt:
+      pt: Agendamento confirmado com código de reserva e resumo do atendimento
+      en: Confirmed booking with booking code and appointment summary
+      es: Reserva confirmada con código y resumen de la cita
+    caption:
+      pt: 4. Código de reserva e comprovante
+      en: 4. Booking code and receipt
+      es: 4. Código de reserva y comprobante
+  - src: /projects/salonier/app-dashboard.webp
+    device: mobile
+    alt:
+      pt: Dashboard do salão no app Android
+      en: Salon dashboard in the Android app
+      es: Panel del salón en la app Android
+    caption:
+      pt: App Android — dashboard
+      en: Android app — dashboard
+      es: App Android — panel
+  - src: /projects/salonier/app-agenda.webp
+    device: mobile
+    alt:
+      pt: Agenda do dia no app Android, com calendário do mês e lista de atendimentos
+      en: Day schedule in the Android app, with month calendar and appointment list
+      es: Agenda del día en la app Android, con calendario del mes y lista de citas
+    caption:
+      pt: App Android — agenda do dia
+      en: Android app — day schedule
+      es: App Android — agenda del día
+stackLayers:
+  - layer: frontend
+    items:
+      - Vue 3
+      - Quasar 2
+      - Pinia
+      - Vue Router
+      - vue-i18n
+      - Chart.js
+  - layer: mobile
+    items:
+      - Capacitor 8
+      - Android
+  - layer: backend
+    items:
+      - Laravel 12
+      - PHP 8.2
+      - Sanctum
+      - Laravel Auditing
+      - Laravel Excel
+      - DomPDF
+  - layer: data
+    items:
+      - PostgreSQL
+challenges:
+  - title:
+      pt: Agenda que entende serviço com intervalo
+      en: A schedule that understands breaks
+      es: Una agenda que entiende servicios con pausa
+    text:
+      pt: >-
+        Um atendimento com pausa ocupa dois blocos com um vão livre no meio. A validação de conflito, a grade
+        e a oferta de horários do link público precisam tratar esse vão como tempo disponível sem nunca
+        sobrepor o início ou o fim do serviço.
+      en: >-
+        An appointment with a break takes two blocks with a free gap in between. Conflict validation, the grid
+        and the public booking slots must treat that gap as available time without ever overlapping the start
+        or the end of the service.
+      es: >-
+        Una cita con pausa ocupa dos bloques con un hueco libre en el medio. La validación de conflictos, la
+        grilla y los horarios del enlace público deben tratar ese hueco como tiempo disponible sin superponer
+        nunca el inicio o el fin del servicio.
+  - title:
+      pt: Horários livres de verdade no link público
+      en: Truly free slots on the public link
+      es: Horarios realmente libres en el enlace público
+    text:
+      pt: >-
+        Os horários oferecidos descontam almoço, dias bloqueados, a duração de cada serviço e o que os outros
+        profissionais já têm marcado. Com "qualquer profissional", o salão define quem atende na confirmação.
+      en: >-
+        Offered times account for lunch, blocked days, each service's duration and what other professionals
+        already have booked. With "any professional", the salon decides who attends when confirming.
+      es: >-
+        Los horarios ofrecidos descuentan almuerzo, días bloqueados, la duración de cada servicio y lo que los
+        demás profesionales ya tienen. Con "cualquier profesional", el salón define quién atiende al
+        confirmar.
+  - title:
+      pt: Dados sensíveis criptografados e ainda pesquisáveis
+      en: Encrypted yet searchable sensitive data
+      es: Datos sensibles cifrados y aun así buscables
+    text:
+      pt: >-
+        Telefone, CPF, endereço e observações ficam criptografados no banco. Para reconhecer quem volta pelo
+        link público sem decifrar a base inteira, o cliente é localizado por um hash do telefone normalizado.
+      en: >-
+        Phone, tax ID, address and notes are encrypted in the database. To recognize returning clients on the
+        public link without decrypting the whole base, they are looked up by a hash of the normalized phone
+        number.
+      es: >-
+        Teléfono, documento, dirección y observaciones quedan cifrados en la base. Para reconocer a quien
+        vuelve por el enlace público sin descifrar toda la base, el cliente se busca por un hash del teléfono
+        normalizado.
+  - title:
+      pt: Isolamento por salão e por cargo
+      en: Isolation by salon and by role
+      es: Aislamiento por salón y por cargo
+    text:
+      pt: >-
+        Todo dado é segregado por salão via escopo global. As rotas do profissional não recebem id na URL: o
+        escopo vem do usuário autenticado, então é impossível por construção alcançar o dado de um colega.
+      en: >-
+        All data is scoped by salon through a global scope. Staff routes take no id in the URL: the scope
+        comes from the authenticated user, so reaching a colleague's data is impossible by construction.
+      es: >-
+        Todo dato se segrega por salón con un scope global. Las rutas del profesional no reciben id en la URL:
+        el alcance viene del usuario autenticado, así que es imposible por construcción llegar al dato de un
+        colega.
+  - title:
+      pt: Rastro de tudo e nada perdido
+      en: Every change traced, nothing lost
+      es: Rastro de todo y nada perdido
+    text:
+      pt: >-
+        Toda alteração é auditada com autor e data, e exclusões são reversíveis. Se um valor sumiu do caixa,
+        dá para descobrir por onde ele passou; se um cliente foi apagado sem querer, ele volta.
+      en: >-
+        Every change is audited with author and date, and deletions can be reversed. If money vanished from
+        the cash register you can find where it went; if a client was deleted by mistake, they come back.
+      es: >-
+        Todo cambio queda auditado con autor y fecha, y las eliminaciones son reversibles. Si un valor
+        desapareció de la caja, se puede descubrir por dónde pasó; si un cliente se borró por error, vuelve.

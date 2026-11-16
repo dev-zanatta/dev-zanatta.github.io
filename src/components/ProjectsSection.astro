@@ -1,9 +1,15 @@
 ---
-import { projects } from '../data/projects.js';
-import { useTranslations, normalizeLocale, pickLocalized } from '../i18n/utils.js';
+import { getProjects } from '../lib/projects.js';
+import { useTranslations, normalizeLocale, pickLocalized, projectPath } from '../i18n/utils.js';
 
 const locale = normalizeLocale(Astro.currentLocale);
 const t = useTranslations(locale);
+const projects = (await getProjects()).map(entry => ({
+  id: entry.id,
+  num: String(entry.data.order).padStart(2, '0'),
+  href: projectPath(locale, entry.id),
+  ...entry.data,
+}));
 ---
 
 <section id="projetos" class="projects-section">
@@ -22,7 +28,7 @@ const t = useTranslations(locale);
               <img src={project.icon} alt="" width="72" height="72" loading="lazy" decoding="async" />
             </div>
             <div class="project-meta">
-              <h3 class="project-name">{project.name}</h3>
+              <h3 class="project-name"><a href={project.href}>{project.name}</a></h3>
               <p class="project-tagline">{pickLocalized(project.tagline, locale)}</p>
               <p class="project-desc">{pickLocalized(project.description, locale)}</p>
             </div>
@@ -46,13 +52,16 @@ const t = useTranslations(locale);
                 <span class="stack-tag">{tech}</span>
               ))}
             </div>
-            {project.link ? (
-              <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-link">
+            <div class="project-actions">
+              <a href={project.href} class="project-link">
                 {t('projects.view')} <span aria-hidden="true">→</span>
               </a>
-            ) : (
-              <span class="project-link-wip">{t('projects.wip')}</span>
-            )}
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" class="project-visit">
+                  {t('projects.visit')} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </article>
@@ -243,15 +252,31 @@ const t = useTranslations(locale);
   }
   .project-link:hover { gap: 0.7rem; opacity: 0.75; }
 
-  .project-link-wip {
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .project-visit {
     font-family: var(--font-heading);
     font-size: 0.78rem;
-    color: var(--text-dim);
+    font-weight: 500;
     letter-spacing: 0.06em;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid var(--border);
-    border-radius: 2rem;
+    color: var(--text-muted);
+    transition: color 0.3s;
   }
+  .project-visit:hover { color: var(--text); }
+
+  /* Nome do projeto também leva aos detalhes; o ::after estende o clique ao card inteiro. */
+  .project-card { position: relative; }
+  .project-name a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .project-link, .project-visit { position: relative; z-index: 1; }
 
   /* ─── Responsive ─── */
   @media (max-width: 900px) {

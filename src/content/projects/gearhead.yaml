@@ -1,0 +1,286 @@
+order: 5
+name: GearHead
+icon: /projects/gearhead.png
+playStore: false
+link: null
+type:
+  pt: Web · WebApp
+  en: Web · WebApp
+  es: Web · WebApp
+tagline:
+  pt: Rede social para quem respira automobilismo
+  en: A social network for those who live and breathe cars
+  es: Red social para quienes respiran automovilismo
+description:
+  pt: >-
+    Comunidade online onde entusiastas de carros compartilham seus veículos, encontros, modificações e
+    histórias. Feed, perfis, garage virtual e eventos por região.
+  en: >-
+    An online community where car enthusiasts share their vehicles, meetups, modifications and stories. Feed,
+    profiles, virtual garage and events by region.
+  es: >-
+    Comunidad online donde los entusiastas de los coches comparten sus vehículos, encuentros, modificaciones e
+    historias. Feed, perfiles, garaje virtual y eventos por región.
+stack:
+  - PHP/Laravel
+  - PostgreSQL
+year: '2026'
+status:
+  pt: Em desenvolvimento
+  en: In development
+  es: En desarrollo
+role:
+  pt: Full stack — API e front
+  en: Full stack — API and front
+  es: Full stack — API y front
+summary:
+  - pt: >-
+      O GearHead é uma rede social para quem vive carro. Cada pessoa monta a sua garagem virtual com os
+      carros, versões, potência e modificações, posta o andamento dos projetos, entra em clubes por estilo e
+      confirma presença em encontros e track days da sua região.
+    en: >-
+      GearHead is a social network for people who live and breathe cars. Everyone builds a virtual garage with
+      their cars, trims, horsepower and mods, posts project updates, joins clubs by style and RSVPs to meetups
+      and track days in their region.
+    es: >-
+      GearHead es una red social para quienes viven los autos. Cada persona arma su garaje virtual con autos,
+      versiones, potencia y modificaciones, publica el avance de sus proyectos, entra en clubes por estilo y
+      confirma asistencia a encuentros y track days de su región.
+  - pt: >-
+      O projeto começou com duas aplicações paralelas que acessavam o mesmo banco. Ele foi reorganizado em um
+      monorepo com responsabilidades claras: a API Laravel com JWT é a única que fala com o PostgreSQL, e o
+      front em PHP puro, com roteador próprio e tradução em português, inglês e espanhol, consome tudo por
+      HTTP.
+    en: >-
+      The project started as two parallel applications hitting the same database. It was reorganized into a
+      monorepo with clear responsibilities: the Laravel API with JWT is the only thing that talks to
+      PostgreSQL, and the plain PHP front end, with its own router and Portuguese, English and Spanish
+      translations, consumes everything over HTTP.
+    es: >-
+      El proyecto empezó como dos aplicaciones paralelas que accedían a la misma base. Se reorganizó en un
+      monorepo con responsabilidades claras: la API Laravel con JWT es la única que habla con PostgreSQL, y el
+      front en PHP puro, con router propio y traducción en portugués, inglés y español, consume todo por HTTP.
+problem:
+  pt: >-
+    Encontros, clubes e projetos de carro vivem espalhados entre grupos de WhatsApp e perfis genéricos de rede
+    social, onde o carro é só mais uma foto e não há como achar quem tem o mesmo modelo ou o próximo encontro
+    da cidade.
+  en: >-
+    Meetups, clubs and car projects are scattered across WhatsApp groups and generic social profiles, where a
+    car is just another photo and there's no way to find people with the same model or the next meetup in
+    town.
+  es: >-
+    Encuentros, clubes y proyectos de autos viven repartidos entre grupos de WhatsApp y perfiles genéricos de
+    redes sociales, donde el auto es solo una foto más y no hay forma de encontrar a quien tiene el mismo
+    modelo o el próximo encuentro de la ciudad.
+audience:
+  pt: Antigomobilistas, fãs de JDM, muscle cars, euro, off-road e quem participa de track days e encontros.
+  en: Classic car collectors, JDM, muscle, euro and off-road fans, and people who go to track days and meetups.
+  es: >-
+    Coleccionistas de clásicos, fans de JDM, muscle cars, europeos, off-road y quienes van a track days y
+    encuentros.
+features:
+  - title:
+      pt: Garagem virtual
+      en: Virtual garage
+      es: Garaje virtual
+    text:
+      pt: >-
+        Carros com marca, modelo, ano, versão, cor, potência e lista de modificações, com um carro principal
+        no perfil.
+      en: >-
+        Cars with make, model, year, trim, color, horsepower and a list of mods, with a main car on the
+        profile.
+      es: >-
+        Autos con marca, modelo, año, versión, color, potencia y lista de modificaciones, con un auto
+        principal en el perfil.
+  - title:
+      pt: Feed da comunidade
+      en: Community feed
+      es: Feed de la comunidad
+    text:
+      pt: Posts com imagem, curtidas e comentários, no feed geral ou dentro de um clube.
+      en: Posts with images, likes and comments, in the main feed or inside a club.
+      es: Publicaciones con imagen, me gusta y comentarios, en el feed general o dentro de un club.
+  - title:
+      pt: Clubes por estilo
+      en: Clubs by style
+      es: Clubes por estilo
+    text:
+      pt: >-
+        JDM, Muscle, Euro, Off-Road, Classic e Track Day, com dono, administradores, membros e um mural
+        próprio.
+      en: JDM, Muscle, Euro, Off-Road, Classic and Track Day, with owner, admins, members and their own wall.
+      es: >-
+        JDM, Muscle, Euro, Off-Road, Classic y Track Day, con dueño, administradores, miembros y un muro
+        propio.
+  - title:
+      pt: Encontros e eventos
+      en: Meetups and events
+      es: Encuentros y eventos
+    text:
+      pt: >-
+        Encontros, track days e trilhas com data, local, limite de vagas e confirmação de presença, filtráveis
+        por tipo e período.
+      en: >-
+        Meetups, track days and trails with date, place, attendee limit and RSVP, filterable by type and
+        period.
+      es: >-
+        Encuentros, track days y travesías con fecha, lugar, cupo y confirmación de asistencia, filtrables por
+        tipo y período.
+  - title:
+      pt: Amizades e mensagens
+      en: Friends and messages
+      es: Amistades y mensajes
+    text:
+      pt: Pedidos de amizade e conversas privadas entre membros.
+      en: Friend requests and private conversations between members.
+      es: Solicitudes de amistad y conversaciones privadas entre miembros.
+  - title:
+      pt: Três idiomas
+      en: Three languages
+      es: Tres idiomas
+    text:
+      pt: Interface em português, inglês e espanhol, com preferência de idioma e formato de hora por usuário.
+      en: Interface in Portuguese, English and Spanish, with language and time-format preferences per user.
+      es: Interfaz en portugués, inglés y español, con preferencia de idioma y formato de hora por usuario.
+stackLayers:
+  - layer: frontend
+    items:
+      - PHP puro
+      - Roteador próprio
+      - i18n pt/en/es
+  - layer: backend
+    items:
+      - Laravel 12
+      - JWT (tymon/jwt-auth)
+  - layer: data
+    items:
+      - PostgreSQL
+challenges:
+  - title:
+      pt: Desacoplar o front do banco
+      en: Decoupling the front end from the database
+      es: Desacoplar el front de la base
+    text:
+      pt: >-
+        O front lia e gravava direto no PostgreSQL com PDO, em paralelo a uma API que ninguém consumia. A
+        migração moveu cada leitura e escrita para endpoints da API e removeu por completo o acesso direto e o
+        SQL legado.
+      en: >-
+        The front end read and wrote PostgreSQL directly with PDO, alongside an API nobody used. The migration
+        moved every read and write to API endpoints and completely removed direct access and the legacy SQL.
+      es: >-
+        El front leía y escribía directamente en PostgreSQL con PDO, en paralelo a una API que nadie consumía.
+        La migración movió cada lectura y escritura a endpoints de la API y eliminó por completo el acceso
+        directo y el SQL heredado.
+  - title:
+      pt: Autenticação entre duas aplicações
+      en: Authentication across two applications
+      es: Autenticación entre dos aplicaciones
+    text:
+      pt: >-
+        O token JWT é obtido no login e guardado na sessão PHP do front, que continua responsável por sessão,
+        CSRF e mensagens. A API não conhece a sessão; o front não conhece o banco.
+      en: >-
+        The JWT is obtained at login and kept in the front end's PHP session, which still handles session,
+        CSRF and flash messages. The API doesn't know the session; the front end doesn't know the database.
+      es: >-
+        El token JWT se obtiene en el login y se guarda en la sesión PHP del front, que sigue a cargo de
+        sesión, CSRF y mensajes. La API no conoce la sesión; el front no conoce la base.
+  - title:
+      pt: Contadores coerentes
+      en: Consistent counters
+      es: Contadores coherentes
+    text:
+      pt: >-
+        Membros de clube e confirmados em evento são exibidos em listas grandes, então ficam desnormalizados e
+        precisam ser atualizados junto com cada entrada, saída e confirmação.
+      en: >-
+        Club members and event attendees are shown in long lists, so they're denormalized and must be updated
+        together with every join, leave and RSVP.
+      es: >-
+        Miembros de clubes y confirmados en eventos se muestran en listas grandes, así que quedan
+        desnormalizados y deben actualizarse junto con cada entrada, salida y confirmación.
+cover:
+  src: /projects/gearhead/feed.webp
+  device: desktop
+  alt:
+    pt: Feed com posts da comunidade, próximos eventos e clubes sugeridos
+    en: Feed with community posts, upcoming events and suggested clubs
+    es: Feed con publicaciones de la comunidad, próximos eventos y clubes sugeridos
+  caption:
+    pt: Feed com próximos encontros e clubes sugeridos.
+    en: Feed with upcoming meetups and suggested clubs.
+    es: Feed con próximos encuentros y clubes sugeridos.
+gallery:
+  - src: /projects/gearhead/perfil.webp
+    device: desktop
+    alt:
+      pt: Perfil com carro dos sonhos e a garagem virtual
+      en: Profile with dream car and virtual garage
+      es: Perfil con el auto soñado y el garaje virtual
+    caption:
+      pt: Perfil e garagem virtual.
+      en: Profile and virtual garage.
+      es: Perfil y garaje virtual.
+  - src: /projects/gearhead/grupo.webp
+    device: desktop
+    alt:
+      pt: Página do clube com mural, próximos eventos e membros
+      en: Club page with wall, upcoming events and members
+      es: Página del club con muro, próximos eventos y miembros
+    caption:
+      pt: Clube com mural e membros.
+      en: Club with wall and members.
+      es: Club con muro y miembros.
+  - src: /projects/gearhead/eventos.webp
+    device: desktop
+    alt:
+      pt: Lista de encontros e eventos com filtros por tipo e período
+      en: Meetups and events list with type and period filters
+      es: Lista de encuentros y eventos con filtros por tipo y período
+    caption:
+      pt: Encontros e eventos.
+      en: Meetups and events.
+      es: Encuentros y eventos.
+  - src: /projects/gearhead/evento.webp
+    device: desktop
+    alt:
+      pt: Detalhe de um track day com data, local, vagas e participantes
+      en: Track day details with date, place, spots and attendees
+      es: Detalle de un track day con fecha, lugar, cupos y participantes
+    caption:
+      pt: Detalhe do evento e confirmados.
+      en: Event details and attendees.
+      es: Detalle del evento y confirmados.
+  - src: /projects/gearhead/m-feed.webp
+    device: mobile
+    alt:
+      pt: Feed no celular
+      en: Feed on the phone
+      es: Feed en el celular
+    caption:
+      pt: Feed no celular
+      en: Feed on the phone
+      es: Feed en el celular
+  - src: /projects/gearhead/m-perfil.webp
+    device: mobile
+    alt:
+      pt: Perfil no celular
+      en: Profile on the phone
+      es: Perfil en el celular
+    caption:
+      pt: Perfil
+      en: Profile
+      es: Perfil
+  - src: /projects/gearhead/m-eventos.webp
+    device: mobile
+    alt:
+      pt: Eventos no celular
+      en: Events on the phone
+      es: Eventos en el celular
+    caption:
+      pt: Eventos
+      en: Events
+      es: Eventos

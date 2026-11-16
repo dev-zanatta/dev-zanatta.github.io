@@ -1,0 +1,341 @@
+order: 4
+name: Mecânica Ágil
+icon: /projects/mecanica-agil.png
+playStore: false
+link: https://www.mecanicaagil.com.br/
+type:
+  pt: SaaS · Web · Mobile
+  en: SaaS · Web · Mobile
+  es: SaaS · Web · Móvil
+tagline:
+  pt: Gestão completa para oficinas mecânicas
+  en: Complete management for auto repair shops
+  es: Gestión completa para talleres mecánicos
+description:
+  pt: >-
+    Sistema web transformado em app Android via Capacitor. Controla ordens de serviço, estoque de peças,
+    clientes, financeiro e histórico de manutenções dos veículos.
+  en: >-
+    Web system turned into an Android app via Capacitor. Manages service orders, parts inventory, clients,
+    finances and vehicle maintenance history.
+  es: >-
+    Sistema web convertido en app Android vía Capacitor. Controla órdenes de servicio, inventario de piezas,
+    clientes, finanzas e historial de mantenimiento de los vehículos.
+stack:
+  - Laravel
+  - Quasar
+  - Vue 3
+  - Capacitor
+  - PostgreSQL
+year: '2025'
+status:
+  pt: Em produção
+  en: In production
+  es: En producción
+role:
+  pt: Full stack — API, web e app
+  en: Full stack — API, web and app
+  es: Full stack — API, web y app
+summary:
+  - pt: >-
+      Do orçamento à entrega, tudo em um sistema feito para mecânicos. A Mecânica Ágil controla serviços,
+      clientes, veículos e finanças da oficina, e cada carro anda por um kanban visual da entrada até a
+      entrega.
+    en: >-
+      From the estimate to delivery, everything in one system built for mechanics. Mecânica Ágil handles the
+      shop's services, clients, vehicles and finances, and every car moves through a visual kanban from
+      arrival to pickup.
+    es: >-
+      Del presupuesto a la entrega, todo en un sistema hecho para mecánicos. Mecânica Ágil controla servicios,
+      clientes, vehículos y finanzas del taller, y cada auto avanza por un kanban visual desde la entrada
+      hasta la entrega.
+  - pt: >-
+      Nasceu para uma oficina real e virou SaaS: a base foi convertida para multitenant, com isolamento total
+      entre mecânicas no mesmo banco. Roda no navegador de qualquer computador e, pelo Capacitor, como app
+      Android com navegação própria para o celular.
+    en: >-
+      It was built for a real repair shop and became a SaaS: the codebase was converted to multi-tenant, with
+      full isolation between shops in the same database. It runs in any computer's browser and, through
+      Capacitor, as an Android app with its own mobile navigation.
+    es: >-
+      Nació para un taller real y se convirtió en SaaS: la base se convirtió a multi-tenant, con aislamiento
+      total entre talleres en la misma base de datos. Funciona en el navegador de cualquier computadora y, con
+      Capacitor, como app Android con navegación propia para el celular.
+problem:
+  pt: >-
+    Orçamentos no papel e no WhatsApp, sem histórico de o que foi feito no carro da última vez. Nenhuma ideia
+    de quanto a oficina faturou no mês, contas pagas misturadas às em aberto e cliente ligando para saber se o
+    carro já está pronto.
+  en: >-
+    Estimates on paper and WhatsApp, with no record of what was done to the car last time. No idea how much
+    the shop made in the month, paid and open bills mixed together, and clients calling to ask whether the car
+    is ready.
+  es: >-
+    Presupuestos en papel y WhatsApp, sin historial de lo que se hizo en el auto la última vez. Ninguna idea
+    de cuánto facturó el taller en el mes, cuentas pagadas mezcladas con las pendientes y clientes llamando
+    para saber si el auto ya está listo.
+audience:
+  pt: >-
+    Oficinas mecânicas e auto centers, do dono que fecha o caixa ao mecânico que atualiza o andamento do
+    serviço.
+  en: >-
+    Repair shops and auto centers, from the owner who closes the books to the mechanic who updates a job's
+    progress.
+  es: >-
+    Talleres mecánicos y centros automotrices, desde el dueño que cierra la caja hasta el mecánico que
+    actualiza el avance del servicio.
+features:
+  - title:
+      pt: Dashboard em tempo real
+      en: Real-time dashboard
+      es: Panel en tiempo real
+    text:
+      pt: >-
+        Orçamentos criados, aprovados, finalizados e entregues, valor faturado e distribuição por status, por
+        dia, semana, mês ou período livre.
+      en: >-
+        Estimates created, approved, finished and delivered, revenue and status distribution, by day, week,
+        month or custom period.
+      es: >-
+        Presupuestos creados, aprobados, terminados y entregados, facturación y distribución por estado, por
+        día, semana, mes o período libre.
+  - title:
+      pt: Kanban visual de serviços
+      en: Visual service kanban
+      es: Kanban visual de servicios
+    text:
+      pt: >-
+        Cada veículo vira um card com cliente, placa, valor e itens, e anda pelas colunas pendente, aprovado,
+        em andamento, finalizado e entregue com um arrastar.
+      en: >-
+        Each vehicle becomes a card with client, plate, amount and items, and moves through pending, approved,
+        in progress, finished and delivered with a drag.
+      es: >-
+        Cada vehículo es una tarjeta con cliente, patente, valor e ítems, y avanza por pendiente, aprobado, en
+        curso, terminado y entregado con un arrastre.
+  - title:
+      pt: Orçamentos profissionais
+      en: Professional estimates
+      es: Presupuestos profesionales
+    text:
+      pt: >-
+        Serviços, peças e produtos por linha, desconto em valor ou percentual calculado na hora e PDF para
+        enviar ao cliente.
+      en: >-
+        Services, parts and products line by line, discount by amount or percentage calculated on the fly and
+        a PDF to send to the client.
+      es: >-
+        Servicios, repuestos y productos por línea, descuento por valor o porcentaje calculado al instante y
+        PDF para enviar al cliente.
+  - title:
+      pt: Clientes e veículos
+      en: Clients and vehicles
+      es: Clientes y vehículos
+    text:
+      pt: >-
+        Cadastro na entrada com marca, modelo, cor e placa a partir de um catálogo com centenas de modelos, e
+        histórico de orçamentos por cliente.
+      en: >-
+        Registered at drop-off with make, model, color and plate from a catalog of hundreds of models, plus
+        estimate history per client.
+      es: >-
+        Registro en la entrada con marca, modelo, color y patente a partir de un catálogo con cientos de
+        modelos, e historial de presupuestos por cliente.
+  - title:
+      pt: Controle financeiro
+      en: Financial control
+      es: Control financiero
+    text:
+      pt: >-
+        A conta a receber nasce quando o serviço é finalizado. Previsão do que está em aberto, entradas
+        recebidas, contas a pagar e formas de pagamento.
+      en: >-
+        Receivables are created when a job is finished. Forecast of what is open, payments received, payables
+        and payment methods.
+      es: >-
+        La cuenta por cobrar nace cuando el servicio termina. Previsión de lo pendiente, cobros recibidos,
+        cuentas por pagar y formas de pago.
+  - title:
+      pt: Estoque de peças e produtos
+      en: Parts and product stock
+      es: Stock de repuestos y productos
+    text:
+      pt: >-
+        Catálogo com custo e preço de venda, estoque atual e movimentações, além de compras de produtos que
+        geram a conta a pagar.
+      en: >-
+        Catalog with cost and sale price, current stock and movements, plus product purchases that create the
+        payable.
+      es: >-
+        Catálogo con costo y precio de venta, stock actual y movimientos, además de compras de productos que
+        generan la cuenta por pagar.
+  - title:
+      pt: Multiusuário com permissões
+      en: Multi-user with permissions
+      es: Multiusuario con permisos
+    text:
+      pt: Funcionários e usuários com permissões por tela, e o nome e o logo da oficina no sistema.
+      en: Employees and users with per-screen permissions, and the shop's name and logo in the system.
+      es: Empleados y usuarios con permisos por pantalla, y el nombre y el logo del taller en el sistema.
+stackLayers:
+  - layer: frontend
+    items:
+      - Vue 3
+      - Quasar 2
+      - Pinia
+      - Chart.js
+  - layer: mobile
+    items:
+      - Capacitor
+      - Android
+  - layer: backend
+    items:
+      - Laravel 12
+      - PHP 8.3
+      - Sanctum
+  - layer: data
+    items:
+      - PostgreSQL
+challenges:
+  - title:
+      pt: Single-tenant para multitenant com o sistema no ar
+      en: Single-tenant to multi-tenant with the system live
+      es: De single-tenant a multi-tenant con el sistema en uso
+    text:
+      pt: >-
+        A conversão usou banco único com coluna de empresa e escopo global do Eloquent, contexto de tenant
+        resolvido por middleware e um comando para provisionar novas mecânicas com seus status e formas de
+        pagamento. Foram 82 testes cobrindo o isolamento antes do deploy.
+      en: >-
+        The conversion used a single database with a company column and an Eloquent global scope, a tenant
+        context resolved by middleware and a command to provision new shops with their statuses and payment
+        methods. 82 tests covered the isolation before deploy.
+      es: >-
+        La conversión usó base única con columna de empresa y scope global de Eloquent, contexto de tenant
+        resuelto por middleware y un comando para crear talleres con sus estados y formas de pago. Fueron 82
+        tests cubriendo el aislamiento antes del deploy.
+  - title:
+      pt: Catálogo global, dados por oficina
+      en: Global catalog, per-shop data
+      es: Catálogo global, datos por taller
+    text:
+      pt: >-
+        Marcas, modelos e cores são um catálogo compartilhado e somente leitura; serviços, peças, clientes e
+        financeiro pertencem a cada oficina. A mesma consulta precisa enxergar os dois sem vazar nada entre
+        tenants.
+      en: >-
+        Makes, models and colors are a shared read-only catalog; services, parts, clients and finances belong
+        to each shop. The same query has to see both without leaking anything between tenants.
+      es: >-
+        Marcas, modelos y colores son un catálogo compartido de solo lectura; servicios, repuestos, clientes y
+        finanzas pertenecen a cada taller. La misma consulta debe ver ambos sin filtrar nada entre tenants.
+  - title:
+      pt: Permissões que cobrem todas as rotas
+      en: Permissions that cover every route
+      es: Permisos que cubren todas las rutas
+    text:
+      pt: >-
+        Cada rota exige um escopo de permissão. Um teste de regressão compara os escopos das rotas com os do
+        seeder e falha se algum perfil, inclusive o administrador, ficar sem acesso a uma tela protegida.
+      en: >-
+        Every route requires a permission scope. A regression test compares route scopes with the seeder's and
+        fails if any profile, including the admin, loses access to a protected screen.
+      es: >-
+        Cada ruta exige un alcance de permiso. Un test de regresión compara los alcances de las rutas con los
+        del seeder y falla si algún perfil, incluso el administrador, pierde acceso a una pantalla protegida.
+  - title:
+      pt: Um front, dois dispositivos
+      en: One front end, two devices
+      es: Un front, dos dispositivos
+    text:
+      pt: >-
+        O mesmo código em Quasar entrega layout com menu lateral no desktop e navegação inferior no celular,
+        com roteamento em hash para funcionar dentro do Capacitor.
+      en: >-
+        The same Quasar code delivers a sidebar layout on desktop and bottom navigation on the phone, with
+        hash routing to work inside Capacitor.
+      es: >-
+        El mismo código en Quasar entrega layout con menú lateral en escritorio y navegación inferior en el
+        celular, con ruteo por hash para funcionar dentro de Capacitor.
+cover:
+  src: /projects/mecanica-agil/orcamentos.webp
+  device: desktop
+  alt:
+    pt: Kanban de orçamentos com cards de cliente, veículo, valor e itens em cada etapa
+    en: Estimate kanban with client, vehicle, amount and item cards at each stage
+    es: Kanban de presupuestos con tarjetas de cliente, vehículo, valor e ítems en cada etapa
+  caption:
+    pt: Kanban de orçamentos — cada carro da entrada à entrega.
+    en: Estimate kanban — every car from arrival to delivery.
+    es: Kanban de presupuestos — cada auto de la entrada a la entrega.
+gallery:
+  - src: /projects/mecanica-agil/dashboard.webp
+    device: desktop
+    alt:
+      pt: Painel do mês com orçamentos por status, valor faturado e gráficos de distribuição
+      en: Monthly dashboard with estimates by status, revenue and distribution charts
+      es: Panel del mes con presupuestos por estado, facturación y gráficos de distribución
+    caption:
+      pt: Painel com faturamento e distribuição por status.
+      en: Dashboard with revenue and status distribution.
+      es: Panel con facturación y distribución por estado.
+  - src: /projects/mecanica-agil/contas-receber.webp
+    device: desktop
+    alt:
+      pt: Previsão de orçamentos pendentes, aprovados e em andamento ainda sem conta gerada
+      en: Forecast of pending, approved and in-progress estimates with no receivable yet
+      es: Previsión de presupuestos pendientes, aprobados y en curso aún sin cuenta generada
+    caption:
+      pt: Previsão financeira do que está em aberto.
+      en: Forecast of what is still open.
+      es: Previsión financiera de lo pendiente.
+  - src: /projects/mecanica-agil/veiculos.webp
+    device: desktop
+    alt:
+      pt: Lista de veículos com placa, cliente, marca, modelo, ano e cor
+      en: Vehicle list with plate, client, make, model, year and color
+      es: Lista de vehículos con patente, cliente, marca, modelo, año y color
+    caption:
+      pt: Veículos dos clientes.
+      en: Client vehicles.
+      es: Vehículos de los clientes.
+  - src: /projects/mecanica-agil/produtos.webp
+    device: desktop
+    alt:
+      pt: Catálogo de produtos com estoque, custo e preço de venda
+      en: Product catalog with stock, cost and sale price
+      es: Catálogo de productos con stock, costo y precio de venta
+    caption:
+      pt: Produtos e estoque.
+      en: Products and stock.
+      es: Productos y stock.
+  - src: /projects/mecanica-agil/m-dashboard.webp
+    device: mobile
+    alt:
+      pt: Painel no app Android
+      en: Dashboard in the Android app
+      es: Panel en la app Android
+    caption:
+      pt: App Android — painel
+      en: Android app — dashboard
+      es: App Android — panel
+  - src: /projects/mecanica-agil/m-orcamentos.webp
+    device: mobile
+    alt:
+      pt: Kanban de orçamentos no app Android
+      en: Estimate kanban in the Android app
+      es: Kanban de presupuestos en la app Android
+    caption:
+      pt: App Android — kanban
+      en: Android app — kanban
+      es: App Android — kanban
+  - src: /projects/mecanica-agil/m-financeiro.webp
+    device: mobile
+    alt:
+      pt: Menu financeiro no app Android
+      en: Finance menu in the Android app
+      es: Menú financiero en la app Android
+    caption:
+      pt: App Android — financeiro
+      en: Android app — finances
+      es: App Android — finanzas

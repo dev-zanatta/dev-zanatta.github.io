@@ -1,0 +1,326 @@
+order: 8
+name: Garajá
+icon: /projects/garaja.png
+playStore: false
+link: null
+type:
+  pt: Mobile · API
+  en: Mobile · API
+  es: Móvil · API
+tagline:
+  pt: Manutenção de veículos para a casa ou a frota
+  en: Vehicle maintenance for a household or a small fleet
+  es: Mantenimiento de vehículos para la casa o la flota
+description:
+  pt: >-
+    Centraliza manutenções, abastecimentos, documentos e custos por veículo. Pensado para o registro acontecer
+    no posto ou na oficina: funciona offline, aceita lançamento retroativo e sincroniza quando a conexão
+    volta.
+  en: >-
+    Centralizes maintenance, refueling, documents and costs per vehicle. Designed for records made at the gas
+    station or the garage: works offline, accepts backdated entries and syncs once the connection returns.
+  es: >-
+    Centraliza mantenimientos, repostajes, documentos y costos por vehículo. Pensado para registrar en la
+    estación o el taller: funciona sin conexión, acepta registros retroactivos y sincroniza al volver la
+    señal.
+stack:
+  - C#
+  - .NET 10
+  - Expo
+  - React Native
+  - PostgreSQL
+  - Docker
+year: '2026'
+status:
+  pt: Teste fechado na Play Store
+  en: Closed testing on the Play Store
+  es: Prueba cerrada en la Play Store
+role:
+  pt: Full stack — API, app e web
+  en: Full stack — API, app and web
+  es: Full stack — API, app y web
+summary:
+  - pt: >-
+      O Garajá reúne tudo o que um carro custa: abastecimentos, manutenções, despesas, documentos e
+      quilometragem, por veículo, para uma casa ou uma frota pequena. O painel responde duas perguntas logo de
+      cara — o que vence em breve e quanto cada veículo custa por quilômetro.
+    en: >-
+      Garajá brings together everything a car costs: refueling, maintenance, expenses, documents and mileage,
+      per vehicle, for a household or a small fleet. The dashboard answers two questions right away — what is
+      due soon and how much each vehicle costs per kilometer.
+    es: >-
+      Garajá reúne todo lo que cuesta un auto: cargas de combustible, mantenimientos, gastos, documentos y
+      kilometraje, por vehículo, para una casa o una flota chica. El panel responde dos preguntas de entrada:
+      qué vence pronto y cuánto cuesta cada vehículo por kilómetro.
+  - pt: >-
+      O registro acontece no posto ou na oficina, muitas vezes sem sinal, então o app é offline-first: grava
+      no aparelho, aceita lançamento retroativo e sincroniza quando a conexão volta. A API em .NET 10 é o
+      contrato comum do app em React Native e do painel web em React, com anexos guardados no Cloudflare R2.
+    en: >-
+      Entries happen at the gas station or the shop, often with no signal, so the app is offline-first: it
+      stores on the device, accepts backdated entries and syncs when the connection returns. The .NET 10 API
+      is the shared contract for the React Native app and the React web panel, with attachments stored on
+      Cloudflare R2.
+    es: >-
+      El registro se hace en la estación de servicio o en el taller, muchas veces sin señal, así que la app es
+      offline-first: guarda en el dispositivo, acepta registros retroactivos y sincroniza cuando vuelve la
+      conexión. La API en .NET 10 es el contrato común de la app en React Native y del panel web en React, con
+      adjuntos guardados en Cloudflare R2.
+problem:
+  pt: >-
+    Nota de abastecimento na carteira, revisão anotada no manual, seguro e IPVA lembrados em cima da hora. Sem
+    histórico, ninguém sabe o consumo real do carro, quando foi a última troca de óleo ou quanto o veículo
+    custou no ano.
+  en: >-
+    Fuel receipts in the wallet, services noted in the owner's manual, insurance and vehicle tax remembered at
+    the last minute. With no history, nobody knows the car's real fuel economy, when the last oil change was
+    or how much the vehicle cost in the year.
+  es: >-
+    Tickets de combustible en la billetera, servicios anotados en el manual, seguro e impuestos recordados a
+    último momento. Sin historial, nadie sabe el consumo real del auto, cuándo fue el último cambio de aceite
+    o cuánto costó el vehículo en el año.
+audience:
+  pt: Famílias com mais de um veículo e pequenas empresas com uma frota enxuta, com papéis de dono e membro.
+  en: Families with more than one vehicle and small companies with a lean fleet, with owner and member roles.
+  es: Familias con más de un vehículo y pequeñas empresas con una flota reducida, con roles de dueño y miembro.
+features:
+  - title:
+      pt: Painel do que vence e do que custa
+      en: A dashboard of what's due and what it costs
+      es: Panel de lo que vence y de lo que cuesta
+    text:
+      pt: >-
+        Gasto dos últimos 12 meses, custo por quilômetro, quilômetros rodados, alertas de manutenção e
+        documentos e gasto por mês e por veículo.
+      en: >-
+        Last 12 months spending, cost per kilometer, kilometers driven, maintenance and document alerts, and
+        spending per month and per vehicle.
+      es: >-
+        Gasto de los últimos 12 meses, costo por kilómetro, kilómetros recorridos, alertas de mantenimiento y
+        documentos y gasto por mes y por vehículo.
+  - title:
+      pt: Abastecimentos e consumo
+      en: Refueling and fuel economy
+      es: Cargas y consumo
+    text:
+      pt: >-
+        Litros, preço, combustível, posto e tanque cheio. O consumo em km/l é calculado entre abastecimentos e
+        o custo por km sai de tudo que o veículo gastou.
+      en: >-
+        Liters, price, fuel, station and full tank. Fuel economy in km/l is computed between fill-ups and cost
+        per km comes from everything the vehicle cost.
+      es: >-
+        Litros, precio, combustible, estación y tanque lleno. El consumo en km/l se calcula entre cargas y el
+        costo por km sale de todo lo que gastó el vehículo.
+  - title:
+      pt: Plano de manutenção
+      en: Maintenance plan
+      es: Plan de mantenimiento
+    text:
+      pt: >-
+        Regras por quilometragem e por tempo (óleo, filtros, alinhamento, correia, bateria) com última e
+        próxima execução e aviso antes de vencer.
+      en: >-
+        Rules by mileage and by time (oil, filters, alignment, timing belt, battery) with last and next
+        service and a warning before it's due.
+      es: >-
+        Reglas por kilometraje y por tiempo (aceite, filtros, alineación, correa, batería) con última y
+        próxima ejecución y aviso antes del vencimiento.
+  - title:
+      pt: Manutenções, despesas e documentos
+      en: Maintenance, expenses and documents
+      es: Mantenimientos, gastos y documentos
+    text:
+      pt: >-
+        Peças e mão de obra por oficina, pedágio, lavagem, IPVA, licenciamento, multas, CRLV e seguro com
+        alerta de vencimento.
+      en: >-
+        Parts and labor per shop, tolls, car washes, vehicle tax, licensing, fines, registration and insurance
+        with expiry alerts.
+      es: >-
+        Repuestos y mano de obra por taller, peajes, lavados, impuestos, patente, multas, documentación y
+        seguro con alerta de vencimiento.
+  - title:
+      pt: Anexos e anotações
+      en: Attachments and notes
+      es: Adjuntos y notas
+    text:
+      pt: Fotos e PDFs organizados em pastas, visualizador em tela cheia no app e anotações fixadas por veículo.
+      en: Photos and PDFs organized in folders, a full-screen viewer in the app and pinned notes per vehicle.
+      es: Fotos y PDF organizados en carpetas, visor a pantalla completa en la app y notas fijadas por vehículo.
+  - title:
+      pt: Frota compartilhada
+      en: Shared fleet
+      es: Flota compartida
+    text:
+      pt: Convite para outros membros, papéis de dono e membro, e o mesmo histórico para toda a casa ou empresa.
+      en: Invite other members, owner and member roles, and the same history for the whole household or company.
+      es: >-
+        Invitación a otros miembros, roles de dueño y miembro, y el mismo historial para toda la casa o
+        empresa.
+stackLayers:
+  - layer: mobile
+    items:
+      - React Native
+      - Expo SDK 58
+      - Expo Router
+      - expo-sqlite
+      - NativeWind
+      - TanStack Query
+      - Zustand
+  - layer: frontend
+    items:
+      - React
+      - TypeScript
+      - Tailwind
+  - layer: backend
+    items:
+      - C#
+      - .NET 10
+      - ASP.NET Core Minimal APIs
+      - EF Core 10
+      - JWT
+      - OpenAPI + Scalar
+  - layer: data
+    items:
+      - PostgreSQL 18
+      - Cloudflare R2
+  - layer: infra
+    items:
+      - Docker
+      - Caddy
+      - xUnit v3
+      - Testcontainers
+challenges:
+  - title:
+      pt: Offline-first com lançamento retroativo
+      en: Offline-first with backdated entries
+      es: Offline-first con registros retroactivos
+    text:
+      pt: >-
+        Cada registro nasce no aparelho com um GUID v7 e entra numa fila de sincronização. Como dá para lançar
+        um abastecimento de ontem depois do de hoje, a API valida a cronologia do hodômetro em relação aos
+        registros vizinhos.
+      en: >-
+        Every record is born on the device with a GUID v7 and enters a sync queue. Since yesterday's fill-up
+        can be logged after today's, the API validates odometer chronology against neighboring records.
+      es: >-
+        Cada registro nace en el dispositivo con un GUID v7 y entra en una cola de sincronización. Como se
+        puede cargar la carga de ayer después de la de hoy, la API valida la cronología del odómetro respecto
+        de los registros vecinos.
+  - title:
+      pt: Isolamento por frota em tudo
+      en: Fleet isolation everywhere
+      es: Aislamiento por flota en todo
+    text:
+      pt: >-
+        Toda tabela carrega a frota, filtros globais do EF Core restringem cada consulta e uma guarda no
+        SaveChanges impede gravar fora do escopo. As rotas são fechadas por padrão.
+      en: >-
+        Every table carries the fleet, EF Core global filters restrict every query and a SaveChanges guard
+        prevents writing outside the scope. Routes are closed by default.
+      es: >-
+        Toda tabla lleva la flota, filtros globales de EF Core restringen cada consulta y una guarda en
+        SaveChanges impide grabar fuera del alcance. Las rutas están cerradas por defecto.
+  - title:
+      pt: Upload que funciona de verdade no Expo
+      en: Uploads that actually work in Expo
+      es: Uploads que funcionan de verdad en Expo
+    text:
+      pt: >-
+        O fetch do Expo recusava arquivos no FormData e nenhum anexo chegava ao servidor. O upload passou para
+        XMLHttpRequest, com o nome do arquivo decodificado na API e envio só em Wi-Fi quando o usuário
+        prefere.
+      en: >-
+        Expo's fetch rejected files in FormData and no attachment reached the server. Uploads moved to
+        XMLHttpRequest, with the file name decoded in the API and Wi-Fi-only uploads when the user prefers.
+      es: >-
+        El fetch de Expo rechazaba archivos en el FormData y ningún adjunto llegaba al servidor. El upload
+        pasó a XMLHttpRequest, con el nombre del archivo decodificado en la API y envío solo con Wi-Fi cuando
+        el usuario lo prefiere.
+  - title:
+      pt: Custo que não conta duas vezes
+      en: Costs that don't count twice
+      es: Costos que no cuentan dos veces
+    text:
+      pt: >-
+        Documento e despesa não podem registrar o mesmo pagamento, senão o custo por quilômetro dobra. A
+        modelagem separa o que é prazo (documento) do que é dinheiro (despesa).
+      en: >-
+        A document and an expense can't record the same payment, or cost per kilometer doubles. The model
+        separates what is a deadline (document) from what is money (expense).
+      es: >-
+        Documento y gasto no pueden registrar el mismo pago, o el costo por kilómetro se duplica. El modelo
+        separa lo que es plazo (documento) de lo que es dinero (gasto).
+cover:
+  src: /projects/garaja/inicio.webp
+  device: desktop
+  alt:
+    pt: Painel com gasto dos últimos 12 meses, custo por km, alerta de seguro e gasto por mês
+    en: Dashboard with last 12 months spending, cost per km, insurance alert and spending per month
+    es: Panel con gasto de los últimos 12 meses, costo por km, alerta de seguro y gasto por mes
+  caption:
+    pt: Painel — o que vence e quanto cada veículo custa (versão web).
+    en: Dashboard — what's due and what each vehicle costs (web version).
+    es: Panel — qué vence y cuánto cuesta cada vehículo (versión web).
+gallery:
+  - src: /projects/garaja/veiculo.webp
+    device: desktop
+    alt:
+      pt: Veículo com hodômetro, abastecimentos, consumo médio e custo por km
+      en: Vehicle with odometer, refueling, average fuel economy and cost per km
+      es: Vehículo con odómetro, cargas, consumo promedio y costo por km
+    caption:
+      pt: Abastecimentos e consumo do veículo.
+      en: Vehicle refueling and fuel economy.
+      es: Cargas y consumo del vehículo.
+  - src: /projects/garaja/veiculo-manut.webp
+    device: desktop
+    alt:
+      pt: Manutenções do veículo com peças, mão de obra e oficina
+      en: Vehicle maintenance with parts, labor and shop
+      es: Mantenimientos del vehículo con repuestos, mano de obra y taller
+    caption:
+      pt: Histórico de manutenções.
+      en: Maintenance history.
+      es: Historial de mantenimientos.
+  - src: /projects/garaja/veiculo-plano.webp
+    device: desktop
+    alt:
+      pt: Plano de manutenção com intervalos por km e por tempo, última e próxima execução
+      en: Maintenance plan with mileage and time intervals, last and next service
+      es: Plan de mantenimiento con intervalos por km y por tiempo, última y próxima ejecución
+    caption:
+      pt: Plano de manutenção.
+      en: Maintenance plan.
+      es: Plan de mantenimiento.
+  - src: /projects/garaja/veiculos.webp
+    device: desktop
+    alt:
+      pt: Lista de veículos da frota com tipo, placa, combustível e hodômetro
+      en: Fleet vehicle list with type, plate, fuel and odometer
+      es: Lista de vehículos de la flota con tipo, patente, combustible y odómetro
+    caption:
+      pt: Veículos da casa.
+      en: The household's vehicles.
+      es: Vehículos de la casa.
+  - src: /projects/garaja/m-inicio.webp
+    device: mobile
+    alt:
+      pt: Painel no celular com alerta e gasto por mês
+      en: Dashboard on the phone with alert and spending per month
+      es: Panel en el celular con alerta y gasto por mes
+    caption:
+      pt: Painel no celular
+      en: Dashboard on the phone
+      es: Panel en el celular
+  - src: /projects/garaja/m-veiculo.webp
+    device: mobile
+    alt:
+      pt: Detalhe do veículo no celular
+      en: Vehicle details on the phone
+      es: Detalle del vehículo en el celular
+    caption:
+      pt: Veículo
+      en: Vehicle
+      es: Vehículo

@@ -2,13 +2,19 @@
 import { languages } from '../i18n/ui.js';
 import { useTranslations, normalizeLocale } from '../i18n/utils.js';
 
+interface Props {
+  /** Destino de cada bandeira. Padrão: a home de cada idioma. */
+  paths?: { pt: string; en: string; es: string };
+}
+
 const locale = normalizeLocale(Astro.currentLocale);
 const t = useTranslations(locale);
+const { paths = { pt: '/', en: '/en/', es: '/es/' } } = Astro.props;
 
 const langs = [
-  { code: 'pt', href: '/', label: languages.pt },
-  { code: 'en', href: '/en/', label: languages.en },
-  { code: 'es', href: '/es/', label: languages.es },
+  { code: 'pt', href: paths.pt, label: languages.pt },
+  { code: 'en', href: paths.en, label: languages.en },
+  { code: 'es', href: paths.es, label: languages.es },
 ];
 ---
 

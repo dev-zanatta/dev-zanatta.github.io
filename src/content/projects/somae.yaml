@@ -1,0 +1,328 @@
+order: 6
+name: Soma-Σ
+icon: /projects/somae.png
+playStore: true
+link: null
+type:
+  pt: Mobile
+  en: Mobile
+  es: Móvil
+tagline:
+  pt: Aplicativo para motoristas de aplicativo.
+  en: An app for rideshare drivers.
+  es: Aplicación para conductores de apps de transporte.
+description:
+  pt: >-
+    Aplicativo para gestão de finanças pessoais focada para os motoristas de aplicativo. Histórico de ganhos,
+    gastos, manutenções, insights.
+  en: >-
+    Personal finance management app focused on rideshare drivers. Earnings history, expenses, maintenance
+    records and insights.
+  es: >-
+    App de gestión de finanzas personales enfocada en los conductores de apps de transporte. Historial de
+    ganancias, gastos, mantenimientos e insights.
+stack:
+  - Vue 3
+  - Quasar
+  - Laravel
+  - PostgreSQL
+  - Capacitor
+year: '2026'
+status:
+  pt: Teste fechado na Play Store
+  en: Closed testing on the Play Store
+  es: Prueba cerrada en la Play Store
+role:
+  pt: Full stack — API e app
+  en: Full stack — API and app
+  es: Full stack — API y app
+summary:
+  - pt: >-
+      O Soma-Σ é o caderninho do motorista de aplicativo, só que fazendo as contas sozinho. O motorista liga a
+      jornada no começo do dia, lança quanto fez em cada plataforma e o que gastou, e o app devolve o lucro
+      líquido, quanto ganhou por hora e quanto custou cada quilômetro.
+    en: >-
+      Soma-Σ is the rideshare driver's notebook, except it does the math. The driver starts the shift in the
+      morning, logs earnings per platform and expenses, and the app returns net profit, earnings per hour and
+      cost per kilometer.
+    es: >-
+      Soma-Σ es la libreta del conductor de apps, solo que hace las cuentas sola. El conductor inicia la
+      jornada al empezar el día, carga cuánto hizo en cada plataforma y lo que gastó, y la app devuelve la
+      ganancia neta, cuánto ganó por hora y cuánto costó cada kilómetro.
+  - pt: >-
+      É dark e minimalista de propósito: é usado com o carro parado entre uma corrida e outra, com pouco tempo
+      e muita luz na tela. Vue 3 e Quasar no app, Capacitor para o Android e uma API Laravel guardando o
+      histórico.
+    en: >-
+      It is dark and minimal on purpose: it's used with the car parked between rides, with little time and
+      lots of glare on the screen. Vue 3 and Quasar in the app, Capacitor for Android and a Laravel API
+      keeping the history.
+    es: >-
+      Es oscura y minimalista a propósito: se usa con el auto detenido entre un viaje y otro, con poco tiempo
+      y mucha luz en la pantalla. Vue 3 y Quasar en la app, Capacitor para Android y una API Laravel guardando
+      el historial.
+problem:
+  pt: >-
+    O motorista vê o valor bruto que a Uber e a 99 mostram, mas não o que sobra depois de energia,
+    combustível, comida e manutenção. Sem esse número não dá para saber se vale rodar mais uma hora, se a
+    semana bateu a meta ou se o carro está custando caro demais.
+  en: >-
+    Drivers see the gross amount Uber and 99 show, but not what is left after charging or fuel, food and
+    maintenance. Without that number there's no way to know if another hour is worth it, if the week hit the
+    goal or if the car is costing too much.
+  es: >-
+    El conductor ve el valor bruto que muestran Uber y 99, pero no lo que queda después de energía o
+    combustible, comida y mantenimiento. Sin ese número no hay forma de saber si vale la pena una hora más, si
+    la semana alcanzó la meta o si el auto está costando demasiado.
+audience:
+  pt: Motoristas de Uber, 99, InDrive, corridas particulares e turismo, com carro a combustão ou elétrico.
+  en: Uber, 99, InDrive, private-ride and tour drivers, with combustion or electric cars.
+  es: Conductores de Uber, 99, InDrive, viajes particulares y turismo, con auto a combustión o eléctrico.
+features:
+  - title:
+      pt: Jornada com cronômetro
+      en: Shift timer
+      es: Jornada con cronómetro
+    text:
+      pt: >-
+        Um toque inicia a jornada do dia, com pausa e retomada. O estado sobrevive ao fechamento do app e a um
+        reinício do celular.
+      en: >-
+        One tap starts the day's shift, with pause and resume. The state survives closing the app and
+        restarting the phone.
+      es: >-
+        Un toque inicia la jornada del día, con pausa y reanudación. El estado sobrevive al cierre de la app y
+        a un reinicio del celular.
+  - title:
+      pt: Faturamento por plataforma
+      en: Earnings per platform
+      es: Facturación por plataforma
+    text:
+      pt: >-
+        Uber, 99, InDrive, corridas particulares, turismo e outros, lançados no próprio dia. O saldo líquido e
+        o progresso da meta diária se atualizam na hora.
+      en: >-
+        Uber, 99, InDrive, private rides, tours and others, logged on the day itself. Net balance and daily
+        goal progress update instantly.
+      es: >-
+        Uber, 99, InDrive, viajes particulares, turismo y otros, cargados en el mismo día. El saldo neto y el
+        progreso de la meta diaria se actualizan al instante.
+  - title:
+      pt: Despesas do dia
+      en: Daily expenses
+      es: Gastos del día
+    text:
+      pt: >-
+        Energia, combustível, alimentação, pedágio, estacionamento, lavagem e manutenção, cada uma na sua
+        categoria.
+      en: Charging, fuel, food, tolls, parking, car wash and maintenance, each in its own category.
+      es: >-
+        Energía, combustible, comida, peaje, estacionamiento, lavado y mantenimiento, cada uno en su
+        categoría.
+  - title:
+      pt: Insights do período
+      en: Period insights
+      es: Insights del período
+    text:
+      pt: >-
+        Lucro líquido, R$ por hora, média por dia, horas trabalhadas, km rodados, eficiência em kWh/100 km ou
+        km/L e a evolução semanal com a melhor semana destacada.
+      en: >-
+        Net profit, earnings per hour, average per day, hours worked, km driven, efficiency in kWh/100 km or
+        km/l and weekly evolution with the best week highlighted.
+      es: >-
+        Ganancia neta, R$ por hora, promedio por día, horas trabajadas, km recorridos, eficiencia en kWh/100
+        km o km/l y la evolución semanal con la mejor semana destacada.
+  - title:
+      pt: Calendário e histórico
+      en: Calendar and history
+      es: Calendario e historial
+    text:
+      pt: >-
+        Os dias trabalhados aparecem no calendário da home, com intensidade pelo resultado, e o histórico
+        agrupa por semana com bruto e líquido de cada dia.
+      en: >-
+        Worked days show on the home calendar, shaded by result, and the history groups by week with each
+        day's gross and net.
+      es: >-
+        Los días trabajados aparecen en el calendario del inicio, con intensidad según el resultado, y el
+        historial agrupa por semana con bruto y neto de cada día.
+  - title:
+      pt: Veículos e manutenções
+      en: Vehicles and maintenance
+      es: Vehículos y mantenimientos
+    text:
+      pt: >-
+        Vários veículos, um ativo por vez, com eficiência própria e histórico de manutenções com custo e
+        quilometragem.
+      en: >-
+        Several vehicles, one active at a time, each with its own efficiency and a maintenance history with
+        cost and mileage.
+      es: >-
+        Varios vehículos, uno activo por vez, con eficiencia propia e historial de mantenimientos con costo y
+        kilometraje.
+  - title:
+      pt: Metas semanais
+      en: Weekly goals
+      es: Metas semanales
+    text:
+      pt: Meta da semana e dias de trabalho por semana, com quanto falta por dia para alcançar o objetivo.
+      en: Weekly goal and working days per week, with how much is still needed per day to reach it.
+      es: Meta de la semana y días de trabajo por semana, con cuánto falta por día para alcanzar el objetivo.
+stackLayers:
+  - layer: frontend
+    items:
+      - Vue 3
+      - Quasar 2
+      - Pinia
+      - Chart.js
+  - layer: mobile
+    items:
+      - Capacitor 7
+      - Capacitor Preferences
+      - Android
+  - layer: backend
+    items:
+      - Laravel 12
+      - PHP 8.3
+      - Sanctum
+  - layer: data
+    items:
+      - PostgreSQL
+challenges:
+  - title:
+      pt: Um timer que não se perde
+      en: A timer that never gets lost
+      es: Un cronómetro que no se pierde
+    text:
+      pt: >-
+        A jornada é um turno aberto na API, mas a pausa é local e o estado fica no Capacitor Preferences. Ao
+        abrir o app, o estado local é restaurado e depois reconciliado com o dashboard da API, sem duplicar
+        horas.
+      en: >-
+        The shift is an open session in the API, but the pause is local and the state lives in Capacitor
+        Preferences. When the app opens, the local state is restored and then reconciled with the API
+        dashboard, without double-counting hours.
+      es: >-
+        La jornada es un turno abierto en la API, pero la pausa es local y el estado queda en Capacitor
+        Preferences. Al abrir la app, el estado local se restaura y luego se concilia con el panel de la API,
+        sin duplicar horas.
+  - title:
+      pt: Elétrico e combustão no mesmo cálculo
+      en: Electric and combustion in the same math
+      es: Eléctrico y combustión en el mismo cálculo
+    text:
+      pt: >-
+        O tipo de energia vem da unidade de eficiência do veículo: km/kWh gera consumo em kWh/100 km a partir
+        do preço da energia; km/L gera km por litro a partir do preço do combustível.
+      en: >-
+        The energy type comes from the vehicle's efficiency unit: km/kWh yields consumption in kWh/100 km from
+        the energy price; km/l yields kilometers per liter from the fuel price.
+      es: >-
+        El tipo de energía sale de la unidad de eficiencia del vehículo: km/kWh genera consumo en kWh/100 km a
+        partir del precio de la energía; km/l genera km por litro a partir del precio del combustible.
+  - title:
+      pt: Lançamento rápido e idempotente
+      en: Fast, idempotent entry
+      es: Carga rápida e idempotente
+    text:
+      pt: >-
+        Existe um dia por motorista por data e um lançamento por plataforma por dia. Salvar um valor é um
+        upsert, zerar apaga, e criar o dia de novo nunca devolve erro.
+      en: >-
+        There's one day per driver per date and one entry per platform per day. Saving a value is an upsert,
+        zeroing it deletes it, and creating the day again never returns an error.
+      es: >-
+        Existe un día por conductor por fecha y una carga por plataforma por día. Guardar un valor es un
+        upsert, ponerlo en cero lo borra, y crear el día de nuevo nunca devuelve error.
+  - title:
+      pt: Ler a corrida antes de aceitar
+      en: Reading the ride before accepting it
+      es: Leer el viaje antes de aceptarlo
+    text:
+      pt: >-
+        Em paralelo, um protótipo Android nativo em Kotlin lê o card da corrida por captura de tela e OCR no
+        aparelho e mostra R$/km e R$/hora, sem usar o serviço de acessibilidade, para não esbarrar nas
+        políticas da Play Store.
+      en: >-
+        In parallel, a native Kotlin Android prototype reads the ride card through screen capture and
+        on-device OCR and shows earnings per km and per hour, without using the accessibility service, to stay
+        within Play Store policies.
+      es: >-
+        En paralelo, un prototipo Android nativo en Kotlin lee la tarjeta del viaje por captura de pantalla y
+        OCR en el dispositivo y muestra R$/km y R$/hora, sin usar el servicio de accesibilidad, para no chocar
+        con las políticas de la Play Store.
+cover:
+  src: /projects/somae/home.webp
+  device: mobile
+  alt:
+    pt: Home com calendário dos dias trabalhados, cronômetro da jornada e meta do dia
+    en: Home with the calendar of worked days, the shift timer and the daily goal
+    es: Inicio con el calendario de los días trabajados, el cronómetro de la jornada y la meta del día
+  caption:
+    pt: Home — calendário, jornada e meta do dia.
+    en: Home — calendar, shift and daily goal.
+    es: Inicio — calendario, jornada y meta del día.
+gallery:
+  - src: /projects/somae/dia.webp
+    device: mobile
+    alt:
+      pt: Página do dia com saldo líquido, meta e faturamento por plataforma
+      en: Day page with net balance, goal and earnings per platform
+      es: Página del día con saldo neto, meta y facturación por plataforma
+    caption:
+      pt: O dia — saldo líquido e faturamento por plataforma
+      en: The day — net balance and earnings per platform
+      es: El día — saldo neto y facturación por plataforma
+  - src: /projects/somae/insights.webp
+    device: mobile
+    alt:
+      pt: Insights dos últimos 30 dias com lucro, R$ por hora, km rodados, eficiência e evolução semanal
+      en: Last 30 days insights with profit, earnings per hour, km driven, efficiency and weekly evolution
+      es: >-
+        Insights de los últimos 30 días con ganancia, R$ por hora, km recorridos, eficiencia y evolución
+        semanal
+    caption:
+      pt: Insights dos últimos 30 dias
+      en: Last 30 days insights
+      es: Insights de los últimos 30 días
+  - src: /projects/somae/historico.webp
+    device: mobile
+    alt:
+      pt: Histórico do mês agrupado por semana com líquido e bruto de cada dia
+      en: Month history grouped by week with each day's net and gross
+      es: Historial del mes agrupado por semana con neto y bruto de cada día
+    caption:
+      pt: Histórico por semana
+      en: History by week
+      es: Historial por semana
+  - src: /projects/somae/veiculo.webp
+    device: mobile
+    alt:
+      pt: Veículos cadastrados com eficiência e veículo ativo
+      en: Registered vehicles with efficiency and active vehicle
+      es: Vehículos registrados con eficiencia y vehículo activo
+    caption:
+      pt: Veículos
+      en: Vehicles
+      es: Vehículos
+  - src: /projects/somae/manutencao.webp
+    device: mobile
+    alt:
+      pt: Histórico de manutenções do veículo com custo e quilometragem
+      en: Vehicle maintenance history with cost and mileage
+      es: Historial de mantenimientos del vehículo con costo y kilometraje
+    caption:
+      pt: Manutenções
+      en: Maintenance
+      es: Mantenimientos
+  - src: /projects/somae/perfil.webp
+    device: mobile
+    alt:
+      pt: Perfil do motorista com contato, metas semanais e veículo ativo
+      en: Driver profile with contact, weekly goals and active vehicle
+      es: Perfil del conductor con contacto, metas semanales y vehículo activo
+    caption:
+      pt: Perfil e metas
+      en: Profile and goals
+      es: Perfil y metas

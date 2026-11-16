@@ -1,0 +1,376 @@
+order: 2
+name: Decasa
+icon: /projects/decasa.png
+playStore: true
+link: null
+type:
+  pt: Mobile
+  en: Mobile
+  es: Móvil
+tagline:
+  pt: Gerenciamento inteligente do lar
+  en: Smart home management
+  es: Gestión inteligente del hogar
+description:
+  pt: >-
+    Sistema centralizado para organizar a casa: registro de gastos com frequência, tarefas domésticas, listas
+    de compras, compromissos, gestão dos pets. Tudo em um único lugar.
+  en: >-
+    A centralized system to organize the home: recurring expense tracking, household chores, shopping lists,
+    appointments and pet care. Everything in one place.
+  es: >-
+    Sistema centralizado para organizar la casa: registro de gastos recurrentes, tareas domésticas, listas de
+    compras, compromisos y gestión de mascotas. Todo en un único lugar.
+stack:
+  - Vue 3
+  - Quasar
+  - Laravel
+  - PostgreSQL
+  - Capacitor
+year: '2024'
+status:
+  pt: Teste fechado na Play Store
+  en: Closed testing on the Play Store
+  es: Prueba cerrada en la Play Store
+role:
+  pt: Full stack — API e app
+  en: Full stack — API and app
+  es: Full stack — API y app
+summary:
+  - pt: >-
+      O DeCasa é o app da casa compartilhada. Quem mora junto entra na mesma casa e divide, num lugar só, as
+      contas do mês, a lista do mercado, as tarefas domésticas, os compromissos da família e os cuidados com
+      os pets.
+    en: >-
+      DeCasa is the app for a shared home. Everyone who lives together joins the same house and shares, in one
+      place, the month's bills, the grocery list, the chores, the family calendar and pet care.
+    es: >-
+      DeCasa es la app de la casa compartida. Quienes viven juntos entran en la misma casa y comparten, en un
+      solo lugar, las cuentas del mes, la lista del súper, las tareas domésticas, los compromisos de la
+      familia y el cuidado de las mascotas.
+  - pt: >-
+      O financeiro foi pensado para previsibilidade, não para conciliação bancária: contas fixas, variáveis e
+      parceladas viram uma projeção dos próximos 12 meses, com a sobra prevista do mês e a data em que cada
+      parcelamento termina. O app nasce em Vue 3 com Quasar e vai para Android via Capacitor, em português,
+      inglês e espanhol.
+    en: >-
+      Its finances are built for predictability, not bank reconciliation: fixed, variable and installment
+      bills become a 12-month projection, with the month's expected surplus and the date each installment plan
+      ends. The app is built in Vue 3 with Quasar and ships to Android through Capacitor, in Portuguese,
+      English and Spanish.
+    es: >-
+      Las finanzas están pensadas para la previsibilidad, no para la conciliación bancaria: cuentas fijas,
+      variables y en cuotas se convierten en una proyección de 12 meses, con el excedente previsto del mes y
+      la fecha en que termina cada financiación. La app está hecha en Vue 3 con Quasar y llega a Android con
+      Capacitor, en portugués, inglés y español.
+problem:
+  pt: >-
+    As contas da casa ficam espalhadas entre o app do banco, a fatura do cartão e a memória de cada um. A
+    lista do mercado está no grupo da família, as tarefas são cobradas no grito e ninguém lembra quando é a
+    próxima vacina do cachorro.
+  en: >-
+    Household bills are scattered across the bank app, the credit card statement and everyone's memory. The
+    grocery list lives in the family chat, chores are demanded by shouting and nobody remembers when the dog's
+    next vaccine is due.
+  es: >-
+    Las cuentas de la casa están repartidas entre la app del banco, el resumen de la tarjeta y la memoria de
+    cada uno. La lista del súper vive en el grupo de la familia, las tareas se reclaman a los gritos y nadie
+    recuerda cuándo es la próxima vacuna del perro.
+audience:
+  pt: >-
+    Casais, famílias e quem divide apartamento: pessoas que querem saber quanto sobra no fim do mês e dividir
+    o trabalho da casa sem planilha.
+  en: >-
+    Couples, families and roommates: people who want to know how much is left at the end of the month and to
+    split the housework without a spreadsheet.
+  es: >-
+    Parejas, familias y quienes comparten departamento: personas que quieren saber cuánto sobra a fin de mes y
+    dividir el trabajo de la casa sin planilla.
+features:
+  - title:
+      pt: Contas fixas, variáveis e parceladas
+      en: Fixed, variable and installment bills
+      es: Cuentas fijas, variables y en cuotas
+    text:
+      pt: >-
+        Aluguel e internet entram uma vez e se repetem; energia e água têm faixa de valor; o financiamento
+        mostra a parcela atual e quando acaba. Cada conta pode ir para um cartão.
+      en: >-
+        Rent and internet are entered once and repeat; power and water have a value range; the car loan shows
+        the current installment and when it ends. Any bill can be charged to a card.
+      es: >-
+        Alquiler e internet se cargan una vez y se repiten; luz y agua tienen un rango de valor; el préstamo
+        del auto muestra la cuota actual y cuándo termina. Cada cuenta puede ir a una tarjeta.
+  - title:
+      pt: Projeção de 12 meses
+      en: 12-month projection
+      es: Proyección de 12 meses
+    text:
+      pt: >-
+        Gráfico de saídas por mês contra a renda da casa, sobra projetada do mês e os próximos "alívios" — os
+        meses em que um parcelamento termina.
+      en: >-
+        Monthly spending against household income, the month's projected surplus and the upcoming "reliefs" —
+        the months when an installment plan ends.
+      es: >-
+        Gastos por mes frente al ingreso de la casa, excedente proyectado del mes y los próximos "alivios":
+        los meses en que termina una financiación.
+  - title:
+      pt: Fechamento do mês
+      en: Month-end closing
+      es: Cierre del mes
+    text:
+      pt: >-
+        Um checklist pede só o que muda: o valor real das contas variáveis, das faturas de cartão e das rendas
+        variáveis. Com tudo informado, o mês é fechado.
+      en: >-
+        A checklist asks only for what changes: the real value of variable bills, card statements and variable
+        income. Once everything is in, the month is closed.
+      es: >-
+        Un checklist pide solo lo que cambia: el valor real de las cuentas variables, de los resúmenes de
+        tarjeta y de los ingresos variables. Con todo informado, el mes se cierra.
+  - title:
+      pt: Renda e divisão por pessoa
+      en: Income and split per person
+      es: Ingresos y división por persona
+    text:
+      pt: >-
+        Salários fixos e freelas variáveis, distribuição da renda entre os moradores e um rateio percentual
+        das despesas da casa.
+      en: >-
+        Fixed salaries and variable freelance income, how income is distributed among residents and a
+        percentage split of household expenses.
+      es: >-
+        Sueldos fijos y trabajos freelance variables, distribución del ingreso entre los habitantes y un
+        reparto porcentual de los gastos de la casa.
+  - title:
+      pt: Lista de compras que vira gasto
+      en: A grocery list that becomes an expense
+      es: Lista del súper que se vuelve gasto
+    text:
+      pt: >-
+        Itens com quantidade, unidade e preço estimado, marcados no mercado. Ao fechar a lista com o valor
+        pago, ela entra no financeiro na categoria certa.
+      en: >-
+        Items with quantity, unit and estimated price, checked off at the store. Closing the list with the
+        amount paid sends it to the finances under the right category.
+      es: >-
+        Ítems con cantidad, unidad y precio estimado, marcados en el súper. Al cerrar la lista con el valor
+        pagado, entra en las finanzas en la categoría correcta.
+  - title:
+      pt: Tarefas com pontuação
+      en: Chores with points
+      es: Tareas con puntos
+    text:
+      pt: >-
+        Afazeres únicos, diários, semanais ou mensais, com responsável. Cada tarefa feita rende pontos e o
+        ranking do mês mostra quem mais ajudou em casa.
+      en: >-
+        One-off, daily, weekly or monthly chores, each with an owner. Every completed chore earns points and
+        the monthly ranking shows who helped the most.
+      es: >-
+        Tareas únicas, diarias, semanales o mensuales, con responsable. Cada tarea hecha suma puntos y el
+        ranking del mes muestra quién más ayudó en casa.
+  - title:
+      pt: Agenda da família
+      en: Family calendar
+      es: Agenda de la familia
+    text:
+      pt: >-
+        Compromissos com local, responsável, etiquetas e status, inclusive recorrentes em dias específicos da
+        semana, em lista ou agenda.
+      en: >-
+        Appointments with place, owner, tags and status, including recurring ones on specific weekdays, as a
+        list or a calendar.
+      es: >-
+        Compromisos con lugar, responsable, etiquetas y estado, incluso recurrentes en días específicos de la
+        semana, en lista o agenda.
+  - title:
+      pt: Pets em dia
+      en: Pets up to date
+      es: Mascotas al día
+    text:
+      pt: >-
+        Ficha de cada pet com vacinas, remédios e consultas, alertas das próximas doses e controle de estoque
+        de ração e areia com mínimo configurável.
+      en: >-
+        A record for each pet with vaccines, medication and vet visits, alerts for upcoming doses and food and
+        litter stock with a configurable minimum.
+      es: >-
+        Ficha de cada mascota con vacunas, remedios y consultas, alertas de las próximas dosis y control de
+        stock de alimento y piedras con mínimo configurable.
+stackLayers:
+  - layer: frontend
+    items:
+      - Vue 3
+      - Quasar 2
+      - Pinia
+      - vue-i18n
+      - ECharts
+  - layer: mobile
+    items:
+      - Capacitor 8
+      - Android
+  - layer: backend
+    items:
+      - Laravel 12
+      - PHP 8.3
+      - Sanctum
+      - Scheduler
+  - layer: data
+    items:
+      - PostgreSQL
+challenges:
+  - title:
+      pt: Projetar em vez de materializar
+      en: Project instead of materialize
+      es: Proyectar en lugar de materializar
+    text:
+      pt: >-
+        Contas recorrentes não geram um lançamento por mês no banco. Cada mês é calculado a partir da série
+        vigente, e só o valor real informado vira registro. Isso mantém a projeção de 12 meses barata e sempre
+        coerente com a configuração atual.
+      en: >-
+        Recurring bills don't create one row per month in the database. Each month is computed from the
+        current series, and only the real value informed becomes a record. That keeps the 12-month projection
+        cheap and always consistent with the current setup.
+      es: >-
+        Las cuentas recurrentes no generan un registro por mes en la base. Cada mes se calcula a partir de la
+        serie vigente y solo el valor real informado se guarda. Eso mantiene la proyección de 12 meses liviana
+        y siempre coherente con la configuración actual.
+  - title:
+      pt: Mudar o valor sem reescrever o passado
+      en: Change the amount without rewriting the past
+      es: Cambiar el valor sin reescribir el pasado
+    text:
+      pt: >-
+        Uma conta é versionada por vigência: alterar o aluguel a partir de agora fecha a versão anterior no
+        mês corrente e abre uma nova, preservando os meses já fechados.
+      en: >-
+        A bill is versioned by validity period: changing the rent from now on closes the previous version in
+        the current month and opens a new one, preserving the months already closed.
+      es: >-
+        Una cuenta se versiona por vigencia: cambiar el alquiler a partir de ahora cierra la versión anterior
+        en el mes actual y abre una nueva, preservando los meses ya cerrados.
+  - title:
+      pt: Pontuação justa por período
+      en: Fair points per period
+      es: Puntos justos por período
+    text:
+      pt: >-
+        Cada conclusão é registrada por período (dia, semana ou mês) e só pode acontecer uma vez nele. Os
+        pontos dependem da frequência da tarefa e o ranking é agregado por mês ou no histórico total.
+      en: >-
+        Each completion is stored per period (day, week or month) and can happen only once in it. Points
+        depend on the chore's frequency and the ranking is aggregated per month or all-time.
+      es: >-
+        Cada conclusión se registra por período (día, semana o mes) y solo puede ocurrir una vez en él. Los
+        puntos dependen de la frecuencia de la tarea y el ranking se agrega por mes o en el historial total.
+  - title:
+      pt: Simplificar um módulo em produção
+      en: Simplifying a module in production
+      es: Simplificar un módulo en producción
+    text:
+      pt: >-
+        O financeiro foi reestruturado com o app em uso: saíram contas bancárias, subcategorias e divisão por
+        gasto, com migrations defensivas e uma ordem de passos que não quebrasse os dados existentes.
+      en: >-
+        The finance module was restructured with the app in use: bank accounts, subcategories and per-expense
+        splits were removed through defensive migrations and an order of steps that wouldn't break existing
+        data.
+      es: >-
+        Las finanzas se reestructuraron con la app en uso: salieron cuentas bancarias, subcategorías y
+        división por gasto, con migraciones defensivas y un orden de pasos que no rompiera los datos
+        existentes.
+cover:
+  src: /projects/decasa/home.webp
+  device: mobile
+  alt:
+    pt: Início do app com o total de gastos do mês, tarefas pendentes, líder do ranking e gastos por categoria
+    en: Home with the month's total spending, pending chores, ranking leader and spending by category
+    es: Inicio con el total de gastos del mes, tareas pendientes, líder del ranking y gastos por categoría
+  caption:
+    pt: Início — o mês da casa de relance.
+    en: Home — the household's month at a glance.
+    es: Inicio — el mes de la casa de un vistazo.
+gallery:
+  - src: /projects/decasa/financeiro.webp
+    device: mobile
+    alt:
+      pt: Panorama financeiro com a sobra projetada do mês e o gráfico dos próximos 12 meses
+      en: Financial overview with the month's projected surplus and the next 12 months chart
+      es: Panorama financiero con el excedente proyectado del mes y el gráfico de los próximos 12 meses
+    caption:
+      pt: Sobra projetada e próximos 12 meses
+      en: Projected surplus and next 12 months
+      es: Excedente proyectado y próximos 12 meses
+  - src: /projects/decasa/compras.webp
+    device: mobile
+    alt:
+      pt: Lista de compras aberta com itens marcados, quantidade e preço estimado
+      en: Open grocery list with checked items, quantity and estimated price
+      es: Lista del súper abierta con ítems marcados, cantidad y precio estimado
+    caption:
+      pt: Lista do mercado
+      en: Grocery list
+      es: Lista del súper
+  - src: /projects/decasa/entradas.webp
+    device: mobile
+    alt:
+      pt: Rendas fixas e variáveis da casa e a distribuição da renda entre os moradores
+      en: Fixed and variable household income and its distribution among residents
+      es: Ingresos fijos y variables de la casa y su distribución entre los habitantes
+    caption:
+      pt: Renda e distribuição por pessoa
+      en: Income and split per person
+      es: Ingresos y división por persona
+  - src: /projects/decasa/afazeres.webp
+    device: mobile
+    alt:
+      pt: Tarefas do dia com frequência, responsável e pontos
+      en: Today's chores with frequency, owner and points
+      es: Tareas del día con frecuencia, responsable y puntos
+    caption:
+      pt: Afazeres do dia
+      en: Today's chores
+      es: Tareas del día
+  - src: /projects/decasa/ranking.webp
+    device: mobile
+    alt:
+      pt: Ranking do mês com a pontuação de cada morador
+      en: Monthly ranking with each resident's score
+      es: Ranking del mes con la puntuación de cada habitante
+    caption:
+      pt: Ranking da casa
+      en: Household ranking
+      es: Ranking de la casa
+  - src: /projects/decasa/compromissos.webp
+    device: mobile
+    alt:
+      pt: Lista de compromissos com filtros de status e responsável
+      en: Appointment list with status and owner filters
+      es: Lista de compromisos con filtros de estado y responsable
+    caption:
+      pt: Compromissos da família
+      en: Family appointments
+      es: Compromisos de la familia
+  - src: /projects/decasa/pets.webp
+    device: mobile
+    alt:
+      pt: Resumo dos pets com próximas vacinas e estoque de ração e areia
+      en: Pets summary with upcoming vaccines and food and litter stock
+      es: Resumen de las mascotas con próximas vacunas y stock de alimento y piedras
+    caption:
+      pt: Pets e estoque
+      en: Pets and stock
+      es: Mascotas y stock
+  - src: /projects/decasa/pet-perfil.webp
+    device: mobile
+    alt:
+      pt: Perfil do pet com dados, próximas vacinas e histórico
+      en: Pet profile with details, upcoming vaccines and history
+      es: Perfil de la mascota con datos, próximas vacunas e historial
+    caption:
+      pt: Perfil do pet
+      en: Pet profile
+      es: Perfil de la mascota

@@ -1,0 +1,355 @@
+order: 9
+name: WebTennis Liga
+icon: /projects/tennisliga.png
+playStore: false
+link: null
+type:
+  pt: Web · Jogo
+  en: Web · Game
+  es: Web · Juego
+tagline:
+  pt: Manager de tênis para jogar com os amigos
+  en: A tennis manager game to play with friends
+  es: Manager de tenis para jugar con los amigos
+description:
+  pt: >-
+    Cada jogador cuida de um atleta, treina em minigames de habilidade e disputa uma liga fechada com uma
+    partida por dia. Tem mata-mata, leilão, chat e replay das partidas, com atualização ao vivo por WebSocket.
+  en: >-
+    Each player manages one athlete, trains in skill minigames and competes in a closed league with one match
+    a day. Features playoffs, auctions, chat and match replays, updated live over WebSocket.
+  es: >-
+    Cada jugador cuida de un atleta, entrena en minijuegos de habilidad y compite en una liga cerrada con un
+    partido por día. Tiene eliminatorias, subasta, chat y repetición de partidos, con actualización en vivo
+    por WebSocket.
+stack:
+  - Laravel 13
+  - Inertia
+  - Vue 3
+  - TypeScript
+  - Three.js
+  - Redis
+  - PostgreSQL
+year: '2026'
+status:
+  pt: Beta fechado
+  en: Closed beta
+  es: Beta cerrada
+role:
+  pt: Game design e full stack
+  en: Game design and full stack
+  es: Game design y full stack
+summary:
+  - pt: >-
+      Um manager de tênis persistente para jogar com os amigos. Cada pessoa cria e cuida de um atleta numa
+      liga fechada de oito, e todo dia o ciclo se repete: ajustar o plano de jogo, treinar em um minigame,
+      assistir à partida das 19h e entender o resultado para melhorar atleta, equipamento e equipe.
+    en: >-
+      A persistent tennis manager to play with friends. Each person creates and looks after one athlete in a
+      closed league of eight, and the daily loop repeats: tweak the game plan, train in a minigame, watch the
+      7 p.m. match and understand the result to improve athlete, gear and team.
+    es: >-
+      Un manager de tenis persistente para jugar con amigos. Cada persona crea y cuida a un atleta en una liga
+      cerrada de ocho, y todos los días el ciclo se repite: ajustar el plan de juego, entrenar en un
+      minijuego, ver el partido de las 19 h y entender el resultado para mejorar atleta, equipamiento y
+      equipo.
+  - pt: >-
+      O relógio é compartilhado: os planos travam às 18h55 e a rodada começa às 19h para todo mundo, com a
+      partida simulada uma única vez no servidor e reproduzida ao vivo no celular, sem spoiler. Fins de semana
+      têm mata-mata; entre sets, um duelo de habilidade.
+    en: >-
+      The clock is shared: plans lock at 6:55 p.m. and the round starts at 7 p.m. for everyone, with each
+      match simulated once on the server and played back live on the phone, with no spoilers. Weekends bring
+      playoffs; between sets, a skill duel.
+    es: >-
+      El reloj es compartido: los planes se bloquean a las 18:55 y la ronda empieza a las 19 h para todos, con
+      el partido simulado una sola vez en el servidor y reproducido en vivo en el celular, sin spoilers. Los
+      fines de semana hay eliminatorias; entre sets, un duelo de habilidad.
+problem:
+  pt: >-
+    Jogos de manager costumam ser solitários ou abertos a milhares de desconhecidos. A ideia era o contrário:
+    uma liga pequena entre amigos, um momento por dia em que todos assistem juntos, e decisões curtas que
+    cabem numa pausa do dia.
+  en: >-
+    Manager games are usually solitary or open to thousands of strangers. The idea was the opposite: a small
+    league among friends, one moment a day when everyone watches together, and short decisions that fit into a
+    break in the day.
+  es: >-
+    Los juegos de manager suelen ser solitarios o abiertos a miles de desconocidos. La idea era lo contrario:
+    una liga chica entre amigos, un momento al día en que todos miran juntos y decisiones cortas que entran en
+    una pausa del día.
+audience:
+  pt: >-
+    Grupos de amigos que jogam no celular em sessões curtas, uma ou duas vezes por dia, e no computador quando
+    querem mexer em mercado, equipamento e finanças com calma.
+  en: >-
+    Groups of friends who play on the phone in short sessions once or twice a day, and on the computer when
+    they want to handle the market, gear and finances calmly.
+  es: >-
+    Grupos de amigos que juegan en el celular en sesiones cortas, una o dos veces al día, y en la computadora
+    cuando quieren ocuparse del mercado, el equipamiento y las finanzas con calma.
+features:
+  - title:
+      pt: Partida diária ao vivo
+      en: Live daily match
+      es: Partido diario en vivo
+    text:
+      pt: >-
+        Rodada às 19h com a quadra de saibro em 2D e 3D, placar ponto a ponto, lances e estatísticas, e replay
+        para quem perdeu a hora.
+      en: >-
+        A 7 p.m. round on a clay court in 2D and 3D, point-by-point scoreboard, plays and stats, and a replay
+        for those who missed it.
+      es: >-
+        Ronda a las 19 h con la cancha de polvo de ladrillo en 2D y 3D, marcador punto a punto, jugadas y
+        estadísticas, y repetición para quien no llegó a tiempo.
+  - title:
+      pt: Plano de jogo
+      en: Game plan
+      es: Plan de juego
+    text:
+      pt: >-
+        Postura, saque, posição, ritmo, padrão e equipamento definem como o atleta joga, com a contagem
+        regressiva até o fechamento dos planos.
+      en: >-
+        Stance, serve, position, rhythm, pattern and gear define how the athlete plays, with a countdown until
+        plans lock.
+      es: >-
+        Postura, saque, posición, ritmo, patrón y equipamiento definen cómo juega el atleta, con la cuenta
+        regresiva hasta el cierre de los planes.
+  - title:
+      pt: Nove minigames de treino
+      en: Nine training minigames
+      es: Nueve minijuegos de entrenamiento
+    text:
+      pt: >-
+        Saque, direita, esquerda, voleio, smash, deslocamento e outros, feitos com three.js. O resultado vira
+        pontos de progresso nos atributos do atleta.
+      en: >-
+        Serve, forehand, backhand, volley, smash, footwork and more, built with three.js. Results turn into
+        progress points on the athlete's attributes.
+      es: >-
+        Saque, drive, revés, volea, smash, desplazamiento y otros, hechos con three.js. El resultado se
+        convierte en puntos de progreso en los atributos del atleta.
+  - title:
+      pt: Liga, mata-mata e copas
+      en: League, playoffs and cups
+      es: Liga, eliminatorias y copas
+    text:
+      pt: >-
+        Tabela da semana e ranking da temporada, mata-mata Ouro e Prata no fim de semana, Copa Aberta e a Copa
+        Infinita.
+      en: Weekly table and season ranking, Gold and Silver weekend playoffs, the Open Cup and the Infinite Cup.
+      es: >-
+        Tabla de la semana y ranking de la temporada, eliminatorias Oro y Plata el fin de semana, la Copa
+        Abierta y la Copa Infinita.
+  - title:
+      pt: Economia do atleta
+      en: Athlete economy
+      es: Economía del atleta
+    text:
+      pt: >-
+        Prêmios, salários, patrocínios e representantes de marca, saldo dia a dia e extrato, além do mercado
+        de staff e equipamentos com leilão.
+      en: >-
+        Prize money, salaries, sponsorships and brand reps, day-by-day balance and statement, plus a staff and
+        gear market with auctions.
+      es: >-
+        Premios, salarios, patrocinios y representantes de marca, saldo día a día y extracto, además del
+        mercado de staff y equipamiento con subastas.
+  - title:
+      pt: Resenha e chat
+      en: Feed and chat
+      es: Feed y chat
+    text:
+      pt: >-
+        Feed da liga com os resultados comentados, palpites da rodada, coletiva e chat em tempo real via
+        WebSocket.
+      en: >-
+        League feed with commented results, round predictions, press conference and real-time chat over
+        WebSocket.
+      es: >-
+        Feed de la liga con los resultados comentados, pronósticos de la ronda, conferencia de prensa y chat
+        en tiempo real por WebSocket.
+stackLayers:
+  - layer: frontend
+    items:
+      - Vue 3
+      - TypeScript
+      - Inertia 3
+      - Tailwind 4
+      - three.js
+  - layer: backend
+    items:
+      - Laravel 13
+      - PHP 8.4
+      - Fortify
+      - Reverb
+      - Horizon
+      - Pest
+  - layer: data
+    items:
+      - PostgreSQL 17
+      - Redis 7
+  - layer: infra
+    items:
+      - Docker
+challenges:
+  - title:
+      pt: Uma linha do tempo autoritativa
+      en: An authoritative timeline
+      es: Una línea de tiempo autoritativa
+    text:
+      pt: >-
+        Cada partida é simulada uma vez no servidor e gravada como linha do tempo. O app só revela o que o
+        relógio da liga já passou, então ninguém vê o placar antes da hora, nem recarregando a página.
+      en: >-
+        Each match is simulated once on the server and stored as a timeline. The app only reveals what the
+        league clock has already passed, so nobody sees the score early, not even by reloading the page.
+      es: >-
+        Cada partido se simula una vez en el servidor y se guarda como línea de tiempo. La app solo revela lo
+        que el reloj de la liga ya pasó, así que nadie ve el marcador antes de hora, ni recargando la página.
+  - title:
+      pt: Habilidade dentro do manager
+      en: Skill inside a manager
+      es: Habilidad dentro del manager
+    text:
+      pt: >-
+        Minigames e duelos precisam ser divertidos sem quebrar a simulação: o servidor valida cada execução e
+        transforma desempenho em progresso dentro de limites diários.
+      en: >-
+        Minigames and duels have to be fun without breaking the simulation: the server validates every run and
+        turns performance into progress within daily limits.
+      es: >-
+        Minijuegos y duelos tienen que ser divertidos sin romper la simulación: el servidor valida cada
+        ejecución y transforma el desempeño en progreso dentro de límites diarios.
+  - title:
+      pt: Dinheiro que nunca quebra
+      en: Money that never breaks
+      es: Dinero que nunca se rompe
+    text:
+      pt: >-
+        Créditos e Bolles são moedas separadas, uma do jogo e outra só cosmética, sem pagar por vantagem. A
+        contabilidade de prêmios, salários e leilões é registrada em extrato e coberta por testes.
+      en: >-
+        Credits and Bolles are separate currencies, one for the game and one purely cosmetic, with no
+        pay-to-win. Prize, salary and auction accounting is recorded in a statement and covered by tests.
+      es: >-
+        Créditos y Bolles son monedas separadas, una del juego y otra solo cosmética, sin pagar por ventaja.
+        La contabilidad de premios, salarios y subastas queda registrada en un extracto y cubierta por tests.
+  - title:
+      pt: Tempo real sem depender dele
+      en: Real time without depending on it
+      es: Tiempo real sin depender de él
+    text:
+      pt: >-
+        Chat, duelos e avisos de leilão chegam por Reverb, mas tudo funciona sem a conexão ao vivo: a próxima
+        leitura da página mostra o estado certo.
+      en: >-
+        Chat, duels and auction alerts arrive through Reverb, but everything works without the live
+        connection: the next page load shows the correct state.
+      es: >-
+        Chat, duelos y avisos de subasta llegan por Reverb, pero todo funciona sin la conexión en vivo: la
+        próxima carga de la página muestra el estado correcto.
+cover:
+  src: /projects/tennisliga/match.webp
+  device: desktop
+  alt:
+    pt: Partida na quadra de saibro com placar, lances do jogo e estatísticas
+    en: Match on the clay court with scoreboard, plays and stats
+    es: Partido en la cancha de polvo de ladrillo con marcador, jugadas y estadísticas
+  caption:
+    pt: A partida do dia — quadra, placar e lance a lance.
+    en: The match of the day — court, score and every point.
+    es: El partido del día — cancha, marcador y punto a punto.
+gallery:
+  - src: /projects/tennisliga/dashboard.webp
+    device: desktop
+    alt:
+      pt: Início com o checklist do dia e a resenha da liga
+      en: Home with the day's checklist and the league feed
+      es: Inicio con el checklist del día y el feed de la liga
+    caption:
+      pt: Hoje em quadra — o checklist do dia.
+      en: On court today — the day's checklist.
+      es: Hoy en cancha — el checklist del día.
+  - src: /projects/tennisliga/plan.webp
+    device: desktop
+    alt:
+      pt: Plano de jogo com postura, saque, posição, ritmo e equipamento
+      en: Game plan with stance, serve, position, rhythm and gear
+      es: Plan de juego con postura, saque, posición, ritmo y equipamiento
+    caption:
+      pt: Plano de jogo antes do fechamento das 18h55.
+      en: Game plan before the 6:55 p.m. lock.
+      es: Plan de juego antes del cierre de las 18:55.
+  - src: /projects/tennisliga/training.webp
+    device: desktop
+    alt:
+      pt: Tela de treino com os minigames de cada fundamento
+      en: Training screen with a minigame for each skill
+      es: Pantalla de entrenamiento con los minijuegos de cada fundamento
+    caption:
+      pt: Treino em nove minigames.
+      en: Training in nine minigames.
+      es: Entrenamiento en nueve minijuegos.
+  - src: /projects/tennisliga/league.webp
+    device: desktop
+    alt:
+      pt: Classificação da liga da semana e ranking da temporada
+      en: Weekly league table and season ranking
+      es: Tabla de la liga de la semana y ranking de la temporada
+    caption:
+      pt: Liga do Saibro — tabela e ranking.
+      en: Clay League — table and ranking.
+      es: Liga del Polvo de Ladrillo — tabla y ranking.
+  - src: /projects/tennisliga/finances.webp
+    device: desktop
+    alt:
+      pt: Finanças do atleta com saldo dia a dia, receitas, gastos e patrocínios
+      en: Athlete finances with daily balance, income, expenses and sponsorships
+      es: Finanzas del atleta con saldo diario, ingresos, gastos y patrocinios
+    caption:
+      pt: Finanças do atleta.
+      en: Athlete finances.
+      es: Finanzas del atleta.
+  - src: /projects/tennisliga/landing.webp
+    device: desktop
+    alt:
+      pt: Página de apresentação do jogo
+      en: Game landing page
+      es: Página de presentación del juego
+    caption:
+      pt: A página de entrada do jogo.
+      en: The game's landing page.
+      es: La página de entrada del juego.
+  - src: /projects/tennisliga/m-match.webp
+    device: mobile
+    alt:
+      pt: Partida no celular com placar e quadra
+      en: Match on the phone with scoreboard and court
+      es: Partido en el celular con marcador y cancha
+    caption:
+      pt: A partida no celular
+      en: The match on the phone
+      es: El partido en el celular
+  - src: /projects/tennisliga/m-dashboard.webp
+    device: mobile
+    alt:
+      pt: Checklist do dia no celular
+      en: Day's checklist on the phone
+      es: Checklist del día en el celular
+    caption:
+      pt: Checklist do dia
+      en: Daily checklist
+      es: Checklist del día
+  - src: /projects/tennisliga/m-league.webp
+    device: mobile
+    alt:
+      pt: Classificação da liga no celular
+      en: League table on the phone
+      es: Tabla de la liga en el celular
+    caption:
+      pt: Classificação
+      en: Standings
+      es: Clasificación

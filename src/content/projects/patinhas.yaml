@@ -1,0 +1,282 @@
+order: 11
+name: Patinhas
+icon: /projects/patinhas.png
+playStore: false
+link: null
+type:
+  pt: Mobile · Extensão universitária
+  en: Mobile · University outreach
+  es: Móvil · Extensión universitaria
+tagline:
+  pt: Controle de animais adotados e em lar temporário
+  en: Tracking for adopted and fostered animals
+  es: Control de animales adoptados y en hogar temporal
+description:
+  pt: >-
+    Projeto de extensão da faculdade, desenvolvido para uma protetora de animais da cidade onde moro — que
+    resgata, trata e cuida dos animais até a adoção responsável. Cada resgatado tem ficha própria com vacinas,
+    vermífugos, peso e consultas, além de lembretes locais e fotos. Os dados ficam no próprio aparelho, em
+    SQLite, com backup exportável.
+  en: >-
+    A university outreach project built for an animal rescue group in my city — people who rescue, treat and
+    care for animals until responsible adoption. Every rescued animal has its own record with vaccines,
+    dewormers, weight and vet visits, plus local reminders and photos. Data stays on the device, in SQLite,
+    with an exportable backup.
+  es: >-
+    Proyecto de extensión universitaria desarrollado para una protectora de animales de la ciudad donde vivo —
+    que rescata, trata y cuida a los animales hasta la adopción responsable. Cada rescatado tiene su propia
+    ficha con vacunas, desparasitantes, peso y consultas, además de recordatorios locales y fotos. Los datos
+    quedan en el propio dispositivo, en SQLite, con respaldo exportable.
+stack:
+  - Vue 3
+  - Quasar
+  - Capacitor
+  - SQLite
+  - TypeScript
+year: '2026'
+status:
+  pt: Versão 0.1
+  en: Version 0.1
+  es: Versión 0.1
+role:
+  pt: Projeto de extensão — app completo
+  en: University outreach — full app
+  es: Extensión universitaria — app completa
+summary:
+  - pt: >-
+      O Patinhas nasceu como projeto de extensão da faculdade para uma protetora de animais da minha cidade,
+      que resgata, trata e cuida dos animais até a adoção responsável. Cada animal tem sua ficha com saúde,
+      vacinas, vermífugos, consultas, remédios, peso, fotos e arquivos, e a tela inicial mostra os remédios do
+      dia de todos os animais em lar temporário.
+    en: >-
+      Patinhas started as a university outreach project for an animal rescue group in my city, which rescues,
+      treats and cares for animals until responsible adoption. Each animal has a record with health, vaccines,
+      dewormers, vet visits, medication, weight, photos and files, and the home screen shows today's
+      medication for every animal in foster care.
+    es: >-
+      Patinhas nació como proyecto de extensión universitaria para una protectora de animales de mi ciudad,
+      que rescata, trata y cuida a los animales hasta la adopción responsable. Cada animal tiene su ficha con
+      salud, vacunas, desparasitantes, consultas, remedios, peso, fotos y archivos, y la pantalla de inicio
+      muestra los remedios del día de todos los animales en hogar temporal.
+  - pt: >-
+      Não há servidor: os dados ficam no próprio celular, em SQLite, com lembretes locais e um backup em um
+      único arquivo .zip que pode ser guardado no Google Drive ou no computador. Simples de instalar, sem
+      mensalidade e sem depender de internet.
+    en: >-
+      There's no server: data stays on the phone in SQLite, with local reminders and a backup in a single .zip
+      file that can be kept on Google Drive or a computer. Easy to install, no subscription and no internet
+      needed.
+    es: >-
+      No hay servidor: los datos quedan en el propio celular, en SQLite, con recordatorios locales y un backup
+      en un único archivo .zip que se puede guardar en Google Drive o en la computadora. Simple de instalar,
+      sin mensualidad y sin depender de internet.
+problem:
+  pt: >-
+    A protetora cuidava de vários animais ao mesmo tempo, em casas diferentes, e controlava remédios, vacinas
+    e consultas em cadernos e mensagens. Um horário de remédio esquecido ou um histórico perdido faz diferença
+    na recuperação de um animal resgatado.
+  en: >-
+    The rescue group looked after several animals at once, in different homes, and tracked medication,
+    vaccines and vet visits in notebooks and messages. A forgotten dose or a lost history makes a difference
+    in a rescued animal's recovery.
+  es: >-
+    La protectora cuidaba varios animales al mismo tiempo, en casas distintas, y controlaba remedios, vacunas
+    y consultas en cuadernos y mensajes. Un horario de remedio olvidado o un historial perdido marca la
+    diferencia en la recuperación de un animal rescatado.
+audience:
+  pt: >-
+    Protetoras independentes, lares temporários e tutores que querem o histórico de saúde dos seus animais num
+    lugar só.
+  en: Independent rescuers, foster homes and owners who want their animals' health history in one place.
+  es: >-
+    Protectoras independientes, hogares temporales y tutores que quieren el historial de salud de sus animales
+    en un solo lugar.
+features:
+  - title:
+      pt: Remédios de hoje
+      en: Today's medication
+      es: Remedios de hoy
+    text:
+      pt: >-
+        A tela inicial lista os horários do dia de todos os animais, com dose e observação, para marcar
+        conforme forem dados.
+      en: >-
+        The home screen lists the day's times for every animal, with dose and notes, to check off as they're
+        given.
+      es: >-
+        La pantalla de inicio lista los horarios del día de todos los animales, con dosis y observación, para
+        marcarlos a medida que se dan.
+  - title:
+      pt: Ficha completa do animal
+      en: Complete animal record
+      es: Ficha completa del animal
+    text:
+      pt: >-
+        Espécie, raça, sexo, nascimento, peso, cor, castração, origem (pessoal ou resgatado) e data de entrada
+        no lar temporário.
+      en: >-
+        Species, breed, sex, birth date, weight, color, neutering, origin (own or rescued) and foster care
+        start date.
+      es: >-
+        Especie, raza, sexo, nacimiento, peso, color, castración, origen (propio o rescatado) y fecha de
+        ingreso al hogar temporal.
+  - title:
+      pt: Saúde em dia
+      en: Health up to date
+      es: Salud al día
+    text:
+      pt: >-
+        Vacinas, vermífugos, consultas agendadas e realizadas, exames e histórico de peso, com lembretes
+        locais.
+      en: >-
+        Vaccines, dewormers, scheduled and completed vet visits, exams and weight history, with local
+        reminders.
+      es: >-
+        Vacunas, desparasitantes, consultas programadas y realizadas, exámenes e historial de peso, con
+        recordatorios locales.
+  - title:
+      pt: Fotos e arquivos
+      en: Photos and files
+      es: Fotos y archivos
+    text:
+      pt: Fotos tiradas pela câmera e documentos como receitas e exames, guardados por animal.
+      en: Photos taken with the camera and documents such as prescriptions and exams, stored per animal.
+      es: Fotos sacadas con la cámara y documentos como recetas y exámenes, guardados por animal.
+  - title:
+      pt: Backup em um arquivo
+      en: Backup in one file
+      es: Backup en un archivo
+    text:
+      pt: >-
+        Animais, históricos, fotos e arquivos exportados num único .zip para compartilhar e restaurar em outro
+        aparelho.
+      en: >-
+        Animals, histories, photos and files exported into a single .zip to share and restore on another
+        device.
+      es: >-
+        Animales, historiales, fotos y archivos exportados en un único .zip para compartir y restaurar en otro
+        dispositivo.
+stackLayers:
+  - layer: frontend
+    items:
+      - Vue 3
+      - Quasar 2
+      - Pinia
+      - TypeScript
+  - layer: mobile
+    items:
+      - Capacitor 8
+      - Local Notifications
+      - Camera
+      - Filesystem
+      - Share
+  - layer: data
+    items:
+      - SQLite (@capacitor-community/sqlite)
+      - jeep-sqlite na web
+      - JSZip
+challenges:
+  - title:
+      pt: Offline de verdade, sem servidor
+      en: Truly offline, no server
+      es: Offline de verdad, sin servidor
+    text:
+      pt: >-
+        Tudo vive em SQLite no aparelho. Na web e no desenvolvimento, o mesmo código roda com jeep-sqlite e
+        persiste explicitamente, então as telas não sabem em qual plataforma estão.
+      en: >-
+        Everything lives in SQLite on the device. On the web and during development, the same code runs on
+        jeep-sqlite and persists explicitly, so screens don't know which platform they're on.
+      es: >-
+        Todo vive en SQLite en el dispositivo. En la web y en desarrollo, el mismo código corre con
+        jeep-sqlite y persiste explícitamente, así que las pantallas no saben en qué plataforma están.
+  - title:
+      pt: Backup que não perde nada
+      en: A backup that loses nothing
+      es: Un backup que no pierde nada
+    text:
+      pt: >-
+        O .zip leva o banco e todos os arquivos de cada animal. Restaurar troca o conteúdo inteiro de forma
+        segura, para quem troca ou formata o celular.
+      en: >-
+        The .zip carries the database and every animal's files. Restoring safely replaces the whole content,
+        for whoever changes or resets their phone.
+      es: >-
+        El .zip lleva la base y todos los archivos de cada animal. Restaurar reemplaza todo el contenido de
+        forma segura, para quien cambia o formatea el celular.
+  - title:
+      pt: Software para quem cuida, não para quem programa
+      en: Software for caregivers, not for programmers
+      es: Software para quien cuida, no para quien programa
+    text:
+      pt: >-
+        O desenho partiu da rotina da protetora: o que precisa ser feito hoje vem primeiro, com poucos toques
+        e linguagem do dia a dia.
+      en: >-
+        The design started from the rescuer's routine: what needs doing today comes first, with few taps and
+        everyday language.
+      es: >-
+        El diseño partió de la rutina de la protectora: lo que hay que hacer hoy aparece primero, con pocos
+        toques y lenguaje cotidiano.
+cover:
+  src: /projects/patinhas/home.webp
+  device: mobile
+  alt:
+    pt: Início com aviso de backup e os remédios de hoje de todos os animais
+    en: Home with backup reminder and today's medication for every animal
+    es: Inicio con aviso de backup y los remedios de hoy de todos los animales
+  caption:
+    pt: Remédios de hoje de todos os animais.
+    en: Today's medication for every animal.
+    es: Remedios de hoy de todos los animales.
+gallery:
+  - src: /projects/patinhas/animais.webp
+    device: mobile
+    alt:
+      pt: Lista de animais com filtro de pessoais e resgatados
+      en: Animal list with own and rescued filters
+      es: Lista de animales con filtro de propios y rescatados
+    caption:
+      pt: Animais pessoais e resgatados
+      en: Own and rescued animals
+      es: Animales propios y rescatados
+  - src: /projects/patinhas/pipoca.webp
+    device: mobile
+    alt:
+      pt: Ficha de um filhote resgatado em lar temporário
+      en: Record of a rescued puppy in foster care
+      es: Ficha de un cachorro rescatado en hogar temporal
+    caption:
+      pt: Ficha do animal
+      en: Animal record
+      es: Ficha del animal
+  - src: /projects/patinhas/pipoca-saude.webp
+    device: mobile
+    alt:
+      pt: Consultas agendadas e realizadas de um animal
+      en: Scheduled and completed vet visits for an animal
+      es: Consultas programadas y realizadas de un animal
+    caption:
+      pt: Consultas
+      en: Vet visits
+      es: Consultas
+  - src: /projects/patinhas/mingau-remedios.webp
+    device: mobile
+    alt:
+      pt: Remédios contínuos de um gato com dose e horários
+      en: A cat's ongoing medication with dose and times
+      es: Remedios continuos de un gato con dosis y horarios
+    caption:
+      pt: Remédios contínuos
+      en: Ongoing medication
+      es: Remedios continuos
+  - src: /projects/patinhas/bidu-arquivos.webp
+    device: mobile
+    alt:
+      pt: Saúde de um animal resgatado com consultas e exames
+      en: Health of a rescued animal with visits and exams
+      es: Salud de un animal rescatado con consultas y exámenes
+    caption:
+      pt: Histórico de saúde
+      en: Health history
+      es: Historial de salud

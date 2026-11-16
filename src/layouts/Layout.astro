@@ -1,10 +1,15 @@
 ---
 import '../styles/global.css';
+import Cursor from '../components/Cursor.astro';
 import { useTranslations, normalizeLocale } from '../i18n/utils.js';
 
 interface Props {
   title?: string;
   description?: string;
+  /** Caminho da página em cada idioma (hreflang/canonical). Padrão: a home. */
+  paths?: { pt: string; en: string; es: string };
+  ogImage?: string;
+  ogType?: string;
 }
 
 const locale = normalizeLocale(Astro.currentLocale);
@@ -13,6 +18,9 @@ const t = useTranslations(locale);
 const {
   title = t('meta.title'),
   description = t('meta.description'),
+  paths = { pt: '/', en: '/en/', es: '/es/' },
+  ogImage,
+  ogType = 'website',
 } = Astro.props;
 
 const htmlLang = locale === 'pt' ? 'pt-BR' : locale;
@@ -20,12 +28,13 @@ const ogLocale = { pt: 'pt_BR', en: 'en_US', es: 'es_ES' }[locale];
 
 const site = Astro.site ?? new URL('https://dev-zanatta.github.io');
 const alternates = [
-  { hreflang: 'pt-BR',     href: new URL('/', site).href },
-  { hreflang: 'en',        href: new URL('/en/', site).href },
-  { hreflang: 'es',        href: new URL('/es/', site).href },
-  { hreflang: 'x-default', href: new URL('/', site).href },
+  { hreflang: 'pt-BR',     href: new URL(paths.pt, site).href },
+  { hreflang: 'en',        href: new URL(paths.en, site).href },
+  { hreflang: 'es',        href: new URL(paths.es, site).href },
+  { hreflang: 'x-default', href: new URL(paths.pt, site).href },
 ];
-const canonical = new URL(locale === 'pt' ? '/' : `/${locale}/`, site).href;
+const canonical = new URL(paths[locale], site).href;
+const ogImageUrl = ogImage ? new URL(ogImage, site).href : undefined;
 ---
 <!doctype html>
 <html lang={htmlLang}>
@@ -41,7 +50,9 @@ const canonical = new URL(locale === 'pt' ? '/' : `/${locale}/`, site).href;
       <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
     ))}
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+    {ogImageUrl && <meta name="twitter:card" content="summary_large_image" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -71,6 +82,7 @@ const canonical = new URL(locale === 'pt' ? '/' : `/${locale}/`, site).href;
     />
   </head>
   <body>
+    <Cursor />
     <slot />
   </body>
 </html>

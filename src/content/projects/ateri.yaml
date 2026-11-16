@@ -1,0 +1,353 @@
+order: 7
+name: Ateri
+icon: /projects/ateri.png
+playStore: true
+link: null
+type:
+  pt: Web · Mobile · API
+  en: Web · Mobile · API
+  es: Web · Móvil · API
+tagline:
+  pt: Gestão de visitas técnicas rurais, offline-first
+  en: Offline-first management of rural technical visits
+  es: Gestión de visitas técnicas rurales, offline-first
+description:
+  pt: >-
+    Plataforma para técnicos que acompanham agroindústrias familiares em campo. Cadastro de produtores,
+    visitas com histórico rastreável, fotos e documentos. Funciona sem sinal e sincroniza depois, resolvendo
+    conflitos campo a campo.
+  en: >-
+    A platform for field technicians who support family agro-industries. Producer records, visits with a
+    traceable history, photos and documents. Works with no signal and syncs later, resolving conflicts field
+    by field.
+  es: >-
+    Plataforma para técnicos que acompañan agroindustrias familiares en campo. Registro de productores,
+    visitas con historial rastreable, fotos y documentos. Funciona sin señal y sincroniza después, resolviendo
+    conflictos campo a campo.
+stack:
+  - React
+  - React Native
+  - C#
+  - .NET 10
+  - PostgreSQL
+  - Docker
+year: '2026'
+status:
+  pt: Em uso no campo
+  en: In field use
+  es: En uso en el campo
+role:
+  pt: Full stack — API, web e app
+  en: Full stack — API, web and app
+  es: Full stack — API, web y app
+summary:
+  - pt: >-
+      O Ateri organiza o trabalho de técnicos de extensão rural que acompanham agroindústrias familiares no
+      oeste do Paraná. Cada produtor tem sua ficha, cada visita tem histórico rastreável, e o painel mostra a
+      cota do mês — uma visita por produtor —, o que está atrasado e o que vem nos próximos dias.
+    en: >-
+      Ateri organizes the work of rural extension technicians who support family agro-industries in western
+      Paraná. Every producer has a record, every visit has a traceable history, and the dashboard shows the
+      monthly quota — one visit per producer —, what is overdue and what is coming up next.
+    es: >-
+      Ateri organiza el trabajo de técnicos de extensión rural que acompañan agroindustrias familiares en el
+      oeste de Paraná. Cada productor tiene su ficha, cada visita tiene historial rastreable y el panel
+      muestra la cuota del mes — una visita por productor —, lo atrasado y lo que viene en los próximos días.
+  - pt: >-
+      O app de campo é offline-first: grava tudo no aparelho, funciona sem sinal na propriedade e sincroniza
+      quando a conexão volta, resolvendo conflitos campo a campo. A API em C# e .NET 10 é o contrato comum
+      para o app em React Native e o painel web em React, e o projeto foi também uma forma de estudar a stack
+      que o mercado pede.
+    en: >-
+      The field app is offline-first: it stores everything on the device, works with no signal on the farm and
+      syncs when the connection returns, resolving conflicts field by field. The C# and .NET 10 API is the
+      shared contract for the React Native app and the React web panel, and the project was also a way to
+      study the stack the market asks for.
+    es: >-
+      La app de campo es offline-first: guarda todo en el dispositivo, funciona sin señal en la propiedad y
+      sincroniza cuando vuelve la conexión, resolviendo conflictos campo a campo. La API en C# y .NET 10 es el
+      contrato común de la app en React Native y del panel web en React, y el proyecto también fue una forma
+      de estudiar la stack que pide el mercado.
+problem:
+  pt: >-
+    Visitas técnicas acontecem em estradas de chão e propriedades sem sinal. As informações ficavam espalhadas
+    entre cadernos, fotos no celular e planilhas, sem como saber quem já foi visitado no mês, quem está
+    atrasado ou o que foi combinado na última visita.
+  en: >-
+    Technical visits happen on dirt roads and farms with no signal. Information was scattered across
+    notebooks, phone photos and spreadsheets, with no way to know who had been visited that month, who was
+    overdue or what was agreed on the last visit.
+  es: >-
+    Las visitas técnicas ocurren en caminos de tierra y propiedades sin señal. La información estaba repartida
+    entre cuadernos, fotos del celular y planillas, sin forma de saber quién ya fue visitado en el mes, quién
+    está atrasado o qué se acordó en la última visita.
+audience:
+  pt: Técnicos de ATER, gestores de equipe e instituições como o IDR-Paraná, cooperativas e sindicatos rurais.
+  en: >-
+    Rural extension technicians, team managers and institutions such as IDR-Paraná, cooperatives and rural
+    unions.
+  es: >-
+    Técnicos de extensión rural, gestores de equipo e instituciones como el IDR-Paraná, cooperativas y
+    sindicatos rurales.
+features:
+  - title:
+      pt: Painel da cota do mês
+      en: Monthly quota dashboard
+      es: Panel de la cuota del mes
+    text:
+      pt: >-
+        Quantos produtores já foram atendidos, visitas concluídas, atrasadas e da próxima semana, quem falta
+        visitar e o andamento por bloco de rota.
+      en: >-
+        How many producers have been served, completed, overdue and next-week visits, who still needs a visit
+        and progress per route block.
+      es: >-
+        Cuántos productores ya fueron atendidos, visitas concluidas, atrasadas y de la próxima semana, quién
+        falta visitar y el avance por bloque de ruta.
+  - title:
+      pt: Agenda de visitas
+      en: Visit schedule
+      es: Agenda de visitas
+    text:
+      pt: >-
+        Visitas por dia com status pendente, concluída, remarcada, cancelada ou atrasada, filtro por bloco,
+        cidade e "só as minhas".
+      en: >-
+        Visits by day with pending, completed, rescheduled, canceled or overdue status, and filters by block,
+        city and "only mine".
+      es: >-
+        Visitas por día con estado pendiente, concluida, reprogramada, cancelada o atrasada, y filtro por
+        bloque, ciudad y "solo las mías".
+  - title:
+      pt: Ficha do produtor
+      en: Producer record
+      es: Ficha del productor
+    text:
+      pt: >-
+        Dados, coordenadas, CAF com aviso de vencimento, equipe responsável, anotações fixadas e o histórico
+        completo de visitas.
+      en: >-
+        Details, coordinates, CAF with expiry warning, responsible team, pinned notes and the full visit
+        history.
+      es: >-
+        Datos, coordenadas, CAF con aviso de vencimiento, equipo responsable, notas fijadas y el historial
+        completo de visitas.
+  - title:
+      pt: Blocos de rota
+      en: Route blocks
+      es: Bloques de ruta
+    text:
+      pt: Cidades agrupadas em blocos para planejar as saídas de campo e acompanhar a cobertura de cada região.
+      en: Cities grouped into blocks to plan field trips and track coverage of each region.
+      es: >-
+        Ciudades agrupadas en bloques para planificar las salidas de campo y seguir la cobertura de cada
+        región.
+  - title:
+      pt: Arquivos e lançamentos
+      en: Files and expense entries
+      es: Archivos y gastos
+    text:
+      pt: >-
+        Fotos, documentos e áudios por produtor, que sobem só em Wi-Fi, além de quilometragem e despesas das
+        visitas.
+      en: Photos, documents and audio per producer, uploaded only on Wi-Fi, plus mileage and visit expenses.
+      es: >-
+        Fotos, documentos y audios por productor, que suben solo con Wi-Fi, además de kilometraje y gastos de
+        las visitas.
+  - title:
+      pt: Funciona sem servidor
+      en: Works without a server
+      es: Funciona sin servidor
+    text:
+      pt: >-
+        Um modo local permite usar o app na rua antes de existir servidor, guardando a fila de operações para
+        levar tudo à API depois, sem perder nada.
+      en: >-
+        A local mode lets the app be used in the field before a server exists, keeping the operation queue to
+        take everything to the API later, without losing anything.
+      es: >-
+        Un modo local permite usar la app en el campo antes de que exista servidor, guardando la cola de
+        operaciones para llevar todo a la API después, sin perder nada.
+stackLayers:
+  - layer: frontend
+    items:
+      - React
+      - TypeScript
+      - TanStack Query
+      - TanStack Table
+      - Zustand
+      - Tailwind 4
+      - shadcn/ui
+  - layer: mobile
+    items:
+      - React Native
+      - Expo
+      - Expo Router
+      - SQLite
+      - NativeWind
+  - layer: backend
+    items:
+      - C#
+      - .NET 10
+      - ASP.NET Core Minimal APIs
+      - EF Core 10
+      - Dapper
+      - Identity + JWT
+      - OpenAPI
+  - layer: data
+    items:
+      - PostgreSQL
+  - layer: infra
+    items:
+      - Docker
+      - xUnit
+      - Testcontainers
+      - Vitest
+      - Playwright
+challenges:
+  - title:
+      pt: Uma rota de sincronização
+      en: One sync route
+      es: Una ruta de sincronización
+    text:
+      pt: >-
+        O aparelho envia a fila de operações e recebe, na mesma resposta, o que mudou no servidor desde o
+        último cursor. Com sinal fraco, cada ida e volta a menos conta, e o app já recebe o estado mesclado do
+        que acabou de enviar.
+      en: >-
+        The device sends its operation queue and receives, in the same response, what changed on the server
+        since the last cursor. With weak signal every round trip saved counts, and the app already gets the
+        merged state of what it just sent.
+      es: >-
+        El dispositivo envía la cola de operaciones y recibe, en la misma respuesta, lo que cambió en el
+        servidor desde el último cursor. Con señal débil cada ida y vuelta menos cuenta, y la app ya recibe el
+        estado combinado de lo que acaba de enviar.
+  - title:
+      pt: Operações idempotentes com ids do aparelho
+      en: Idempotent operations with device ids
+      es: Operaciones idempotentes con ids del dispositivo
+    text:
+      pt: >-
+        Cada operação tem um GUID v7 gerado no celular e a hora em que foi feita. Reenviar a mesma fila não
+        duplica nada, e entidades criadas offline já nascem com o id definitivo.
+      en: >-
+        Every operation has a GUID v7 generated on the phone and the time it happened. Resending the same
+        queue duplicates nothing, and entities created offline are born with their final id.
+      es: >-
+        Cada operación tiene un GUID v7 generado en el celular y la hora en que se hizo. Reenviar la misma
+        cola no duplica nada, y las entidades creadas offline nacen con su id definitivo.
+  - title:
+      pt: Não perder trabalho em conflito
+      en: Never losing work in a conflict
+      es: No perder trabajo en un conflicto
+    text:
+      pt: >-
+        A última escrita vence campo a campo, com histórico por registro. Se uma operação é recusada (um CPF
+        repetido, por exemplo), as seguintes do mesmo produtor ficam adiadas em vez de descartadas, esperando
+        a correção.
+      en: >-
+        Last write wins field by field, with a history per record. If an operation is rejected (a duplicate
+        tax ID, for example), the following ones for the same producer are deferred instead of discarded,
+        waiting for the fix.
+      es: >-
+        La última escritura gana campo a campo, con historial por registro. Si una operación es rechazada (un
+        documento repetido, por ejemplo), las siguientes del mismo productor quedan diferidas en lugar de
+        descartadas, esperando la corrección.
+  - title:
+      pt: Um contrato para dois clientes
+      en: One contract for two clients
+      es: Un contrato para dos clientes
+    text:
+      pt: >-
+        O documento OpenAPI gerado pela API é a fonte dos tipos do web e do app. Web e mobile têm interfaces
+        próprias, mas falam exatamente a mesma língua com o servidor.
+      en: >-
+        The OpenAPI document generated by the API is the source of types for web and app. Web and mobile have
+        their own interfaces, but speak exactly the same language with the server.
+      es: >-
+        El documento OpenAPI generado por la API es la fuente de los tipos del web y de la app. Web y mobile
+        tienen interfaces propias, pero hablan exactamente el mismo idioma con el servidor.
+cover:
+  src: /projects/ateri/produtor.webp
+  device: desktop
+  alt:
+    pt: Ficha do produtor com dados, CAF, anotações e o histórico de visitas
+    en: Producer record with details, CAF, notes and visit history
+    es: Ficha del productor con datos, CAF, notas e historial de visitas
+  caption:
+    pt: Ficha do produtor com histórico de visitas.
+    en: Producer record with visit history.
+    es: Ficha del productor con historial de visitas.
+gallery:
+  - src: /projects/ateri/painel.webp
+    device: desktop
+    alt:
+      pt: Painel com a cota do mês, visitas concluídas e atrasadas, quem falta visitar e andamento por bloco
+      en: >-
+        Dashboard with monthly quota, completed and overdue visits, producers left to visit and progress per
+        block
+      es: Panel con la cuota del mes, visitas concluidas y atrasadas, quién falta visitar y avance por bloque
+    caption:
+      pt: Painel da cota do mês.
+      en: Monthly quota dashboard.
+      es: Panel de la cuota del mes.
+  - src: /projects/ateri/agenda.webp
+    device: desktop
+    alt:
+      pt: Agenda de visitas do mês com status e filtros
+      en: Month's visit schedule with status and filters
+      es: Agenda de visitas del mes con estado y filtros
+    caption:
+      pt: Agenda de visitas.
+      en: Visit schedule.
+      es: Agenda de visitas.
+  - src: /projects/ateri/produtores.webp
+    device: desktop
+    alt:
+      pt: Lista de produtores com cidade, WhatsApp e equipe
+      en: Producer list with city, WhatsApp and team
+      es: Lista de productores con ciudad, WhatsApp y equipo
+    caption:
+      pt: Produtores da carteira.
+      en: Producers in the portfolio.
+      es: Productores de la cartera.
+  - src: /projects/ateri/blocos.webp
+    device: desktop
+    alt:
+      pt: Blocos de rota com as cidades de cada região
+      en: Route blocks with each region's cities
+      es: Bloques de ruta con las ciudades de cada región
+    caption:
+      pt: Blocos de rota.
+      en: Route blocks.
+      es: Bloques de ruta.
+  - src: /projects/ateri/m-painel.webp
+    device: mobile
+    alt:
+      pt: Painel no celular
+      en: Dashboard on the phone
+      es: Panel en el celular
+    caption:
+      pt: Painel no celular
+      en: Dashboard on the phone
+      es: Panel en el celular
+  - src: /projects/ateri/m-agenda.webp
+    device: mobile
+    alt:
+      pt: Agenda no celular com visitas atrasadas destacadas
+      en: Schedule on the phone with overdue visits highlighted
+      es: Agenda en el celular con visitas atrasadas destacadas
+    caption:
+      pt: Agenda
+      en: Schedule
+      es: Agenda
+  - src: /projects/ateri/m-produtor.webp
+    device: mobile
+    alt:
+      pt: Ficha do produtor no celular
+      en: Producer record on the phone
+      es: Ficha del productor en el celular
+    caption:
+      pt: Ficha do produtor
+      en: Producer record
+      es: Ficha del productor
